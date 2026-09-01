@@ -30,8 +30,8 @@ nbconvert==7.16.4
 ipykernel==6.29.5
 
 # --- serving layer ---
-fastapi==0.115.6
-pydantic==2.10.4
-uvicorn[standard]==0.34.0
+fastapi>=0.115.6
+pydantic>=2.10.4
+uvicorn[standard]>=0.34.0
 gradio
 
