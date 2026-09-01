@@ -1,0 +1,74 @@
+[
+  {
+    "dataset":"Heart Disease (Cleveland)",
+    "n":303,
+    "negative":164,
+    "positive":139,
+    "positive_rate":0.459,
+    "majority_baseline":0.541
+  },
+  {
+    "dataset":"Heart Failure Clinical Records",
+    "n":299,
+    "negative":203,
+    "positive":96,
+    "positive_rate":0.321,
+    "majority_baseline":0.679
+  },
+  {
+    "dataset":"Pima Indians Diabetes",
+    "n":768,
+    "negative":500,
+    "positive":268,
+    "positive_rate":0.349,
+    "majority_baseline":0.651
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "n":400,
+    "negative":150,
+    "positive":250,
+    "positive_rate":0.625,
+    "majority_baseline":0.625
+  },
+  {
+    "dataset":"Breast Cancer Wisconsin (Diagnostic)",
+    "n":569,
+    "negative":357,
+    "positive":212,
+    "positive_rate":0.373,
+    "majority_baseline":0.627
+  },
+  {
+    "dataset":"Breast Cancer Recurrence (Ljubljana)",
+    "n":286,
+    "negative":201,
+    "positive":85,
+    "positive_rate":0.297,
+    "majority_baseline":0.703
+  },
+  {
+    "dataset":"Breast Cancer Surgical Survival (Haberman)",
+    "n":306,
+    "negative":225,
+    "positive":81,
+    "positive_rate":0.265,
+    "majority_baseline":0.735
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "n":858,
+    "negative":803,
+    "positive":55,
+    "positive_rate":0.064,
+    "majority_baseline":0.936
+  },
+  {
+    "dataset":"Lung Cancer Thoracic Surgery",
+    "n":470,
+    "negative":400,
+    "positive":70,
+    "positive_rate":0.149,
+    "majority_baseline":0.851
+  }
+]

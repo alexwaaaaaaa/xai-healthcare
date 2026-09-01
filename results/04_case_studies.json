@@ -1,0 +1,5425 @@
+{
+  "heart_disease": {
+    "model": "logistic_regression",
+    "model_label": "Logistic Regression",
+    "cases": [
+      {
+        "case": "true_positive",
+        "case_label": "True positive (correctly flagged)",
+        "test_index": 41,
+        "actual": 1,
+        "probability": 0.9881370378457519,
+        "patient": {
+          "age": 58.0,
+          "sex": 1.0,
+          "cp": 4.0,
+          "trestbps": 128.0,
+          "chol": 216.0,
+          "fbs": 0.0,
+          "restecg": 2.0,
+          "thalach": 131.0,
+          "exang": 1.0,
+          "oldpeak": 2.2,
+          "slope": 2.0,
+          "ca": 3.0,
+          "thal": 7.0
+        },
+        "patient_display": {
+          "age": "58 years",
+          "sex": "Male",
+          "cp": "Asymptomatic",
+          "trestbps": "128 mm Hg",
+          "chol": "216 mg/dL",
+          "fbs": "No",
+          "restecg": "Left ventricular hypertrophy",
+          "thalach": "131 bpm",
+          "exang": "Yes",
+          "oldpeak": "2.2 mm",
+          "slope": "Flat",
+          "ca": "3",
+          "thal": "Reversible defect"
+        },
+        "shap_values": {
+          "age": -6.280651180340883e-05,
+          "sex": 0.32485877240492317,
+          "cp": 0.35435559511230597,
+          "trestbps": -0.028740739931169483,
+          "chol": -0.08918934804630689,
+          "fbs": 0.04008960606898751,
+          "restecg": 0.18961984651256183,
+          "thalach": 0.24823715598489532,
+          "exang": 0.47431471806734454,
+          "oldpeak": 0.24593022525693914,
+          "slope": 0.17473590423658333,
+          "ca": 2.0058038157496823,
+          "thal": 0.6497288298342598
+        },
+        "lime_explanation": [
+          [
+            "ca",
+            0.17924836215076828
+          ],
+          [
+            "cp",
+            0.13406403893711105
+          ],
+          [
+            "thal",
+            0.1071658668424556
+          ],
+          [
+            "thalach",
+            0.09903320560055921
+          ],
+          [
+            "exang",
+            0.07753494961062858
+          ],
+          [
+            "oldpeak",
+            0.06013551416879203
+          ],
+          [
+            "sex",
+            0.052618535389389515
+          ],
+          [
+            "fbs",
+            0.052488758417520306
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "ca",
+            "label": "Major vessels coloured by fluoroscopy",
+            "value": 3.0,
+            "value_display": "3",
+            "shap_value": 2.0058038157496823,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Major vessels coloured by fluoroscopy of 3 pushed this prediction toward \u201cHeart disease present\u201d."
+          },
+          {
+            "feature": "thal",
+            "label": "Thallium perfusion scan",
+            "value": 7.0,
+            "value_display": "Reversible defect",
+            "shap_value": 0.6497288298342598,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Thallium perfusion scan of Reversible defect pushed this prediction toward \u201cHeart disease present\u201d."
+          },
+          {
+            "feature": "exang",
+            "label": "Exercise-induced angina",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.47431471806734454,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Exercise-induced angina of Yes pushed this prediction toward \u201cHeart disease present\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cHeart disease present\u201d (99%). Raising the estimate: Major vessels coloured by fluoroscopy (3), Thallium perfusion scan (Reversible defect), Exercise-induced angina (Yes).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "true_negative",
+        "case_label": "True negative (correctly cleared)",
+        "test_index": 11,
+        "actual": 0,
+        "probability": 0.04170018523518834,
+        "patient": {
+          "age": 58.0,
+          "sex": 0.0,
+          "cp": 1.0,
+          "trestbps": 150.0,
+          "chol": 283.0,
+          "fbs": 1.0,
+          "restecg": 2.0,
+          "thalach": 162.0,
+          "exang": 0.0,
+          "oldpeak": 1.0,
+          "slope": 1.0,
+          "ca": 0.0,
+          "thal": 3.0
+        },
+        "patient_display": {
+          "age": "58 years",
+          "sex": "Female",
+          "cp": "Typical angina",
+          "trestbps": "150 mm Hg",
+          "chol": "283 mg/dL",
+          "fbs": "Yes",
+          "restecg": "Left ventricular hypertrophy",
+          "thalach": "162 bpm",
+          "exang": "No",
+          "oldpeak": "1.0 mm",
+          "slope": "Upsloping",
+          "ca": "0",
+          "thal": "Normal"
+        },
+        "shap_values": {
+          "age": -6.280651180340883e-05,
+          "sex": -0.659561750034238,
+          "cp": -0.9744778865588413,
+          "trestbps": 0.19627572928083356,
+          "chol": 0.06889759161249104,
+          "fbs": -0.2682919790770703,
+          "restecg": 0.18961984651256183,
+          "thalach": -0.13595414883446338,
+          "exang": -0.22320692614933865,
+          "oldpeak": 0.023704118097054378,
+          "slope": -0.19704261541572154,
+          "ca": -0.45028248924992864,
+          "thal": -0.5369904940639317
+        },
+        "lime_explanation": [
+          [
+            "cp",
+            -0.1702359648363683
+          ],
+          [
+            "ca",
+            -0.12666723406123176
+          ],
+          [
+            "thal",
+            -0.10637660017099729
+          ],
+          [
+            "exang",
+            -0.08817607364745117
+          ],
+          [
+            "sex",
+            -0.06713742857499393
+          ],
+          [
+            "trestbps",
+            0.06356105849279228
+          ],
+          [
+            "fbs",
+            -0.057847688886074985
+          ],
+          [
+            "chol",
+            0.049611611744464136
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "cp",
+            "label": "Chest pain type",
+            "value": 1.0,
+            "value_display": "Typical angina",
+            "shap_value": -0.9744778865588413,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Chest pain type of Typical angina pushed this prediction toward \u201cNo heart disease\u201d."
+          },
+          {
+            "feature": "sex",
+            "label": "Sex",
+            "value": 0.0,
+            "value_display": "Female",
+            "shap_value": -0.659561750034238,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Sex of Female pushed this prediction toward \u201cNo heart disease\u201d."
+          },
+          {
+            "feature": "thal",
+            "label": "Thallium perfusion scan",
+            "value": 3.0,
+            "value_display": "Normal",
+            "shap_value": -0.5369904940639317,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Thallium perfusion scan of Normal pushed this prediction toward \u201cNo heart disease\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cHeart disease present\u201d (4%). Lowering it: Chest pain type (Typical angina), Sex (Female), Thallium perfusion scan (Normal).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "false_positive",
+        "case_label": "False positive (unnecessary referral)",
+        "test_index": 40,
+        "actual": 0,
+        "probability": 0.937994619300728,
+        "patient": {
+          "age": 62.0,
+          "sex": 1.0,
+          "cp": 3.0,
+          "trestbps": 130.0,
+          "chol": 231.0,
+          "fbs": 0.0,
+          "restecg": 0.0,
+          "thalach": 146.0,
+          "exang": 0.0,
+          "oldpeak": 1.8,
+          "slope": 2.0,
+          "ca": 3.0,
+          "thal": 7.0
+        },
+        "patient_display": {
+          "age": "62 years",
+          "sex": "Male",
+          "cp": "Non-anginal pain",
+          "trestbps": "130 mm Hg",
+          "chol": "231 mg/dL",
+          "fbs": "No",
+          "restecg": "Normal",
+          "thalach": "146 bpm",
+          "exang": "No",
+          "oldpeak": "1.8 mm",
+          "slope": "Flat",
+          "ca": "3",
+          "thal": "Reversible defect"
+        },
+        "shap_values": {
+          "age": -0.0001674840314757569,
+          "sex": 0.32485877240492317,
+          "cp": -0.08858889877807648,
+          "trestbps": -0.008284697275532842,
+          "chol": -0.05379674961523273,
+          "fbs": 0.04008960606898751,
+          "restecg": -0.17156081351136543,
+          "thalach": 0.0623381375239153,
+          "exang": -0.22320692614933865,
+          "oldpeak": 0.1718548562036442,
+          "slope": 0.17473590423658333,
+          "ca": 2.0058038157496823,
+          "thal": 0.6497288298342598
+        },
+        "lime_explanation": [
+          [
+            "ca",
+            0.1875834892768204
+          ],
+          [
+            "thal",
+            0.10722821304007668
+          ],
+          [
+            "exang",
+            -0.08612370962104757
+          ],
+          [
+            "oldpeak",
+            0.06017712816299793
+          ],
+          [
+            "sex",
+            0.057332605576014946
+          ],
+          [
+            "fbs",
+            0.04918480742375727
+          ],
+          [
+            "restecg",
+            -0.02888599189958899
+          ],
+          [
+            "thalach",
+            0.018739875564992025
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "ca",
+            "label": "Major vessels coloured by fluoroscopy",
+            "value": 3.0,
+            "value_display": "3",
+            "shap_value": 2.0058038157496823,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Major vessels coloured by fluoroscopy of 3 pushed this prediction toward \u201cHeart disease present\u201d."
+          },
+          {
+            "feature": "thal",
+            "label": "Thallium perfusion scan",
+            "value": 7.0,
+            "value_display": "Reversible defect",
+            "shap_value": 0.6497288298342598,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Thallium perfusion scan of Reversible defect pushed this prediction toward \u201cHeart disease present\u201d."
+          },
+          {
+            "feature": "sex",
+            "label": "Sex",
+            "value": 1.0,
+            "value_display": "Male",
+            "shap_value": 0.32485877240492317,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Sex of Male pushed this prediction toward \u201cHeart disease present\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cHeart disease present\u201d (94%). Raising the estimate: Major vessels coloured by fluoroscopy (3), Thallium perfusion scan (Reversible defect), Sex (Male).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "false_negative",
+        "case_label": "False negative (missed case)",
+        "test_index": 54,
+        "actual": 1,
+        "probability": 0.3603572862270728,
+        "patient": {
+          "age": 59.0,
+          "sex": 0.0,
+          "cp": 4.0,
+          "trestbps": 174.0,
+          "chol": 249.0,
+          "fbs": 0.0,
+          "restecg": 0.0,
+          "thalach": 143.0,
+          "exang": 1.0,
+          "oldpeak": 0.0,
+          "slope": 2.0,
+          "ca": 0.0,
+          "thal": 3.0
+        },
+        "patient_display": {
+          "age": "59 years",
+          "sex": "Female",
+          "cp": "Asymptomatic",
+          "trestbps": "174 mm Hg",
+          "chol": "249 mg/dL",
+          "fbs": "No",
+          "restecg": "Normal",
+          "thalach": "143 bpm",
+          "exang": "Yes",
+          "oldpeak": "0.0 mm",
+          "slope": "Flat",
+          "ca": "0",
+          "thal": "Normal"
+        },
+        "shap_values": {
+          "age": -8.897589172149583e-05,
+          "sex": -0.659561750034238,
+          "cp": 0.35435559511230597,
+          "trestbps": 0.4417482411484733,
+          "chol": -0.011325631497943734,
+          "fbs": 0.04008960606898751,
+          "restecg": -0.17156081351136543,
+          "thalach": 0.09951794121611132,
+          "exang": 0.47431471806734454,
+          "oldpeak": -0.16148430453618287,
+          "slope": 0.17473590423658333,
+          "ca": -0.45028248924992864,
+          "thal": -0.5369904940639317
+        },
+        "lime_explanation": [
+          [
+            "cp",
+            0.13655394411970098
+          ],
+          [
+            "ca",
+            -0.12437273180282472
+          ],
+          [
+            "thal",
+            -0.10622164823793187
+          ],
+          [
+            "exang",
+            0.08303646647008378
+          ],
+          [
+            "trestbps",
+            0.06449691766959792
+          ],
+          [
+            "sex",
+            -0.058453251873355434
+          ],
+          [
+            "fbs",
+            0.04662247156845643
+          ],
+          [
+            "restecg",
+            -0.03136758306380214
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "sex",
+            "label": "Sex",
+            "value": 0.0,
+            "value_display": "Female",
+            "shap_value": -0.659561750034238,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Sex of Female pushed this prediction toward \u201cNo heart disease\u201d."
+          },
+          {
+            "feature": "thal",
+            "label": "Thallium perfusion scan",
+            "value": 3.0,
+            "value_display": "Normal",
+            "shap_value": -0.5369904940639317,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Thallium perfusion scan of Normal pushed this prediction toward \u201cNo heart disease\u201d."
+          },
+          {
+            "feature": "exang",
+            "label": "Exercise-induced angina",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.47431471806734454,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Exercise-induced angina of Yes pushed this prediction toward \u201cHeart disease present\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cHeart disease present\u201d (36%). Raising the estimate: Exercise-induced angina (Yes). Lowering it: Sex (Female), Thallium perfusion scan (Normal).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "borderline",
+        "case_label": "Borderline (p \u2248 0.5)",
+        "test_index": 57,
+        "actual": 1,
+        "probability": 0.5084442169418854,
+        "patient": {
+          "age": 61.0,
+          "sex": 1.0,
+          "cp": 1.0,
+          "trestbps": 134.0,
+          "chol": 234.0,
+          "fbs": 0.0,
+          "restecg": 0.0,
+          "thalach": 145.0,
+          "exang": 0.0,
+          "oldpeak": 2.6,
+          "slope": 2.0,
+          "ca": 2.0,
+          "thal": 3.0
+        },
+        "patient_display": {
+          "age": "61 years",
+          "sex": "Male",
+          "cp": "Typical angina",
+          "trestbps": "134 mm Hg",
+          "chol": "234 mg/dL",
+          "fbs": "No",
+          "restecg": "Normal",
+          "thalach": "145 bpm",
+          "exang": "No",
+          "oldpeak": "2.6 mm",
+          "slope": "Flat",
+          "ca": "2",
+          "thal": "Normal"
+        },
+        "shap_values": {
+          "age": -0.00014131465155766987,
+          "sex": 0.32485877240492317,
+          "cp": -0.9744778865588413,
+          "trestbps": 0.032627388035740446,
+          "chol": -0.0467182299290179,
+          "fbs": 0.04008960606898751,
+          "restecg": -0.17156081351136543,
+          "thalach": 0.07473140542131397,
+          "exang": -0.22320692614933865,
+          "oldpeak": 0.320005594310234,
+          "slope": 0.17473590423658333,
+          "ca": 1.187108380749812,
+          "thal": -0.5369904940639317
+        },
+        "lime_explanation": [
+          [
+            "ca",
+            0.18837973929422794
+          ],
+          [
+            "cp",
+            -0.17904504639937258
+          ],
+          [
+            "thal",
+            -0.10576537033080588
+          ],
+          [
+            "exang",
+            -0.08526491371565957
+          ],
+          [
+            "oldpeak",
+            0.06770043954729972
+          ],
+          [
+            "sex",
+            0.0559167712486213
+          ],
+          [
+            "fbs",
+            0.052789862046764405
+          ],
+          [
+            "restecg",
+            -0.03431973590733647
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "ca",
+            "label": "Major vessels coloured by fluoroscopy",
+            "value": 2.0,
+            "value_display": "2",
+            "shap_value": 1.187108380749812,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Major vessels coloured by fluoroscopy of 2 pushed this prediction toward \u201cHeart disease present\u201d."
+          },
+          {
+            "feature": "cp",
+            "label": "Chest pain type",
+            "value": 1.0,
+            "value_display": "Typical angina",
+            "shap_value": -0.9744778865588413,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Chest pain type of Typical angina pushed this prediction toward \u201cNo heart disease\u201d."
+          },
+          {
+            "feature": "thal",
+            "label": "Thallium perfusion scan",
+            "value": 3.0,
+            "value_display": "Normal",
+            "shap_value": -0.5369904940639317,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Thallium perfusion scan of Normal pushed this prediction toward \u201cNo heart disease\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cHeart disease present\u201d (51%). Raising the estimate: Major vessels coloured by fluoroscopy (2). Lowering it: Chest pain type (Typical angina), Thallium perfusion scan (Normal).",
+        "shap_lime_top5_overlap": 0.8
+      }
+    ]
+  },
+  "heart_failure": {
+    "model": "random_forest",
+    "model_label": "Random Forest",
+    "cases": [
+      {
+        "case": "true_positive",
+        "case_label": "True positive (correctly flagged)",
+        "test_index": 33,
+        "actual": 1,
+        "probability": 0.7986865079365079,
+        "patient": {
+          "age": 60.0,
+          "sex": 1.0,
+          "smoking": 1.0,
+          "diabetes": 0.0,
+          "high_blood_pressure": 0.0,
+          "anaemia": 0.0,
+          "ejection_fraction": 20.0,
+          "serum_creatinine": 2.9,
+          "serum_sodium": 127.0,
+          "creatinine_phosphokinase": 68.0,
+          "platelets": 119000.0
+        },
+        "patient_display": {
+          "age": "60 years",
+          "sex": "Male",
+          "smoking": "Yes",
+          "diabetes": "No",
+          "high_blood_pressure": "No",
+          "anaemia": "No",
+          "ejection_fraction": "20 %",
+          "serum_creatinine": "2.90 mg/dL",
+          "serum_sodium": "127 mEq/L",
+          "creatinine_phosphokinase": "68 mcg/L",
+          "platelets": "119000 platelets/mL"
+        },
+        "shap_values": {
+          "age": -0.009587634762751521,
+          "sex": -0.004039994761214772,
+          "smoking": -0.0017287551168797635,
+          "diabetes": -0.009570223280741277,
+          "high_blood_pressure": -0.0026718636024458636,
+          "anaemia": -0.00932252797431047,
+          "ejection_fraction": 0.2673715790257652,
+          "serum_creatinine": 0.14643399458365527,
+          "serum_sodium": 0.0859942699974865,
+          "creatinine_phosphokinase": -0.022236238184506256,
+          "platelets": 0.03791837899989883
+        },
+        "lime_explanation": [
+          [
+            "serum_creatinine",
+            0.2673448828666052
+          ],
+          [
+            "ejection_fraction",
+            0.207072051778631
+          ],
+          [
+            "serum_sodium",
+            0.08772774799909257
+          ],
+          [
+            "platelets",
+            0.045197049995712175
+          ],
+          [
+            "high_blood_pressure",
+            -0.03695486100270013
+          ],
+          [
+            "anaemia",
+            -0.02896862499898308
+          ],
+          [
+            "age",
+            -0.027847134001188382
+          ],
+          [
+            "smoking",
+            0.022788346828829582
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "ejection_fraction",
+            "label": "Ejection fraction",
+            "value": 20.0,
+            "value_display": "20 %",
+            "shap_value": 0.2673715790257652,
+            "direction": "increases",
+            "level": "low",
+            "sentence": "Ejection fraction of 20 % (low for this range) pushed this prediction toward \u201cDeath during follow-up\u201d."
+          },
+          {
+            "feature": "serum_creatinine",
+            "label": "Serum creatinine",
+            "value": 2.9,
+            "value_display": "2.90 mg/dL",
+            "shap_value": 0.14643399458365527,
+            "direction": "increases",
+            "level": "low",
+            "sentence": "Serum creatinine of 2.90 mg/dL (low for this range) pushed this prediction toward \u201cDeath during follow-up\u201d."
+          },
+          {
+            "feature": "serum_sodium",
+            "label": "Serum sodium",
+            "value": 127.0,
+            "value_display": "127 mEq/L",
+            "shap_value": 0.0859942699974865,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Serum sodium of 127 mEq/L (mid-range for this range) pushed this prediction toward \u201cDeath during follow-up\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cDeath during follow-up\u201d (80%). Raising the estimate: Ejection fraction (20 %), Serum creatinine (2.90 mg/dL), Serum sodium (127 mEq/L).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "true_negative",
+        "case_label": "True negative (correctly cleared)",
+        "test_index": 30,
+        "actual": 0,
+        "probability": 0.029597425073364346,
+        "patient": {
+          "age": 55.0,
+          "sex": 1.0,
+          "smoking": 1.0,
+          "diabetes": 0.0,
+          "high_blood_pressure": 0.0,
+          "anaemia": 0.0,
+          "ejection_fraction": 40.0,
+          "serum_creatinine": 0.7,
+          "serum_sodium": 140.0,
+          "creatinine_phosphokinase": 835.0,
+          "platelets": 279000.0
+        },
+        "patient_display": {
+          "age": "55 years",
+          "sex": "Male",
+          "smoking": "Yes",
+          "diabetes": "No",
+          "high_blood_pressure": "No",
+          "anaemia": "No",
+          "ejection_fraction": "40 %",
+          "serum_creatinine": "0.70 mg/dL",
+          "serum_sodium": "140 mEq/L",
+          "creatinine_phosphokinase": "835 mcg/L",
+          "platelets": "279000 platelets/mL"
+        },
+        "shap_values": {
+          "age": -0.02801720223233386,
+          "sex": -0.0021157372582216367,
+          "smoking": 0.009484439618328061,
+          "diabetes": -0.006545320674372399,
+          "high_blood_pressure": -0.01981691348635939,
+          "anaemia": -0.009407910837166366,
+          "ejection_fraction": -0.08295865518217596,
+          "serum_creatinine": -0.09147248454959324,
+          "serum_sodium": -0.025368149682723464,
+          "creatinine_phosphokinase": -0.011415462728481297,
+          "platelets": -0.022894700926088078
+        },
+        "lime_explanation": [
+          [
+            "serum_creatinine",
+            -0.14300365885692448
+          ],
+          [
+            "ejection_fraction",
+            -0.09093919871691518
+          ],
+          [
+            "platelets",
+            -0.047529122492267276
+          ],
+          [
+            "high_blood_pressure",
+            -0.04050442108752153
+          ],
+          [
+            "serum_sodium",
+            -0.03914922117052516
+          ],
+          [
+            "age",
+            -0.038576720893230144
+          ],
+          [
+            "anaemia",
+            -0.03580244596626739
+          ],
+          [
+            "creatinine_phosphokinase",
+            0.017434612439678702
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "serum_creatinine",
+            "label": "Serum creatinine",
+            "value": 0.7,
+            "value_display": "0.70 mg/dL",
+            "shap_value": -0.09147248454959324,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Serum creatinine of 0.70 mg/dL (low for this range) pushed this prediction toward \u201cSurvived follow-up\u201d."
+          },
+          {
+            "feature": "ejection_fraction",
+            "label": "Ejection fraction",
+            "value": 40.0,
+            "value_display": "40 %",
+            "shap_value": -0.08295865518217596,
+            "direction": "decreases",
+            "level": "mid-range",
+            "sentence": "Ejection fraction of 40 % (mid-range for this range) pushed this prediction toward \u201cSurvived follow-up\u201d."
+          },
+          {
+            "feature": "age",
+            "label": "Age",
+            "value": 55.0,
+            "value_display": "55 years",
+            "shap_value": -0.02801720223233386,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Age of 55 years (low for this range) pushed this prediction toward \u201cSurvived follow-up\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cDeath during follow-up\u201d (3%). Lowering it: Serum creatinine (0.70 mg/dL), Ejection fraction (40 %), Age (55 years).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "false_positive",
+        "case_label": "False positive (unnecessary referral)",
+        "test_index": 9,
+        "actual": 0,
+        "probability": 0.8424530492996656,
+        "patient": {
+          "age": 80.0,
+          "sex": 1.0,
+          "smoking": 0.0,
+          "diabetes": 1.0,
+          "high_blood_pressure": 0.0,
+          "anaemia": 0.0,
+          "ejection_fraction": 35.0,
+          "serum_creatinine": 2.1,
+          "serum_sodium": 134.0,
+          "creatinine_phosphokinase": 582.0,
+          "platelets": 350000.0
+        },
+        "patient_display": {
+          "age": "80 years",
+          "sex": "Male",
+          "smoking": "No",
+          "diabetes": "Yes",
+          "high_blood_pressure": "No",
+          "anaemia": "No",
+          "ejection_fraction": "35 %",
+          "serum_creatinine": "2.10 mg/dL",
+          "serum_sodium": "134 mEq/L",
+          "creatinine_phosphokinase": "582 mcg/L",
+          "platelets": "350000 platelets/mL"
+        },
+        "shap_values": {
+          "age": 0.13637011471210425,
+          "sex": -0.006308304344810676,
+          "smoking": -0.0032220339745999303,
+          "diabetes": 0.020948217981669483,
+          "high_blood_pressure": -0.017988006010593232,
+          "anaemia": -0.005429894460527366,
+          "ejection_fraction": -0.03577303047841301,
+          "serum_creatinine": 0.32743259571472294,
+          "serum_sodium": 0.06431015733047385,
+          "creatinine_phosphokinase": 0.01297000068338158,
+          "platelets": 0.029017709133707468
+        },
+        "lime_explanation": [
+          [
+            "serum_creatinine",
+            0.2704064604888884
+          ],
+          [
+            "age",
+            0.09387924760417427
+          ],
+          [
+            "ejection_fraction",
+            -0.08923792099489157
+          ],
+          [
+            "serum_sodium",
+            0.08861854154640454
+          ],
+          [
+            "high_blood_pressure",
+            -0.03921321669953166
+          ],
+          [
+            "platelets",
+            0.03885467373423464
+          ],
+          [
+            "anaemia",
+            -0.028686185926805562
+          ],
+          [
+            "smoking",
+            -0.024330163036841483
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "serum_creatinine",
+            "label": "Serum creatinine",
+            "value": 2.1,
+            "value_display": "2.10 mg/dL",
+            "shap_value": 0.32743259571472294,
+            "direction": "increases",
+            "level": "low",
+            "sentence": "Serum creatinine of 2.10 mg/dL (low for this range) pushed this prediction toward \u201cDeath during follow-up\u201d."
+          },
+          {
+            "feature": "age",
+            "label": "Age",
+            "value": 80.0,
+            "value_display": "80 years",
+            "shap_value": 0.13637011471210425,
+            "direction": "increases",
+            "level": "high",
+            "sentence": "Age of 80 years (high for this range) pushed this prediction toward \u201cDeath during follow-up\u201d."
+          },
+          {
+            "feature": "serum_sodium",
+            "label": "Serum sodium",
+            "value": 134.0,
+            "value_display": "134 mEq/L",
+            "shap_value": 0.06431015733047385,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Serum sodium of 134 mEq/L (mid-range for this range) pushed this prediction toward \u201cDeath during follow-up\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cDeath during follow-up\u201d (84%). Raising the estimate: Serum creatinine (2.10 mg/dL), Age (80 years), Serum sodium (134 mEq/L).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "false_negative",
+        "case_label": "False negative (missed case)",
+        "test_index": 47,
+        "actual": 1,
+        "probability": 0.12044339613651675,
+        "patient": {
+          "age": 45.0,
+          "sex": 1.0,
+          "smoking": 0.0,
+          "diabetes": 0.0,
+          "high_blood_pressure": 0.0,
+          "anaemia": 0.0,
+          "ejection_fraction": 35.0,
+          "serum_creatinine": 1.0,
+          "serum_sodium": 145.0,
+          "creatinine_phosphokinase": 582.0,
+          "platelets": 385000.0
+        },
+        "patient_display": {
+          "age": "45 years",
+          "sex": "Male",
+          "smoking": "No",
+          "diabetes": "No",
+          "high_blood_pressure": "No",
+          "anaemia": "No",
+          "ejection_fraction": "35 %",
+          "serum_creatinine": "1.00 mg/dL",
+          "serum_sodium": "145 mEq/L",
+          "creatinine_phosphokinase": "582 mcg/L",
+          "platelets": "385000 platelets/mL"
+        },
+        "shap_values": {
+          "age": -0.02623854789243921,
+          "sex": -0.0017469940075018628,
+          "smoking": -0.0011523712284413528,
+          "diabetes": -0.01311364863022421,
+          "high_blood_pressure": -0.016244964238924766,
+          "anaemia": -0.018079233246976783,
+          "ejection_fraction": -0.060177733856725896,
+          "serum_creatinine": -0.07749776314433385,
+          "serum_sodium": 0.014555936100818663,
+          "creatinine_phosphokinase": -0.006381084585013252,
+          "platelets": 0.006394277853726808
+        },
+        "lime_explanation": [
+          [
+            "ejection_fraction",
+            -0.09536771814473058
+          ],
+          [
+            "serum_creatinine",
+            -0.06481317134276228
+          ],
+          [
+            "high_blood_pressure",
+            -0.048356764673437615
+          ],
+          [
+            "platelets",
+            0.044272998930250385
+          ],
+          [
+            "age",
+            -0.04029545576913318
+          ],
+          [
+            "serum_sodium",
+            -0.034170177680791225
+          ],
+          [
+            "anaemia",
+            -0.03193132864834006
+          ],
+          [
+            "smoking",
+            -0.021594060375512175
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "serum_creatinine",
+            "label": "Serum creatinine",
+            "value": 1.0,
+            "value_display": "1.00 mg/dL",
+            "shap_value": -0.07749776314433385,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Serum creatinine of 1.00 mg/dL (low for this range) pushed this prediction toward \u201cSurvived follow-up\u201d."
+          },
+          {
+            "feature": "ejection_fraction",
+            "label": "Ejection fraction",
+            "value": 35.0,
+            "value_display": "35 %",
+            "shap_value": -0.060177733856725896,
+            "direction": "decreases",
+            "level": "mid-range",
+            "sentence": "Ejection fraction of 35 % (mid-range for this range) pushed this prediction toward \u201cSurvived follow-up\u201d."
+          },
+          {
+            "feature": "age",
+            "label": "Age",
+            "value": 45.0,
+            "value_display": "45 years",
+            "shap_value": -0.02623854789243921,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Age of 45 years (low for this range) pushed this prediction toward \u201cSurvived follow-up\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cDeath during follow-up\u201d (12%). Lowering it: Serum creatinine (1.00 mg/dL), Ejection fraction (35 %), Age (45 years).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "borderline",
+        "case_label": "Borderline (p \u2248 0.5)",
+        "test_index": 7,
+        "actual": 1,
+        "probability": 0.5017804769513796,
+        "patient": {
+          "age": 85.0,
+          "sex": 1.0,
+          "smoking": 1.0,
+          "diabetes": 0.0,
+          "high_blood_pressure": 0.0,
+          "anaemia": 0.0,
+          "ejection_fraction": 60.0,
+          "serum_creatinine": 1.2,
+          "serum_sodium": 132.0,
+          "creatinine_phosphokinase": 129.0,
+          "platelets": 306000.0
+        },
+        "patient_display": {
+          "age": "85 years",
+          "sex": "Male",
+          "smoking": "Yes",
+          "diabetes": "No",
+          "high_blood_pressure": "No",
+          "anaemia": "No",
+          "ejection_fraction": "60 %",
+          "serum_creatinine": "1.20 mg/dL",
+          "serum_sodium": "132 mEq/L",
+          "creatinine_phosphokinase": "129 mcg/L",
+          "platelets": "306000 platelets/mL"
+        },
+        "shap_values": {
+          "age": 0.23910400958473899,
+          "sex": 0.000666019643755855,
+          "smoking": 0.02407284535807419,
+          "diabetes": -0.015363848247886176,
+          "high_blood_pressure": -0.013982553657653048,
+          "anaemia": -0.011623285878809293,
+          "ejection_fraction": -0.0703815321351079,
+          "serum_creatinine": -0.030445901914931087,
+          "serum_sodium": 0.07627209559266923,
+          "creatinine_phosphokinase": 0.007346643173567874,
+          "platelets": -0.0240095375795905
+        },
+        "lime_explanation": [
+          [
+            "age",
+            0.08831119413870495
+          ],
+          [
+            "serum_sodium",
+            0.0822594330957954
+          ],
+          [
+            "ejection_fraction",
+            -0.06790774430495422
+          ],
+          [
+            "high_blood_pressure",
+            -0.04080712992049196
+          ],
+          [
+            "serum_creatinine",
+            -0.03445851643934765
+          ],
+          [
+            "anaemia",
+            -0.030233096559864312
+          ],
+          [
+            "platelets",
+            0.02935328488178643
+          ],
+          [
+            "diabetes",
+            -0.02545215029321652
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "age",
+            "label": "Age",
+            "value": 85.0,
+            "value_display": "85 years",
+            "shap_value": 0.23910400958473899,
+            "direction": "increases",
+            "level": "high",
+            "sentence": "Age of 85 years (high for this range) pushed this prediction toward \u201cDeath during follow-up\u201d."
+          },
+          {
+            "feature": "serum_sodium",
+            "label": "Serum sodium",
+            "value": 132.0,
+            "value_display": "132 mEq/L",
+            "shap_value": 0.07627209559266923,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Serum sodium of 132 mEq/L (mid-range for this range) pushed this prediction toward \u201cDeath during follow-up\u201d."
+          },
+          {
+            "feature": "ejection_fraction",
+            "label": "Ejection fraction",
+            "value": 60.0,
+            "value_display": "60 %",
+            "shap_value": -0.0703815321351079,
+            "direction": "decreases",
+            "level": "high",
+            "sentence": "Ejection fraction of 60 % (high for this range) pushed this prediction toward \u201cSurvived follow-up\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cDeath during follow-up\u201d (50%). Raising the estimate: Age (85 years), Serum sodium (132 mEq/L). Lowering it: Ejection fraction (60 %).",
+        "shap_lime_top5_overlap": 0.8
+      }
+    ]
+  },
+  "diabetes": {
+    "model": "random_forest",
+    "model_label": "Random Forest",
+    "cases": [
+      {
+        "case": "true_positive",
+        "case_label": "True positive (correctly flagged)",
+        "test_index": 111,
+        "actual": 1,
+        "probability": 0.9141695262543204,
+        "patient": {
+          "Age": 41.0,
+          "Pregnancies": 7.0,
+          "DiabetesPedigreeFunction": 0.745,
+          "BMI": 35.9,
+          "BloodPressure": 68.0,
+          "SkinThickness": 28.0,
+          "Glucose": 194.0,
+          "Insulin": NaN
+        },
+        "patient_display": {
+          "Age": "41 years",
+          "Pregnancies": "7",
+          "DiabetesPedigreeFunction": "0.745",
+          "BMI": "35.9 kg/m\u00b2",
+          "BloodPressure": "68 mm Hg",
+          "SkinThickness": "28 mm",
+          "Glucose": "194 mg/dL",
+          "Insulin": "nan mu U/mL"
+        },
+        "shap_values": {
+          "Age": 0.043437534363378376,
+          "Pregnancies": 0.01824134264684433,
+          "DiabetesPedigreeFunction": 0.0241181576591503,
+          "BMI": 0.045855350412500974,
+          "BloodPressure": -0.00012616049586589397,
+          "SkinThickness": -0.003562144247018401,
+          "Glucose": 0.27049511868806214,
+          "Insulin": 0.018657033994533688
+        },
+        "lime_explanation": [
+          [
+            "Glucose",
+            0.34115309987715314
+          ],
+          [
+            "Age",
+            0.0723600420818017
+          ],
+          [
+            "BMI",
+            0.06958895519682567
+          ],
+          [
+            "DiabetesPedigreeFunction",
+            0.06025620361071846
+          ],
+          [
+            "Insulin",
+            0.05222535391563242
+          ],
+          [
+            "Pregnancies",
+            0.044823486476721984
+          ],
+          [
+            "BloodPressure",
+            0.005555106839875277
+          ],
+          [
+            "SkinThickness",
+            -0.0013780061405775995
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "Glucose",
+            "label": "Plasma glucose (2-hour OGTT)",
+            "value": 194.0,
+            "value_display": "194 mg/dL",
+            "shap_value": 0.27049511868806214,
+            "direction": "increases",
+            "level": "high",
+            "sentence": "Plasma glucose (2-hour OGTT) of 194 mg/dL (high for this range) pushed this prediction toward \u201cDiabetes onset\u201d."
+          },
+          {
+            "feature": "BMI",
+            "label": "Body mass index",
+            "value": 35.9,
+            "value_display": "35.9 kg/m\u00b2",
+            "shap_value": 0.045855350412500974,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Body mass index of 35.9 kg/m\u00b2 (mid-range for this range) pushed this prediction toward \u201cDiabetes onset\u201d."
+          },
+          {
+            "feature": "Age",
+            "label": "Age",
+            "value": 41.0,
+            "value_display": "41 years",
+            "shap_value": 0.043437534363378376,
+            "direction": "increases",
+            "level": "low",
+            "sentence": "Age of 41 years (low for this range) pushed this prediction toward \u201cDiabetes onset\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cDiabetes onset\u201d (91%). Raising the estimate: Plasma glucose (2-hour OGTT) (194 mg/dL), Body mass index (35.9 kg/m\u00b2), Age (41 years).",
+        "shap_lime_top5_overlap": 1.0
+      },
+      {
+        "case": "true_negative",
+        "case_label": "True negative (correctly cleared)",
+        "test_index": 64,
+        "actual": 0,
+        "probability": 0.03428240106768417,
+        "patient": {
+          "Age": 23.0,
+          "Pregnancies": 1.0,
+          "DiabetesPedigreeFunction": 0.234,
+          "BMI": 25.2,
+          "BloodPressure": 54.0,
+          "SkinThickness": 25.0,
+          "Glucose": 91.0,
+          "Insulin": 100.0
+        },
+        "patient_display": {
+          "Age": "23 years",
+          "Pregnancies": "1",
+          "DiabetesPedigreeFunction": "0.234",
+          "BMI": "25.2 kg/m\u00b2",
+          "BloodPressure": "54 mm Hg",
+          "SkinThickness": "25 mm",
+          "Glucose": "91 mg/dL",
+          "Insulin": "100 mu U/mL"
+        },
+        "shap_values": {
+          "Age": -0.06328806332145002,
+          "Pregnancies": -0.01424799368114265,
+          "DiabetesPedigreeFunction": -0.021463627910632072,
+          "BMI": -0.1367807330370796,
+          "BloodPressure": -0.01005875398006966,
+          "SkinThickness": -0.0153199869625546,
+          "Glucose": -0.1768835489815268,
+          "Insulin": -0.0247281842905941
+        },
+        "lime_explanation": [
+          [
+            "Glucose",
+            -0.22394000008918086
+          ],
+          [
+            "BMI",
+            -0.21109483699204076
+          ],
+          [
+            "Insulin",
+            -0.10638390297642147
+          ],
+          [
+            "Age",
+            -0.10297305429434228
+          ],
+          [
+            "DiabetesPedigreeFunction",
+            -0.05276319932354503
+          ],
+          [
+            "Pregnancies",
+            -0.029774879782593997
+          ],
+          [
+            "SkinThickness",
+            -0.02461471141459803
+          ],
+          [
+            "BloodPressure",
+            -0.013320121169070904
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "Glucose",
+            "label": "Plasma glucose (2-hour OGTT)",
+            "value": 91.0,
+            "value_display": "91 mg/dL",
+            "shap_value": -0.1768835489815268,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Plasma glucose (2-hour OGTT) of 91 mg/dL (low for this range) pushed this prediction toward \u201cNo diabetes onset\u201d."
+          },
+          {
+            "feature": "BMI",
+            "label": "Body mass index",
+            "value": 25.2,
+            "value_display": "25.2 kg/m\u00b2",
+            "shap_value": -0.1367807330370796,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Body mass index of 25.2 kg/m\u00b2 (low for this range) pushed this prediction toward \u201cNo diabetes onset\u201d."
+          },
+          {
+            "feature": "Age",
+            "label": "Age",
+            "value": 23.0,
+            "value_display": "23 years",
+            "shap_value": -0.06328806332145002,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Age of 23 years (low for this range) pushed this prediction toward \u201cNo diabetes onset\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cDiabetes onset\u201d (3%). Lowering it: Plasma glucose (2-hour OGTT) (91 mg/dL), Body mass index (25.2 kg/m\u00b2), Age (23 years).",
+        "shap_lime_top5_overlap": 1.0
+      },
+      {
+        "case": "false_positive",
+        "case_label": "False positive (unnecessary referral)",
+        "test_index": 134,
+        "actual": 0,
+        "probability": 0.8525636888392737,
+        "patient": {
+          "Age": 60.0,
+          "Pregnancies": 7.0,
+          "DiabetesPedigreeFunction": 0.164,
+          "BMI": 34.2,
+          "BloodPressure": 95.0,
+          "SkinThickness": 31.0,
+          "Glucose": 179.0,
+          "Insulin": NaN
+        },
+        "patient_display": {
+          "Age": "60 years",
+          "Pregnancies": "7",
+          "DiabetesPedigreeFunction": "0.164",
+          "BMI": "34.2 kg/m\u00b2",
+          "BloodPressure": "95 mm Hg",
+          "SkinThickness": "31 mm",
+          "Glucose": "179 mg/dL",
+          "Insulin": "nan mu U/mL"
+        },
+        "shap_values": {
+          "Age": 0.03848188887311929,
+          "Pregnancies": 0.0162673099425047,
+          "DiabetesPedigreeFunction": -0.02695782948713481,
+          "BMI": 0.0429447604165597,
+          "BloodPressure": -0.006281639342902654,
+          "SkinThickness": 0.003029974040703529,
+          "Glucose": 0.2696940636932204,
+          "Insulin": 0.018331867470469485
+        },
+        "lime_explanation": [
+          [
+            "Glucose",
+            0.3508878682249327
+          ],
+          [
+            "Age",
+            0.08087473430154611
+          ],
+          [
+            "BMI",
+            0.07394950372124938
+          ],
+          [
+            "Insulin",
+            0.05445776273153915
+          ],
+          [
+            "Pregnancies",
+            0.047433071107207146
+          ],
+          [
+            "DiabetesPedigreeFunction",
+            -0.04414940903783627
+          ],
+          [
+            "SkinThickness",
+            0.015227742600735044
+          ],
+          [
+            "BloodPressure",
+            0.013067340146896908
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "Glucose",
+            "label": "Plasma glucose (2-hour OGTT)",
+            "value": 179.0,
+            "value_display": "179 mg/dL",
+            "shap_value": 0.2696940636932204,
+            "direction": "increases",
+            "level": "high",
+            "sentence": "Plasma glucose (2-hour OGTT) of 179 mg/dL (high for this range) pushed this prediction toward \u201cDiabetes onset\u201d."
+          },
+          {
+            "feature": "BMI",
+            "label": "Body mass index",
+            "value": 34.2,
+            "value_display": "34.2 kg/m\u00b2",
+            "shap_value": 0.0429447604165597,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Body mass index of 34.2 kg/m\u00b2 (mid-range for this range) pushed this prediction toward \u201cDiabetes onset\u201d."
+          },
+          {
+            "feature": "Age",
+            "label": "Age",
+            "value": 60.0,
+            "value_display": "60 years",
+            "shap_value": 0.03848188887311929,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Age of 60 years (mid-range for this range) pushed this prediction toward \u201cDiabetes onset\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cDiabetes onset\u201d (85%). Raising the estimate: Plasma glucose (2-hour OGTT) (179 mg/dL), Body mass index (34.2 kg/m\u00b2), Age (60 years).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "false_negative",
+        "case_label": "False negative (missed case)",
+        "test_index": 121,
+        "actual": 1,
+        "probability": 0.10256294705483462,
+        "patient": {
+          "Age": 26.0,
+          "Pregnancies": 3.0,
+          "DiabetesPedigreeFunction": 0.248,
+          "BMI": 31.0,
+          "BloodPressure": 50.0,
+          "SkinThickness": 32.0,
+          "Glucose": 78.0,
+          "Insulin": 88.0
+        },
+        "patient_display": {
+          "Age": "26 years",
+          "Pregnancies": "3",
+          "DiabetesPedigreeFunction": "0.248",
+          "BMI": "31.0 kg/m\u00b2",
+          "BloodPressure": "50 mm Hg",
+          "SkinThickness": "32 mm",
+          "Glucose": "78 mg/dL",
+          "Insulin": "88 mu U/mL"
+        },
+        "shap_values": {
+          "Age": -0.06932163206282851,
+          "Pregnancies": -0.0099847875818476,
+          "DiabetesPedigreeFunction": -0.032408986875245564,
+          "BMI": 0.019182776534385926,
+          "BloodPressure": -0.013521398254470364,
+          "SkinThickness": 0.008456548544687727,
+          "Glucose": -0.21913197900442044,
+          "Insulin": -0.07776088747816039
+        },
+        "lime_explanation": [
+          [
+            "Glucose",
+            -0.22921993264667104
+          ],
+          [
+            "Insulin",
+            -0.10769172332183564
+          ],
+          [
+            "Age",
+            -0.054193805018707214
+          ],
+          [
+            "BloodPressure",
+            -0.03919522655137005
+          ],
+          [
+            "BMI",
+            0.03537944316308591
+          ],
+          [
+            "DiabetesPedigreeFunction",
+            -0.024887535382213638
+          ],
+          [
+            "Pregnancies",
+            -0.01892248288567393
+          ],
+          [
+            "SkinThickness",
+            0.0059724664998257095
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "Glucose",
+            "label": "Plasma glucose (2-hour OGTT)",
+            "value": 78.0,
+            "value_display": "78 mg/dL",
+            "shap_value": -0.21913197900442044,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Plasma glucose (2-hour OGTT) of 78 mg/dL (low for this range) pushed this prediction toward \u201cNo diabetes onset\u201d."
+          },
+          {
+            "feature": "Insulin",
+            "label": "2-hour serum insulin",
+            "value": 88.0,
+            "value_display": "88 mu U/mL",
+            "shap_value": -0.07776088747816039,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "2-hour serum insulin of 88 mu U/mL (low for this range) pushed this prediction toward \u201cNo diabetes onset\u201d."
+          },
+          {
+            "feature": "Age",
+            "label": "Age",
+            "value": 26.0,
+            "value_display": "26 years",
+            "shap_value": -0.06932163206282851,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Age of 26 years (low for this range) pushed this prediction toward \u201cNo diabetes onset\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cDiabetes onset\u201d (10%). Lowering it: Plasma glucose (2-hour OGTT) (78 mg/dL), 2-hour serum insulin (88 mu U/mL), Age (26 years).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "borderline",
+        "case_label": "Borderline (p \u2248 0.5)",
+        "test_index": 77,
+        "actual": 1,
+        "probability": 0.4928749419452398,
+        "patient": {
+          "Age": 33.0,
+          "Pregnancies": 1.0,
+          "DiabetesPedigreeFunction": 1.321,
+          "BMI": 32.0,
+          "BloodPressure": 98.0,
+          "SkinThickness": 41.0,
+          "Glucose": 128.0,
+          "Insulin": 58.0
+        },
+        "patient_display": {
+          "Age": "33 years",
+          "Pregnancies": "1",
+          "DiabetesPedigreeFunction": "1.321",
+          "BMI": "32.0 kg/m\u00b2",
+          "BloodPressure": "98 mm Hg",
+          "SkinThickness": "41 mm",
+          "Glucose": "128 mg/dL",
+          "Insulin": "58 mu U/mL"
+        },
+        "shap_values": {
+          "Age": 0.03725008924932014,
+          "Pregnancies": -0.012740150838097325,
+          "DiabetesPedigreeFunction": 0.05098083211532057,
+          "BMI": 0.045404573364821954,
+          "BloodPressure": 0.005254323881987964,
+          "SkinThickness": 0.016879773490332733,
+          "Glucose": 0.01894327635713456,
+          "Insulin": -0.1661510689083144
+        },
+        "lime_explanation": [
+          [
+            "Insulin",
+            -0.10453303090461125
+          ],
+          [
+            "Age",
+            0.07473207210558847
+          ],
+          [
+            "DiabetesPedigreeFunction",
+            0.047119677006570986
+          ],
+          [
+            "BMI",
+            0.039527158471739716
+          ],
+          [
+            "SkinThickness",
+            0.03242110267311312
+          ],
+          [
+            "Pregnancies",
+            -0.020978868472960873
+          ],
+          [
+            "Glucose",
+            0.013812118500350943
+          ],
+          [
+            "BloodPressure",
+            0.008581209842437607
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "Insulin",
+            "label": "2-hour serum insulin",
+            "value": 58.0,
+            "value_display": "58 mu U/mL",
+            "shap_value": -0.1661510689083144,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "2-hour serum insulin of 58 mu U/mL (low for this range) pushed this prediction toward \u201cNo diabetes onset\u201d."
+          },
+          {
+            "feature": "DiabetesPedigreeFunction",
+            "label": "Diabetes pedigree function",
+            "value": 1.321,
+            "value_display": "1.321",
+            "shap_value": 0.05098083211532057,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Diabetes pedigree function of 1.321 (mid-range for this range) pushed this prediction toward \u201cDiabetes onset\u201d."
+          },
+          {
+            "feature": "BMI",
+            "label": "Body mass index",
+            "value": 32.0,
+            "value_display": "32.0 kg/m\u00b2",
+            "shap_value": 0.045404573364821954,
+            "direction": "increases",
+            "level": "low",
+            "sentence": "Body mass index of 32.0 kg/m\u00b2 (low for this range) pushed this prediction toward \u201cDiabetes onset\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cDiabetes onset\u201d (49%). Raising the estimate: Diabetes pedigree function (1.321), Body mass index (32.0 kg/m\u00b2). Lowering it: 2-hour serum insulin (58 mu U/mL).",
+        "shap_lime_top5_overlap": 0.8
+      }
+    ]
+  },
+  "kidney_disease": {
+    "model": "random_forest",
+    "model_label": "Random Forest",
+    "cases": [
+      {
+        "case": "true_positive",
+        "case_label": "True positive (correctly flagged)",
+        "test_index": 20,
+        "actual": 1,
+        "probability": 1.0,
+        "patient": {
+          "age": 59.0,
+          "htn": 0.0,
+          "dm": 1.0,
+          "cad": 0.0,
+          "bp": 80.0,
+          "appet": 1.0,
+          "pe": 0.0,
+          "ane": 0.0,
+          "sg": 1.01,
+          "al": 1.0,
+          "su": 0.0,
+          "rbc": 1.0,
+          "pc": 0.0,
+          "pcc": 0.0,
+          "ba": 0.0,
+          "bgr": 303.0,
+          "bu": 35.0,
+          "sc": 1.3,
+          "sod": 122.0,
+          "pot": 3.5,
+          "hemo": 10.4,
+          "pcv": 35.0,
+          "wbcc": 10900.0,
+          "rbcc": 4.3
+        },
+        "patient_display": {
+          "age": "59 years",
+          "htn": "No",
+          "dm": "Yes",
+          "cad": "No",
+          "bp": "80 mm Hg",
+          "appet": "Poor",
+          "pe": "No",
+          "ane": "No",
+          "sg": "1.010",
+          "al": "1",
+          "su": "0",
+          "rbc": "Abnormal",
+          "pc": "Normal",
+          "pcc": "Not present",
+          "ba": "Not present",
+          "bgr": "303 mg/dL",
+          "bu": "35 mg/dL",
+          "sc": "1.30 mg/dL",
+          "sod": "122 mEq/L",
+          "pot": "3.5 mEq/L",
+          "hemo": "10.4 g/dL",
+          "pcv": "35 %",
+          "wbcc": "10900 cells/cumm",
+          "rbcc": "4.3 millions/cmm"
+        },
+        "shap_values": {
+          "age": 0.0013020979345368738,
+          "htn": -0.008394594304902438,
+          "dm": 0.027954836888321368,
+          "cad": -5.009804468723534e-05,
+          "bp": -0.00047564889366351814,
+          "appet": 0.013959262117794358,
+          "pe": -0.00046329873169337853,
+          "ane": -0.00022327054764460474,
+          "sg": 0.05772265607664856,
+          "al": 0.038595638986341045,
+          "su": -0.0003354463449843962,
+          "rbc": 0.05964585727014507,
+          "pc": -0.002756986086247265,
+          "pcc": -0.00014874296642969012,
+          "ba": -5.328615171363534e-05,
+          "bgr": 0.026458655136413822,
+          "bu": -0.0024933733388161463,
+          "sc": 0.028646849053067174,
+          "sod": 0.013101370878419238,
+          "pot": 0.0005352831368029253,
+          "hemo": 0.058856783779961286,
+          "pcv": 0.04870038395129706,
+          "wbcc": 0.0005981487806850567,
+          "rbcc": 0.01415025475368168
+        },
+        "lime_explanation": [
+          [
+            "hemo",
+            0.07728017660650434
+          ],
+          [
+            "pcv",
+            0.05309183800504846
+          ],
+          [
+            "htn",
+            -0.04878644689920984
+          ],
+          [
+            "dm",
+            0.03224683311580766
+          ],
+          [
+            "sg",
+            0.02892905508696742
+          ],
+          [
+            "sod",
+            0.028048192351250688
+          ],
+          [
+            "rbcc",
+            0.024960577550538647
+          ],
+          [
+            "appet",
+            0.022525284426539914
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "rbc",
+            "label": "Red blood cells (urine microscopy)",
+            "value": 1.0,
+            "value_display": "Abnormal",
+            "shap_value": 0.05964585727014507,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Red blood cells (urine microscopy) of Abnormal pushed this prediction toward \u201cChronic kidney disease\u201d."
+          },
+          {
+            "feature": "hemo",
+            "label": "Haemoglobin",
+            "value": 10.4,
+            "value_display": "10.4 g/dL",
+            "shap_value": 0.058856783779961286,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Haemoglobin of 10.4 g/dL (mid-range for this range) pushed this prediction toward \u201cChronic kidney disease\u201d."
+          },
+          {
+            "feature": "sg",
+            "label": "Urine specific gravity",
+            "value": 1.01,
+            "value_display": "1.010",
+            "shap_value": 0.05772265607664856,
+            "direction": "increases",
+            "level": "low",
+            "sentence": "Urine specific gravity of 1.010 (low for this range) pushed this prediction toward \u201cChronic kidney disease\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cChronic kidney disease\u201d (100%). Raising the estimate: Red blood cells (urine microscopy) (Abnormal), Haemoglobin (10.4 g/dL), Urine specific gravity (1.010).",
+        "shap_lime_top5_overlap": 0.6
+      },
+      {
+        "case": "true_negative",
+        "case_label": "True negative (correctly cleared)",
+        "test_index": 21,
+        "actual": 0,
+        "probability": 0.00022451485407975303,
+        "patient": {
+          "age": 23.0,
+          "htn": 0.0,
+          "dm": 0.0,
+          "cad": 0.0,
+          "bp": 80.0,
+          "appet": 0.0,
+          "pe": 0.0,
+          "ane": 0.0,
+          "sg": 1.025,
+          "al": 0.0,
+          "su": 0.0,
+          "rbc": 0.0,
+          "pc": 0.0,
+          "pcc": 0.0,
+          "ba": 0.0,
+          "bgr": 70.0,
+          "bu": 36.0,
+          "sc": 1.0,
+          "sod": 150.0,
+          "pot": 4.6,
+          "hemo": 17.0,
+          "pcv": 52.0,
+          "wbcc": 9800.0,
+          "rbcc": 5.0
+        },
+        "patient_display": {
+          "age": "23 years",
+          "htn": "No",
+          "dm": "No",
+          "cad": "No",
+          "bp": "80 mm Hg",
+          "appet": "Good",
+          "pe": "No",
+          "ane": "No",
+          "sg": "1.025",
+          "al": "0",
+          "su": "0",
+          "rbc": "Normal",
+          "pc": "Normal",
+          "pcc": "Not present",
+          "ba": "Not present",
+          "bgr": "70 mg/dL",
+          "bu": "36 mg/dL",
+          "sc": "1.00 mg/dL",
+          "sod": "150 mEq/L",
+          "pot": "4.6 mEq/L",
+          "hemo": "17.0 g/dL",
+          "pcv": "52 %",
+          "wbcc": "9800 cells/cumm",
+          "rbcc": "5.0 millions/cmm"
+        },
+        "shap_values": {
+          "age": -0.005744692649786465,
+          "htn": -0.03589120040387898,
+          "dm": -0.023033326712857485,
+          "cad": -0.0005198487743460267,
+          "bp": -0.0037002451233545623,
+          "appet": -0.004830184024098622,
+          "pe": -0.0022501160915610594,
+          "ane": -0.0014180421008849874,
+          "sg": -0.08708923669537737,
+          "al": -0.04941837154884618,
+          "su": -0.0024917488949099727,
+          "rbc": -0.05585349763976412,
+          "pc": -0.011885604987618488,
+          "pcc": -0.0008799428184754742,
+          "ba": -0.00033081395398370394,
+          "bgr": -0.018766984935476988,
+          "bu": -0.010829693893052798,
+          "sc": -0.05872525819504091,
+          "sod": -0.03617542422917233,
+          "pot": -0.0021438512099188527,
+          "hemo": -0.11732131795964046,
+          "pcv": -0.09553322728493165,
+          "wbcc": 0.0006957035691276017,
+          "rbcc": -0.0008052252547372268
+        },
+        "lime_explanation": [
+          [
+            "hemo",
+            -0.17247359248771754
+          ],
+          [
+            "pcv",
+            -0.11456290734728634
+          ],
+          [
+            "sod",
+            -0.0644807623080244
+          ],
+          [
+            "htn",
+            -0.053173133547839035
+          ],
+          [
+            "sg",
+            -0.04582203803852863
+          ],
+          [
+            "dm",
+            -0.03805601848554965
+          ],
+          [
+            "bgr",
+            -0.02287467692284985
+          ],
+          [
+            "appet",
+            -0.01874797155869078
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "hemo",
+            "label": "Haemoglobin",
+            "value": 17.0,
+            "value_display": "17.0 g/dL",
+            "shap_value": -0.11732131795964046,
+            "direction": "decreases",
+            "level": "high",
+            "sentence": "Haemoglobin of 17.0 g/dL (high for this range) pushed this prediction toward \u201cNo chronic kidney disease\u201d."
+          },
+          {
+            "feature": "pcv",
+            "label": "Packed cell volume",
+            "value": 52.0,
+            "value_display": "52 %",
+            "shap_value": -0.09553322728493165,
+            "direction": "decreases",
+            "level": "high",
+            "sentence": "Packed cell volume of 52 % (high for this range) pushed this prediction toward \u201cNo chronic kidney disease\u201d."
+          },
+          {
+            "feature": "sg",
+            "label": "Urine specific gravity",
+            "value": 1.025,
+            "value_display": "1.025",
+            "shap_value": -0.08708923669537737,
+            "direction": "decreases",
+            "level": "high",
+            "sentence": "Urine specific gravity of 1.025 (high for this range) pushed this prediction toward \u201cNo chronic kidney disease\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cChronic kidney disease\u201d (0%). Lowering it: Haemoglobin (17.0 g/dL), Packed cell volume (52 %), Urine specific gravity (1.025).",
+        "shap_lime_top5_overlap": 0.6
+      },
+      {
+        "case": "borderline",
+        "case_label": "Borderline (p \u2248 0.5)",
+        "test_index": 50,
+        "actual": 1,
+        "probability": 0.6200490196078431,
+        "patient": {
+          "age": 56.0,
+          "htn": 0.0,
+          "dm": 0.0,
+          "cad": 0.0,
+          "bp": 70.0,
+          "appet": 0.0,
+          "pe": 0.0,
+          "ane": 0.0,
+          "sg": 1.015,
+          "al": 4.0,
+          "su": 1.0,
+          "rbc": 1.0,
+          "pc": 0.0,
+          "pcc": 0.0,
+          "ba": 0.0,
+          "bgr": 210.0,
+          "bu": 26.0,
+          "sc": 1.7,
+          "sod": 136.0,
+          "pot": 3.8,
+          "hemo": 16.1,
+          "pcv": 52.0,
+          "wbcc": 12500.0,
+          "rbcc": 5.6
+        },
+        "patient_display": {
+          "age": "56 years",
+          "htn": "No",
+          "dm": "No",
+          "cad": "No",
+          "bp": "70 mm Hg",
+          "appet": "Good",
+          "pe": "No",
+          "ane": "No",
+          "sg": "1.015",
+          "al": "4",
+          "su": "1",
+          "rbc": "Abnormal",
+          "pc": "Normal",
+          "pcc": "Not present",
+          "ba": "Not present",
+          "bgr": "210 mg/dL",
+          "bu": "26 mg/dL",
+          "sc": "1.70 mg/dL",
+          "sod": "136 mEq/L",
+          "pot": "3.8 mEq/L",
+          "hemo": "16.1 g/dL",
+          "pcv": "52 %",
+          "wbcc": "12500 cells/cumm",
+          "rbcc": "5.6 millions/cmm"
+        },
+        "shap_values": {
+          "age": 0.001035445424185432,
+          "htn": -0.020569889831915943,
+          "dm": -0.01393207353810396,
+          "cad": -4.527217545766954e-05,
+          "bp": -0.001942380056615347,
+          "appet": -0.002053098727486515,
+          "pe": -0.0010011430622917884,
+          "ane": -0.0009108843360955093,
+          "sg": 0.07572441047587401,
+          "al": 0.06390198533250092,
+          "su": 0.012722727368040577,
+          "rbc": 0.07747353817746942,
+          "pc": 0.0003542661812530635,
+          "pcc": -0.00025571523443959827,
+          "ba": -8.96701653325855e-05,
+          "bgr": 0.05225462114032577,
+          "bu": -0.007409500935017018,
+          "sc": 0.0593556781276246,
+          "sod": 0.016893184458146224,
+          "pot": 0.002446681650251777,
+          "hemo": -0.1641617922468507,
+          "pcv": -0.1337899553108289,
+          "wbcc": 0.0005890461528601424,
+          "rbcc": -0.021707855926920296
+        },
+        "lime_explanation": [
+          [
+            "hemo",
+            -0.1727713987869244
+          ],
+          [
+            "pcv",
+            -0.1154793334005919
+          ],
+          [
+            "rbcc",
+            -0.056400208947090906
+          ],
+          [
+            "htn",
+            -0.050663707418814125
+          ],
+          [
+            "sc",
+            0.043678079538886125
+          ],
+          [
+            "dm",
+            -0.03486531697288196
+          ],
+          [
+            "sg",
+            0.022834210685871867
+          ],
+          [
+            "bgr",
+            0.02176256947631576
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "hemo",
+            "label": "Haemoglobin",
+            "value": 16.1,
+            "value_display": "16.1 g/dL",
+            "shap_value": -0.1641617922468507,
+            "direction": "decreases",
+            "level": "high",
+            "sentence": "Haemoglobin of 16.1 g/dL (high for this range) pushed this prediction toward \u201cNo chronic kidney disease\u201d."
+          },
+          {
+            "feature": "pcv",
+            "label": "Packed cell volume",
+            "value": 52.0,
+            "value_display": "52 %",
+            "shap_value": -0.1337899553108289,
+            "direction": "decreases",
+            "level": "high",
+            "sentence": "Packed cell volume of 52 % (high for this range) pushed this prediction toward \u201cNo chronic kidney disease\u201d."
+          },
+          {
+            "feature": "rbc",
+            "label": "Red blood cells (urine microscopy)",
+            "value": 1.0,
+            "value_display": "Abnormal",
+            "shap_value": 0.07747353817746942,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Red blood cells (urine microscopy) of Abnormal pushed this prediction toward \u201cChronic kidney disease\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cChronic kidney disease\u201d (62%). Raising the estimate: Red blood cells (urine microscopy) (Abnormal). Lowering it: Haemoglobin (16.1 g/dL), Packed cell volume (52 %).",
+        "shap_lime_top5_overlap": 0.4
+      }
+    ]
+  },
+  "breast_cancer": {
+    "model": "logistic_regression",
+    "model_label": "Logistic Regression",
+    "cases": [
+      {
+        "case": "true_positive",
+        "case_label": "True positive (correctly flagged)",
+        "test_index": 108,
+        "actual": 1,
+        "probability": 0.9999999998933822,
+        "patient": {
+          "radius1": 23.09,
+          "texture1": 19.83,
+          "perimeter1": 152.1,
+          "area1": 1682.0,
+          "smoothness1": 0.09342,
+          "compactness1": 0.1275,
+          "concavity1": 0.1676,
+          "concave_points1": 0.1003,
+          "symmetry1": 0.1505,
+          "fractal_dimension1": 0.05484,
+          "radius2": 1.291,
+          "texture2": 0.7452,
+          "perimeter2": 9.635,
+          "area2": 180.2,
+          "smoothness2": 0.005753,
+          "compactness2": 0.03356,
+          "concavity2": 0.03976,
+          "concave_points2": 0.02156,
+          "symmetry2": 0.02201,
+          "fractal_dimension2": 0.002897,
+          "radius3": 30.79,
+          "texture3": 23.87,
+          "perimeter3": 211.5,
+          "area3": 2782.0,
+          "smoothness3": 0.1199,
+          "compactness3": 0.3625,
+          "concavity3": 0.3794,
+          "concave_points3": 0.2264,
+          "symmetry3": 0.2908,
+          "fractal_dimension3": 0.07277
+        },
+        "patient_display": {
+          "radius1": "23.1 \u00b5m",
+          "texture1": "19.8",
+          "perimeter1": "152 \u00b5m",
+          "area1": "1682 \u00b5m\u00b2",
+          "smoothness1": "0.093",
+          "compactness1": "0.128",
+          "concavity1": "0.168",
+          "concave_points1": "0.100",
+          "symmetry1": "0.150",
+          "fractal_dimension1": "0.0548",
+          "radius2": "1.29 \u00b5m",
+          "texture2": "0.75",
+          "perimeter2": "9.6 \u00b5m",
+          "area2": "180 \u00b5m\u00b2",
+          "smoothness2": "0.0058",
+          "compactness2": "0.034",
+          "concavity2": "0.040",
+          "concave_points2": "0.0216",
+          "symmetry2": "0.0220",
+          "fractal_dimension2": "0.0029",
+          "radius3": "30.8 \u00b5m",
+          "texture3": "23.9",
+          "perimeter3": "212 \u00b5m",
+          "area3": "2782 \u00b5m\u00b2",
+          "smoothness3": "0.120",
+          "compactness3": "0.36",
+          "concavity3": "0.38",
+          "concave_points3": "0.226",
+          "symmetry3": "0.291",
+          "fractal_dimension3": "0.073"
+        },
+        "shap_values": {
+          "radius1": 0.8330151043286057,
+          "texture1": 0.03677627950080786,
+          "perimeter1": 0.7955412073599326,
+          "area1": 1.2303414165577844,
+          "smoothness1": -0.11268262522828333,
+          "compactness1": -0.14818660084283886,
+          "concavity1": 0.7161016715884883,
+          "concave_points1": 1.121015719473067,
+          "symmetry1": 0.1923303874119206,
+          "fractal_dimension1": 0.07726326021891716,
+          "radius2": 3.742557489699051,
+          "texture2": 0.34828904165013574,
+          "perimeter2": 2.4128749035261925,
+          "area2": 2.6490021419642775,
+          "smoothness2": -0.10276318777428535,
+          "compactness2": -0.43622298810803434,
+          "concavity2": -0.027564298394439992,
+          "concave_points2": 0.6941919375795937,
+          "symmetry2": -0.12023276023483925,
+          "fractal_dimension2": 0.2116198769709432,
+          "radius3": 2.5090160330757985,
+          "texture3": -0.5922552809190552,
+          "perimeter3": 2.1090285151534136,
+          "area3": 2.8715619928265608,
+          "smoothness3": -0.2997404676719207,
+          "compactness3": -0.09830674007916103,
+          "concavity3": 0.382768202212158,
+          "concave_points3": 1.0439164569691284,
+          "symmetry3": 0.008678120186978538,
+          "fractal_dimension3": -0.041879432086681455
+        },
+        "lime_explanation": [
+          [
+            "radius2",
+            0.22834525810237566
+          ],
+          [
+            "compactness2",
+            -0.18253640021300596
+          ],
+          [
+            "area2",
+            0.18080555538349263
+          ],
+          [
+            "concave_points1",
+            0.17947505968340832
+          ],
+          [
+            "area3",
+            0.17459419277272453
+          ],
+          [
+            "perimeter2",
+            0.15729625508854012
+          ],
+          [
+            "radius3",
+            0.15161891875294312
+          ],
+          [
+            "concavity1",
+            0.14643514297156682
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "radius2",
+            "label": "Radius (variability)",
+            "value": 1.291,
+            "value_display": "1.29 \u00b5m",
+            "shap_value": 3.742557489699051,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Radius (variability) of 1.29 \u00b5m (mid-range for this range) pushed this prediction toward \u201cMalignant\u201d."
+          },
+          {
+            "feature": "area3",
+            "label": "Area (worst)",
+            "value": 2782.0,
+            "value_display": "2782 \u00b5m\u00b2",
+            "shap_value": 2.8715619928265608,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Area (worst) of 2782 \u00b5m\u00b2 (mid-range for this range) pushed this prediction toward \u201cMalignant\u201d."
+          },
+          {
+            "feature": "area2",
+            "label": "Area (variability)",
+            "value": 180.2,
+            "value_display": "180 \u00b5m\u00b2",
+            "shap_value": 2.6490021419642775,
+            "direction": "increases",
+            "level": "low",
+            "sentence": "Area (variability) of 180 \u00b5m\u00b2 (low for this range) pushed this prediction toward \u201cMalignant\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cMalignant\u201d (100%). Raising the estimate: Radius (variability) (1.29 \u00b5m), Area (worst) (2782 \u00b5m\u00b2), Area (variability) (180 \u00b5m\u00b2).",
+        "shap_lime_top5_overlap": 0.6
+      },
+      {
+        "case": "true_negative",
+        "case_label": "True negative (correctly cleared)",
+        "test_index": 91,
+        "actual": 0,
+        "probability": 2.7383722520503946e-08,
+        "patient": {
+          "radius1": 8.888,
+          "texture1": 14.64,
+          "perimeter1": 58.79,
+          "area1": 244.0,
+          "smoothness1": 0.09783,
+          "compactness1": 0.1531,
+          "concavity1": 0.08606,
+          "concave_points1": 0.02872,
+          "symmetry1": 0.1902,
+          "fractal_dimension1": 0.0898,
+          "radius2": 0.5262,
+          "texture2": 0.8522,
+          "perimeter2": 3.168,
+          "area2": 25.44,
+          "smoothness2": 0.01721,
+          "compactness2": 0.09368,
+          "concavity2": 0.05671,
+          "concave_points2": 0.01766,
+          "symmetry2": 0.02541,
+          "fractal_dimension2": 0.02193,
+          "radius3": 9.733,
+          "texture3": 15.67,
+          "perimeter3": 62.56,
+          "area3": 284.4,
+          "smoothness3": 0.1207,
+          "compactness3": 0.2436,
+          "concavity3": 0.1434,
+          "concave_points3": 0.04786,
+          "symmetry3": 0.2254,
+          "fractal_dimension3": 0.1084
+        },
+        "patient_display": {
+          "radius1": "8.9 \u00b5m",
+          "texture1": "14.6",
+          "perimeter1": "59 \u00b5m",
+          "area1": "244 \u00b5m\u00b2",
+          "smoothness1": "0.098",
+          "compactness1": "0.153",
+          "concavity1": "0.086",
+          "concave_points1": "0.029",
+          "symmetry1": "0.190",
+          "fractal_dimension1": "0.0898",
+          "radius2": "0.53 \u00b5m",
+          "texture2": "0.85",
+          "perimeter2": "3.2 \u00b5m",
+          "area2": "25 \u00b5m\u00b2",
+          "smoothness2": "0.0172",
+          "compactness2": "0.094",
+          "concavity2": "0.057",
+          "concave_points2": "0.0177",
+          "symmetry2": "0.0254",
+          "fractal_dimension2": "0.0219",
+          "radius3": "9.7 \u00b5m",
+          "texture3": "15.7",
+          "perimeter3": "63 \u00b5m",
+          "area3": "284 \u00b5m\u00b2",
+          "smoothness3": "0.121",
+          "compactness3": "0.24",
+          "concavity3": "0.14",
+          "concave_points3": "0.048",
+          "symmetry3": "0.225",
+          "fractal_dimension3": "0.108"
+        },
+        "shap_values": {
+          "radius1": -0.5591664616855225,
+          "texture1": -0.5492504033643862,
+          "perimeter1": -0.5063762785085096,
+          "area1": -0.5619309945697654,
+          "smoothness1": -0.007476549677466209,
+          "compactness1": -0.3614203118028729,
+          "concavity1": -0.07377329506759549,
+          "concave_points1": -0.6030391221131497,
+          "symmetry1": -0.044981698998436785,
+          "fractal_dimension1": -0.2652972117159149,
+          "radius2": 0.4612569779287561,
+          "texture2": 0.26934890625978825,
+          "perimeter2": 0.09788192664696888,
+          "area2": -0.3398443622087211,
+          "smoothness2": 0.9098348309320021,
+          "compactness2": -3.56382142215242,
+          "concavity2": -0.08060205001330664,
+          "concave_points2": 0.40361379086238036,
+          "symmetry2": -0.25201040488495186,
+          "fractal_dimension2": -3.9965452817723426,
+          "radius3": -1.347345849433907,
+          "texture3": -2.5147814293440014,
+          "perimeter3": -1.0586945716139307,
+          "area3": -1.096099980524884,
+          "smoothness3": -0.2851903126916086,
+          "compactness3": 0.027730667799150486,
+          "concavity3": -0.6317469975199792,
+          "concave_points3": -0.8221798193383063,
+          "symmetry3": -1.0912231593254142,
+          "fractal_dimension3": 0.07409878671250554
+        },
+        "lime_explanation": [
+          [
+            "radius2",
+            0.24260690222235837
+          ],
+          [
+            "texture3",
+            -0.23851619080418923
+          ],
+          [
+            "compactness2",
+            -0.17180001945307574
+          ],
+          [
+            "symmetry3",
+            -0.16164586222019556
+          ],
+          [
+            "radius3",
+            -0.1423725829995314
+          ],
+          [
+            "area3",
+            -0.11614920564868737
+          ],
+          [
+            "fractal_dimension2",
+            -0.11592854707033104
+          ],
+          [
+            "perimeter3",
+            -0.10778517146087042
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "fractal_dimension2",
+            "label": "Fractal dimension (variability)",
+            "value": 0.02193,
+            "value_display": "0.0219",
+            "shap_value": -3.9965452817723426,
+            "direction": "decreases",
+            "level": "mid-range",
+            "sentence": "Fractal dimension (variability) of 0.0219 (mid-range for this range) pushed this prediction toward \u201cBenign\u201d."
+          },
+          {
+            "feature": "compactness2",
+            "label": "Compactness (variability)",
+            "value": 0.09368,
+            "value_display": "0.094",
+            "shap_value": -3.56382142215242,
+            "direction": "decreases",
+            "level": "mid-range",
+            "sentence": "Compactness (variability) of 0.094 (mid-range for this range) pushed this prediction toward \u201cBenign\u201d."
+          },
+          {
+            "feature": "texture3",
+            "label": "Texture (grey-scale s.d.) (worst)",
+            "value": 15.67,
+            "value_display": "15.7",
+            "shap_value": -2.5147814293440014,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Texture (grey-scale s.d.) (worst) of 15.7 (low for this range) pushed this prediction toward \u201cBenign\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cMalignant\u201d (0%). Lowering it: Fractal dimension (variability) (0.0219), Compactness (variability) (0.094), Texture (grey-scale s.d.) (worst) (15.7).",
+        "shap_lime_top5_overlap": 0.6
+      },
+      {
+        "case": "false_positive",
+        "case_label": "False positive (unnecessary referral)",
+        "test_index": 4,
+        "actual": 0,
+        "probability": 0.5113259857487571,
+        "patient": {
+          "radius1": 13.38,
+          "texture1": 30.72,
+          "perimeter1": 86.34,
+          "area1": 557.2,
+          "smoothness1": 0.09245,
+          "compactness1": 0.07426,
+          "concavity1": 0.02819,
+          "concave_points1": 0.03264,
+          "symmetry1": 0.1375,
+          "fractal_dimension1": 0.06016,
+          "radius2": 0.3408,
+          "texture2": 1.924,
+          "perimeter2": 2.287,
+          "area2": 28.93,
+          "smoothness2": 0.005841,
+          "compactness2": 0.01246,
+          "concavity2": 0.007936,
+          "concave_points2": 0.009128,
+          "symmetry2": 0.01564,
+          "fractal_dimension2": 0.002985,
+          "radius3": 15.05,
+          "texture3": 41.61,
+          "perimeter3": 96.69,
+          "area3": 705.6,
+          "smoothness3": 0.1172,
+          "compactness3": 0.1421,
+          "concavity3": 0.07003,
+          "concave_points3": 0.07763,
+          "symmetry3": 0.2196,
+          "fractal_dimension3": 0.07675
+        },
+        "patient_display": {
+          "radius1": "13.4 \u00b5m",
+          "texture1": "30.7",
+          "perimeter1": "86 \u00b5m",
+          "area1": "557 \u00b5m\u00b2",
+          "smoothness1": "0.092",
+          "compactness1": "0.074",
+          "concavity1": "0.028",
+          "concave_points1": "0.033",
+          "symmetry1": "0.138",
+          "fractal_dimension1": "0.0602",
+          "radius2": "0.34 \u00b5m",
+          "texture2": "1.92",
+          "perimeter2": "2.3 \u00b5m",
+          "area2": "29 \u00b5m\u00b2",
+          "smoothness2": "0.0058",
+          "compactness2": "0.012",
+          "concavity2": "0.008",
+          "concave_points2": "0.0091",
+          "symmetry2": "0.0156",
+          "fractal_dimension2": "0.0030",
+          "radius3": "15.1 \u00b5m",
+          "texture3": "41.6",
+          "perimeter3": "97 \u00b5m",
+          "area3": "706 \u00b5m\u00b2",
+          "smoothness3": "0.117",
+          "compactness3": "0.14",
+          "concavity3": "0.07",
+          "concave_points3": "0.078",
+          "symmetry3": "0.220",
+          "fractal_dimension3": "0.077"
+        },
+        "shap_values": {
+          "radius1": -0.11882850966922441,
+          "texture1": 1.2664160822757533,
+          "perimeter1": -0.12198203635144615,
+          "area1": -0.1715695765133337,
+          "smoothness1": -0.1358231905988712,
+          "compactness1": 0.2952728824193566,
+          "concavity1": -0.6343578464581715,
+          "concave_points1": -0.5086231542587494,
+          "symmetry1": 0.27003963485108035,
+          "fractal_dimension1": 0.025134492750573178,
+          "radius2": -0.3341838103586559,
+          "texture2": -0.5213804125381033,
+          "perimeter2": -0.21748977779567794,
+          "area2": -0.27244274486855724,
+          "smoothness2": -0.09498552995407475,
+          "compactness2": 0.6614537743393466,
+          "concavity2": 0.0720152536715666,
+          "concave_points2": -0.232081785494354,
+          "symmetry2": 0.12665653283022446,
+          "fractal_dimension2": 0.19216322095405625,
+          "radius3": -0.37359478663749207,
+          "texture3": 3.566965923112474,
+          "perimeter3": -0.33280234016925864,
+          "area3": -0.4269859417774349,
+          "smoothness3": -0.3488472407304744,
+          "compactness3": 0.13532357696356276,
+          "concavity3": -0.9471494560129747,
+          "concave_points3": -0.5110244135711263,
+          "symmetry3": -1.188767921117033,
+          "fractal_dimension3": -0.02892424514251182
+        },
+        "lime_explanation": [
+          [
+            "texture3",
+            0.2661374423917702
+          ],
+          [
+            "symmetry3",
+            -0.1562933606309378
+          ],
+          [
+            "concavity3",
+            -0.10301402671642661
+          ],
+          [
+            "concavity1",
+            -0.09973329320988208
+          ],
+          [
+            "compactness2",
+            0.09168585828440984
+          ],
+          [
+            "texture1",
+            0.08602052986734283
+          ],
+          [
+            "texture2",
+            -0.07466036021389409
+          ],
+          [
+            "perimeter2",
+            -0.07332561981412744
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "texture3",
+            "label": "Texture (grey-scale s.d.) (worst)",
+            "value": 41.61,
+            "value_display": "41.6",
+            "shap_value": 3.566965923112474,
+            "direction": "increases",
+            "level": "high",
+            "sentence": "Texture (grey-scale s.d.) (worst) of 41.6 (high for this range) pushed this prediction toward \u201cMalignant\u201d."
+          },
+          {
+            "feature": "texture1",
+            "label": "Texture (grey-scale s.d.) (mean)",
+            "value": 30.72,
+            "value_display": "30.7",
+            "shap_value": 1.2664160822757533,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Texture (grey-scale s.d.) (mean) of 30.7 (mid-range for this range) pushed this prediction toward \u201cMalignant\u201d."
+          },
+          {
+            "feature": "symmetry3",
+            "label": "Symmetry (worst)",
+            "value": 0.2196,
+            "value_display": "0.220",
+            "shap_value": -1.188767921117033,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Symmetry (worst) of 0.220 (low for this range) pushed this prediction toward \u201cBenign\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cMalignant\u201d (51%). Raising the estimate: Texture (grey-scale s.d.) (worst) (41.6), Texture (grey-scale s.d.) (mean) (30.7). Lowering it: Symmetry (worst) (0.220).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "false_negative",
+        "case_label": "False negative (missed case)",
+        "test_index": 16,
+        "actual": 1,
+        "probability": 0.06347811320655482,
+        "patient": {
+          "radius1": 13.8,
+          "texture1": 15.79,
+          "perimeter1": 90.43,
+          "area1": 584.1,
+          "smoothness1": 0.1007,
+          "compactness1": 0.128,
+          "concavity1": 0.07789,
+          "concave_points1": 0.05069,
+          "symmetry1": 0.1662,
+          "fractal_dimension1": 0.06566,
+          "radius2": 0.2787,
+          "texture2": 0.6205,
+          "perimeter2": 1.957,
+          "area2": 23.35,
+          "smoothness2": 0.004717,
+          "compactness2": 0.02065,
+          "concavity2": 0.01759,
+          "concave_points2": 0.009206,
+          "symmetry2": 0.0122,
+          "fractal_dimension2": 0.00313,
+          "radius3": 16.57,
+          "texture3": 20.86,
+          "perimeter3": 110.3,
+          "area3": 812.4,
+          "smoothness3": 0.1411,
+          "compactness3": 0.3542,
+          "concavity3": 0.2779,
+          "concave_points3": 0.1383,
+          "symmetry3": 0.2589,
+          "fractal_dimension3": 0.103
+        },
+        "patient_display": {
+          "radius1": "13.8 \u00b5m",
+          "texture1": "15.8",
+          "perimeter1": "90 \u00b5m",
+          "area1": "584 \u00b5m\u00b2",
+          "smoothness1": "0.101",
+          "compactness1": "0.128",
+          "concavity1": "0.078",
+          "concave_points1": "0.051",
+          "symmetry1": "0.166",
+          "fractal_dimension1": "0.0657",
+          "radius2": "0.28 \u00b5m",
+          "texture2": "0.62",
+          "perimeter2": "2.0 \u00b5m",
+          "area2": "23 \u00b5m\u00b2",
+          "smoothness2": "0.0047",
+          "compactness2": "0.021",
+          "concavity2": "0.018",
+          "concave_points2": "0.0092",
+          "symmetry2": "0.0122",
+          "fractal_dimension2": "0.0031",
+          "radius3": "16.6 \u00b5m",
+          "texture3": "20.9",
+          "perimeter3": "110 \u00b5m",
+          "area3": "812 \u00b5m\u00b2",
+          "smoothness3": "0.141",
+          "compactness3": "0.35",
+          "concavity3": "0.28",
+          "concave_points3": "0.138",
+          "symmetry3": "0.259",
+          "fractal_dimension3": "0.103"
+        },
+        "shap_values": {
+          "radius1": -0.07765710720999798,
+          "texture1": -0.41939863355803314,
+          "perimeter1": -0.06491588570090565,
+          "area1": -0.13804236659724817,
+          "smoothness1": 0.060990896315922714,
+          "compactness1": -0.152351321760027,
+          "concavity1": -0.1529157831419173,
+          "concave_points1": -0.07387615941897287,
+          "symmetry1": 0.0984815270430892,
+          "fractal_dimension1": -0.028758030008053125,
+          "radius2": -0.6006178608044396,
+          "texture2": 0.44028749850225096,
+          "perimeter2": -0.33561992815444447,
+          "area2": -0.3802080814754668,
+          "smoothness2": -0.1943274321122197,
+          "compactness2": 0.2353887182045574,
+          "concavity2": 0.041807203280502366,
+          "concave_points2": -0.22627022256000973,
+          "symmetry2": 0.25998450271151485,
+          "fractal_dimension2": 0.16010395819895842,
+          "radius3": -0.09522322082019855,
+          "texture3": -1.2979630500360175,
+          "perimeter3": -0.04333872253193113,
+          "area3": -0.2573245473371986,
+          "smoothness3": 0.08583863930635166,
+          "compactness3": -0.08950850218689876,
+          "concavity3": -0.053559309537045206,
+          "concave_points3": 0.12309713388923035,
+          "symmetry3": -0.5278180696669252,
+          "fractal_dimension3": 0.05652139739127036
+        },
+        "lime_explanation": [
+          [
+            "texture3",
+            -0.24112881417704907
+          ],
+          [
+            "radius2",
+            -0.08060940055149292
+          ],
+          [
+            "symmetry3",
+            -0.06077125781656026
+          ],
+          [
+            "texture2",
+            0.05970181332620182
+          ],
+          [
+            "symmetry2",
+            0.05946074893712537
+          ],
+          [
+            "texture1",
+            -0.05836955697999128
+          ],
+          [
+            "area2",
+            -0.05034959603276005
+          ],
+          [
+            "concavity2",
+            0.03934979466442106
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "texture3",
+            "label": "Texture (grey-scale s.d.) (worst)",
+            "value": 20.86,
+            "value_display": "20.9",
+            "shap_value": -1.2979630500360175,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Texture (grey-scale s.d.) (worst) of 20.9 (low for this range) pushed this prediction toward \u201cBenign\u201d."
+          },
+          {
+            "feature": "radius2",
+            "label": "Radius (variability)",
+            "value": 0.2787,
+            "value_display": "0.28 \u00b5m",
+            "shap_value": -0.6006178608044396,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Radius (variability) of 0.28 \u00b5m (low for this range) pushed this prediction toward \u201cBenign\u201d."
+          },
+          {
+            "feature": "symmetry3",
+            "label": "Symmetry (worst)",
+            "value": 0.2589,
+            "value_display": "0.259",
+            "shap_value": -0.5278180696669252,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Symmetry (worst) of 0.259 (low for this range) pushed this prediction toward \u201cBenign\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cMalignant\u201d (6%). Lowering it: Texture (grey-scale s.d.) (worst) (20.9), Radius (variability) (0.28 \u00b5m), Symmetry (worst) (0.259).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "borderline",
+        "case_label": "Borderline (p \u2248 0.5)",
+        "test_index": 112,
+        "actual": 1,
+        "probability": 0.5035193580714843,
+        "patient": {
+          "radius1": 15.12,
+          "texture1": 16.68,
+          "perimeter1": 98.78,
+          "area1": 716.6,
+          "smoothness1": 0.08876,
+          "compactness1": 0.09588,
+          "concavity1": 0.0755,
+          "concave_points1": 0.04079,
+          "symmetry1": 0.1594,
+          "fractal_dimension1": 0.05986,
+          "radius2": 0.2711,
+          "texture2": 0.3621,
+          "perimeter2": 1.974,
+          "area2": 26.44,
+          "smoothness2": 0.005472,
+          "compactness2": 0.01919,
+          "concavity2": 0.02039,
+          "concave_points2": 0.00826,
+          "symmetry2": 0.01523,
+          "fractal_dimension2": 0.002881,
+          "radius3": 17.77,
+          "texture3": 20.24,
+          "perimeter3": 117.7,
+          "area3": 989.5,
+          "smoothness3": 0.1491,
+          "compactness3": 0.3331,
+          "concavity3": 0.3327,
+          "concave_points3": 0.1252,
+          "symmetry3": 0.3415,
+          "fractal_dimension3": 0.0974
+        },
+        "patient_display": {
+          "radius1": "15.1 \u00b5m",
+          "texture1": "16.7",
+          "perimeter1": "99 \u00b5m",
+          "area1": "717 \u00b5m\u00b2",
+          "smoothness1": "0.089",
+          "compactness1": "0.096",
+          "concavity1": "0.075",
+          "concave_points1": "0.041",
+          "symmetry1": "0.159",
+          "fractal_dimension1": "0.0599",
+          "radius2": "0.27 \u00b5m",
+          "texture2": "0.36",
+          "perimeter2": "2.0 \u00b5m",
+          "area2": "26 \u00b5m\u00b2",
+          "smoothness2": "0.0055",
+          "compactness2": "0.019",
+          "concavity2": "0.020",
+          "concave_points2": "0.0083",
+          "symmetry2": "0.0152",
+          "fractal_dimension2": "0.0029",
+          "radius3": "17.8 \u00b5m",
+          "texture3": "20.2",
+          "perimeter3": "118 \u00b5m",
+          "area3": "990 \u00b5m\u00b2",
+          "smoothness3": "0.149",
+          "compactness3": "0.33",
+          "concavity3": "0.33",
+          "concave_points3": "0.125",
+          "symmetry3": "0.342",
+          "fractal_dimension3": "0.097"
+        },
+        "shap_values": {
+          "radius1": 0.05173872909042783,
+          "texture1": -0.3189046551861597,
+          "perimeter1": 0.05158835829225141,
+          "area1": 0.02710095362138907,
+          "smoothness1": -0.22385276401894272,
+          "compactness1": 0.11519034996014046,
+          "concavity1": -0.17606762481849375,
+          "concave_points1": -0.3123246496635041,
+          "symmetry1": 0.13912944108818817,
+          "fractal_dimension1": 0.02807408490104372,
+          "radius2": -0.633224926559479,
+          "texture2": 0.6309242366785668,
+          "perimeter2": -0.32953443556020506,
+          "area2": -0.32053157787056524,
+          "smoothness2": -0.12759866331382158,
+          "compactness2": 0.3113417074544711,
+          "concavity2": 0.03304580478299048,
+          "concave_points2": -0.29675404994321075,
+          "symmetry2": 0.1425473664497969,
+          "fractal_dimension2": 0.21515745079219536,
+          "radius3": 0.12454380482503316,
+          "texture3": -1.4433247832096112,
+          "perimeter3": 0.11404781461106854,
+          "area3": 0.02401471254450417,
+          "smoothness3": 0.23134018910947343,
+          "compactness3": -0.06714189742464162,
+          "concavity3": 0.18201455887533247,
+          "concave_points3": -0.013823787022763585,
+          "symmetry3": 0.8613538827447512,
+          "fractal_dimension3": 0.03829299365073017
+        },
+        "lime_explanation": [
+          [
+            "texture3",
+            -0.2260233578046848
+          ],
+          [
+            "symmetry3",
+            0.19144928120787144
+          ],
+          [
+            "radius2",
+            -0.0851102975884619
+          ],
+          [
+            "compactness2",
+            0.06632834602189275
+          ],
+          [
+            "texture2",
+            0.057976015271936666
+          ],
+          [
+            "perimeter2",
+            -0.053629804339308244
+          ],
+          [
+            "area2",
+            -0.05202571155409048
+          ],
+          [
+            "fractal_dimension2",
+            0.040798954486260745
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "texture3",
+            "label": "Texture (grey-scale s.d.) (worst)",
+            "value": 20.24,
+            "value_display": "20.2",
+            "shap_value": -1.4433247832096112,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Texture (grey-scale s.d.) (worst) of 20.2 (low for this range) pushed this prediction toward \u201cBenign\u201d."
+          },
+          {
+            "feature": "symmetry3",
+            "label": "Symmetry (worst)",
+            "value": 0.3415,
+            "value_display": "0.342",
+            "shap_value": 0.8613538827447512,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Symmetry (worst) of 0.342 (mid-range for this range) pushed this prediction toward \u201cMalignant\u201d."
+          },
+          {
+            "feature": "radius2",
+            "label": "Radius (variability)",
+            "value": 0.2711,
+            "value_display": "0.27 \u00b5m",
+            "shap_value": -0.633224926559479,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Radius (variability) of 0.27 \u00b5m (low for this range) pushed this prediction toward \u201cBenign\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cMalignant\u201d (50%). Raising the estimate: Symmetry (worst) (0.342). Lowering it: Texture (grey-scale s.d.) (worst) (20.2), Radius (variability) (0.27 \u00b5m).",
+        "shap_lime_top5_overlap": 0.8
+      }
+    ]
+  },
+  "breast_cancer_recurrence": {
+    "model": "random_forest",
+    "model_label": "Random Forest",
+    "cases": [
+      {
+        "case": "true_positive",
+        "case_label": "True positive (correctly flagged)",
+        "test_index": 16,
+        "actual": 1,
+        "probability": 0.7558214398885857,
+        "patient": {
+          "age": 45.0,
+          "menopause": 1.0,
+          "tumor-size": 32.0,
+          "inv-nodes": 13.0,
+          "node-caps": 1.0,
+          "deg-malig": 3.0,
+          "breast": 0.0,
+          "breast-quad": 2.0,
+          "irradiat": 1.0
+        },
+        "patient_display": {
+          "age": "45 years",
+          "menopause": "Premenopausal",
+          "tumor-size": "32 mm",
+          "inv-nodes": "13",
+          "node-caps": "Yes",
+          "deg-malig": "Grade 3 (poorly differentiated)",
+          "breast": "Left",
+          "breast-quad": "Upper left",
+          "irradiat": "Yes"
+        },
+        "shap_values": {
+          "age": 0.004493209061625287,
+          "menopause": -0.0023530882515557083,
+          "tumor-size": 0.026323525991636464,
+          "inv-nodes": 0.16564701393471634,
+          "node-caps": 0.09770278901440728,
+          "deg-malig": 0.12376168248902826,
+          "breast": 0.029479455668929944,
+          "breast-quad": -0.026568367123832964,
+          "irradiat": 0.03638492670597038
+        },
+        "lime_explanation": [
+          [
+            "deg-malig",
+            0.19380725254544448
+          ],
+          [
+            "node-caps",
+            0.08260942582020729
+          ],
+          [
+            "inv-nodes",
+            0.06828875785121388
+          ],
+          [
+            "breast",
+            0.050615173298301445
+          ],
+          [
+            "tumor-size",
+            0.04873146754512901
+          ],
+          [
+            "irradiat",
+            0.0416366986961644
+          ],
+          [
+            "breast-quad",
+            -0.028251363615707487
+          ],
+          [
+            "menopause",
+            -0.022710060413961213
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "inv-nodes",
+            "label": "Involved axillary nodes (band midpoint)",
+            "value": 13.0,
+            "value_display": "13",
+            "shap_value": 0.16564701393471634,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Involved axillary nodes (band midpoint) of 13 (mid-range for this range) pushed this prediction toward \u201cRecurrence\u201d."
+          },
+          {
+            "feature": "deg-malig",
+            "label": "Histological grade",
+            "value": 3.0,
+            "value_display": "Grade 3 (poorly differentiated)",
+            "shap_value": 0.12376168248902826,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Histological grade of Grade 3 (poorly differentiated) pushed this prediction toward \u201cRecurrence\u201d."
+          },
+          {
+            "feature": "node-caps",
+            "label": "Node capsular invasion",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.09770278901440728,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Node capsular invasion of Yes pushed this prediction toward \u201cRecurrence\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cRecurrence\u201d (76%). Raising the estimate: Involved axillary nodes (band midpoint) (13), Histological grade (Grade 3 (poorly differentiated)), Node capsular invasion (Yes).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "true_negative",
+        "case_label": "True negative (correctly cleared)",
+        "test_index": 11,
+        "actual": 0,
+        "probability": 0.0693717951082129,
+        "patient": {
+          "age": 75.0,
+          "menopause": 2.0,
+          "tumor-size": 2.0,
+          "inv-nodes": 1.0,
+          "node-caps": 0.0,
+          "deg-malig": 1.0,
+          "breast": 0.0,
+          "breast-quad": 3.0,
+          "irradiat": 0.0
+        },
+        "patient_display": {
+          "age": "75 years",
+          "menopause": "Menopause at 40 or later",
+          "tumor-size": "2 mm",
+          "inv-nodes": "1",
+          "node-caps": "No",
+          "deg-malig": "Grade 1 (well differentiated)",
+          "breast": "Left",
+          "breast-quad": "Lower right",
+          "irradiat": "No"
+        },
+        "shap_values": {
+          "age": -0.0033353438424553257,
+          "menopause": -0.004685674693063312,
+          "tumor-size": -0.08181177124517383,
+          "inv-nodes": -0.04136662266828877,
+          "node-caps": -0.026660916986176904,
+          "deg-malig": -0.05592816495781046,
+          "breast": 0.0014021744210490111,
+          "breast-quad": -0.0009377334820041496,
+          "irradiat": -0.01825444383552444
+        },
+        "lime_explanation": [
+          [
+            "node-caps",
+            -0.08242347278795938
+          ],
+          [
+            "deg-malig",
+            -0.07245402318966745
+          ],
+          [
+            "breast-quad",
+            0.06036251079562036
+          ],
+          [
+            "tumor-size",
+            -0.056745780870452116
+          ],
+          [
+            "irradiat",
+            -0.04806654268940139
+          ],
+          [
+            "breast",
+            0.046353966912682905
+          ],
+          [
+            "inv-nodes",
+            -0.03673861996373811
+          ],
+          [
+            "menopause",
+            0.018908137615817826
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "tumor-size",
+            "label": "Tumour size (band midpoint)",
+            "value": 2.0,
+            "value_display": "2 mm",
+            "shap_value": -0.08181177124517383,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Tumour size (band midpoint) of 2 mm (low for this range) pushed this prediction toward \u201cNo recurrence\u201d."
+          },
+          {
+            "feature": "deg-malig",
+            "label": "Histological grade",
+            "value": 1.0,
+            "value_display": "Grade 1 (well differentiated)",
+            "shap_value": -0.05592816495781046,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Histological grade of Grade 1 (well differentiated) pushed this prediction toward \u201cNo recurrence\u201d."
+          },
+          {
+            "feature": "inv-nodes",
+            "label": "Involved axillary nodes (band midpoint)",
+            "value": 1.0,
+            "value_display": "1",
+            "shap_value": -0.04136662266828877,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Involved axillary nodes (band midpoint) of 1 (low for this range) pushed this prediction toward \u201cNo recurrence\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cRecurrence\u201d (7%). Lowering it: Tumour size (band midpoint) (2 mm), Histological grade (Grade 1 (well differentiated)), Involved axillary nodes (band midpoint) (1).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "false_positive",
+        "case_label": "False positive (unnecessary referral)",
+        "test_index": 12,
+        "actual": 0,
+        "probability": 0.6514785309148083,
+        "patient": {
+          "age": 65.0,
+          "menopause": 2.0,
+          "tumor-size": 32.0,
+          "inv-nodes": 4.0,
+          "node-caps": 1.0,
+          "deg-malig": 3.0,
+          "breast": 0.0,
+          "breast-quad": 1.0,
+          "irradiat": 0.0
+        },
+        "patient_display": {
+          "age": "65 years",
+          "menopause": "Menopause at 40 or later",
+          "tumor-size": "32 mm",
+          "inv-nodes": "4",
+          "node-caps": "Yes",
+          "deg-malig": "Grade 3 (poorly differentiated)",
+          "breast": "Left",
+          "breast-quad": "Lower left",
+          "irradiat": "No"
+        },
+        "shap_values": {
+          "age": 0.006394882100439014,
+          "menopause": -0.0012176682992087468,
+          "tumor-size": 0.029150574444331143,
+          "inv-nodes": 0.09404439647991275,
+          "node-caps": 0.08094000509142824,
+          "deg-malig": 0.1528499071814669,
+          "breast": 0.016607806165178925,
+          "breast-quad": -0.008573268988673409,
+          "irradiat": -0.019668395657726916
+        },
+        "lime_explanation": [
+          [
+            "deg-malig",
+            0.19612369166101543
+          ],
+          [
+            "node-caps",
+            0.08290849465670877
+          ],
+          [
+            "breast",
+            0.04668745978496195
+          ],
+          [
+            "irradiat",
+            -0.04317207970632532
+          ],
+          [
+            "tumor-size",
+            0.04125424438797491
+          ],
+          [
+            "breast-quad",
+            -0.019499510241200804
+          ],
+          [
+            "menopause",
+            0.01835769393943961
+          ],
+          [
+            "inv-nodes",
+            -0.010608377017911962
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "deg-malig",
+            "label": "Histological grade",
+            "value": 3.0,
+            "value_display": "Grade 3 (poorly differentiated)",
+            "shap_value": 0.1528499071814669,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Histological grade of Grade 3 (poorly differentiated) pushed this prediction toward \u201cRecurrence\u201d."
+          },
+          {
+            "feature": "inv-nodes",
+            "label": "Involved axillary nodes (band midpoint)",
+            "value": 4.0,
+            "value_display": "4",
+            "shap_value": 0.09404439647991275,
+            "direction": "increases",
+            "level": "low",
+            "sentence": "Involved axillary nodes (band midpoint) of 4 (low for this range) pushed this prediction toward \u201cRecurrence\u201d."
+          },
+          {
+            "feature": "node-caps",
+            "label": "Node capsular invasion",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.08094000509142824,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Node capsular invasion of Yes pushed this prediction toward \u201cRecurrence\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cRecurrence\u201d (65%). Raising the estimate: Histological grade (Grade 3 (poorly differentiated)), Involved axillary nodes (band midpoint) (4), Node capsular invasion (Yes).",
+        "shap_lime_top5_overlap": 0.8
+      },
+      {
+        "case": "false_negative",
+        "case_label": "False negative (missed case)",
+        "test_index": 39,
+        "actual": 1,
+        "probability": 0.12613092255257236,
+        "patient": {
+          "age": 45.0,
+          "menopause": 1.0,
+          "tumor-size": 17.0,
+          "inv-nodes": 1.0,
+          "node-caps": 0.0,
+          "deg-malig": 2.0,
+          "breast": 0.0,
+          "breast-quad": 2.0,
+          "irradiat": 0.0
+        },
+        "patient_display": {
+          "age": "45 years",
+          "menopause": "Premenopausal",
+          "tumor-size": "17 mm",
+          "inv-nodes": "1",
+          "node-caps": "No",
+          "deg-malig": "Grade 2 (moderately differentiated)",
+          "breast": "Left",
+          "breast-quad": "Upper left",
+          "irradiat": "No"
+        },
+        "shap_values": {
+          "age": 0.00021051891449434647,
+          "menopause": 0.002662322048754783,
+          "tumor-size": -0.05375503288577439,
+          "inv-nodes": -0.03699128556307622,
+          "node-caps": -0.02570746251032798,
+          "deg-malig": -0.03794769352567938,
+          "breast": 0.002307637073363893,
+          "breast-quad": -0.014362702561371133,
+          "irradiat": -0.011235670835472441
+        },
+        "lime_explanation": [
+          [
+            "deg-malig",
+            -0.10133866349512449
+          ],
+          [
+            "node-caps",
+            -0.08245716439838735
+          ],
+          [
+            "tumor-size",
+            -0.05979637733612754
+          ],
+          [
+            "breast",
+            0.045939026934978075
+          ],
+          [
+            "irradiat",
+            -0.03916405918736863
+          ],
+          [
+            "inv-nodes",
+            -0.034799995389890634
+          ],
+          [
+            "breast-quad",
+            -0.02703601320899824
+          ],
+          [
+            "menopause",
+            -0.022776404335006106
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "tumor-size",
+            "label": "Tumour size (band midpoint)",
+            "value": 17.0,
+            "value_display": "17 mm",
+            "shap_value": -0.05375503288577439,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Tumour size (band midpoint) of 17 mm (low for this range) pushed this prediction toward \u201cNo recurrence\u201d."
+          },
+          {
+            "feature": "deg-malig",
+            "label": "Histological grade",
+            "value": 2.0,
+            "value_display": "Grade 2 (moderately differentiated)",
+            "shap_value": -0.03794769352567938,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Histological grade of Grade 2 (moderately differentiated) pushed this prediction toward \u201cNo recurrence\u201d."
+          },
+          {
+            "feature": "inv-nodes",
+            "label": "Involved axillary nodes (band midpoint)",
+            "value": 1.0,
+            "value_display": "1",
+            "shap_value": -0.03699128556307622,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Involved axillary nodes (band midpoint) of 1 (low for this range) pushed this prediction toward \u201cNo recurrence\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cRecurrence\u201d (13%). Lowering it: Tumour size (band midpoint) (17 mm), Histological grade (Grade 2 (moderately differentiated)), Involved axillary nodes (band midpoint) (1).",
+        "shap_lime_top5_overlap": 0.6
+      },
+      {
+        "case": "borderline",
+        "case_label": "Borderline (p \u2248 0.5)",
+        "test_index": 46,
+        "actual": 1,
+        "probability": 0.5112915351824409,
+        "patient": {
+          "age": 35.0,
+          "menopause": 1.0,
+          "tumor-size": 32.0,
+          "inv-nodes": 4.0,
+          "node-caps": 0.0,
+          "deg-malig": 3.0,
+          "breast": 1.0,
+          "breast-quad": 2.0,
+          "irradiat": 1.0
+        },
+        "patient_display": {
+          "age": "35 years",
+          "menopause": "Premenopausal",
+          "tumor-size": "32 mm",
+          "inv-nodes": "4",
+          "node-caps": "No",
+          "deg-malig": "Grade 3 (poorly differentiated)",
+          "breast": "Right",
+          "breast-quad": "Upper left",
+          "irradiat": "Yes"
+        },
+        "shap_values": {
+          "age": 0.00387318011012413,
+          "menopause": -0.009912094453562056,
+          "tumor-size": 0.04731443427201916,
+          "inv-nodes": 0.054133177492540346,
+          "node-caps": -0.01901336576080233,
+          "deg-malig": 0.1311098478819972,
+          "breast": -0.015829436778766106,
+          "breast-quad": -0.019445769031117683,
+          "irradiat": 0.03811126905234683
+        },
+        "lime_explanation": [
+          [
+            "deg-malig",
+            0.19197820046766256
+          ],
+          [
+            "node-caps",
+            -0.07898140931819807
+          ],
+          [
+            "tumor-size",
+            0.046686062140681724
+          ],
+          [
+            "breast",
+            -0.04533048578462415
+          ],
+          [
+            "irradiat",
+            0.040020016120504
+          ],
+          [
+            "breast-quad",
+            -0.026398379924078317
+          ],
+          [
+            "menopause",
+            -0.024048711257114445
+          ],
+          [
+            "age",
+            0.011748697665224876
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "deg-malig",
+            "label": "Histological grade",
+            "value": 3.0,
+            "value_display": "Grade 3 (poorly differentiated)",
+            "shap_value": 0.1311098478819972,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Histological grade of Grade 3 (poorly differentiated) pushed this prediction toward \u201cRecurrence\u201d."
+          },
+          {
+            "feature": "inv-nodes",
+            "label": "Involved axillary nodes (band midpoint)",
+            "value": 4.0,
+            "value_display": "4",
+            "shap_value": 0.054133177492540346,
+            "direction": "increases",
+            "level": "low",
+            "sentence": "Involved axillary nodes (band midpoint) of 4 (low for this range) pushed this prediction toward \u201cRecurrence\u201d."
+          },
+          {
+            "feature": "tumor-size",
+            "label": "Tumour size (band midpoint)",
+            "value": 32.0,
+            "value_display": "32 mm",
+            "shap_value": 0.04731443427201916,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Tumour size (band midpoint) of 32 mm (mid-range for this range) pushed this prediction toward \u201cRecurrence\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cRecurrence\u201d (51%). Raising the estimate: Histological grade (Grade 3 (poorly differentiated)), Involved axillary nodes (band midpoint) (4), Tumour size (band midpoint) (32 mm).",
+        "shap_lime_top5_overlap": 0.6
+      }
+    ]
+  },
+  "breast_cancer_survival": {
+    "model": "random_forest",
+    "model_label": "Random Forest",
+    "cases": [
+      {
+        "case": "true_positive",
+        "case_label": "True positive (correctly flagged)",
+        "test_index": 45,
+        "actual": 1,
+        "probability": 0.7790251170800729,
+        "patient": {
+          "age": 56.0,
+          "operation_year": 65.0,
+          "positive_auxillary_nodes": 9.0
+        },
+        "patient_display": {
+          "age": "56 years",
+          "operation_year": "65 19xx",
+          "positive_auxillary_nodes": "9"
+        },
+        "shap_values": {
+          "age": 0.021513539783814588,
+          "operation_year": 0.049788308828789776,
+          "positive_auxillary_nodes": 0.21052673473960706
+        },
+        "lime_explanation": [
+          [
+            "positive_auxillary_nodes",
+            0.2500172908124772
+          ],
+          [
+            "age",
+            0.08535280836755979
+          ],
+          [
+            "operation_year",
+            0.04295714586699166
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "positive_auxillary_nodes",
+            "label": "Positive axillary nodes",
+            "value": 9.0,
+            "value_display": "9",
+            "shap_value": 0.21052673473960706,
+            "direction": "increases",
+            "level": "low",
+            "sentence": "Positive axillary nodes of 9 (low for this range) pushed this prediction toward \u201cDied within five years\u201d."
+          },
+          {
+            "feature": "operation_year",
+            "label": "Year of operation",
+            "value": 65.0,
+            "value_display": "65 19xx",
+            "shap_value": 0.049788308828789776,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Year of operation of 65 19xx (mid-range for this range) pushed this prediction toward \u201cDied within five years\u201d."
+          },
+          {
+            "feature": "age",
+            "label": "Age at operation",
+            "value": 56.0,
+            "value_display": "56 years",
+            "shap_value": 0.021513539783814588,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Age at operation of 56 years (mid-range for this range) pushed this prediction toward \u201cDied within five years\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cDied within five years\u201d (78%). Raising the estimate: Positive axillary nodes (9), Year of operation (65 19xx), Age at operation (56 years).",
+        "shap_lime_top5_overlap": 0.6
+      },
+      {
+        "case": "true_negative",
+        "case_label": "True negative (correctly cleared)",
+        "test_index": 39,
+        "actual": 0,
+        "probability": 0.0640759931193227,
+        "patient": {
+          "age": 36.0,
+          "operation_year": 60.0,
+          "positive_auxillary_nodes": 1.0
+        },
+        "patient_display": {
+          "age": "36 years",
+          "operation_year": "60 19xx",
+          "positive_auxillary_nodes": "1"
+        },
+        "shap_values": {
+          "age": -0.2613965548801768,
+          "operation_year": -0.07845304857422777,
+          "positive_auxillary_nodes": -0.09327093715413488
+        },
+        "lime_explanation": [
+          [
+            "age",
+            -0.2347392215537995
+          ],
+          [
+            "positive_auxillary_nodes",
+            -0.13969315282765904
+          ],
+          [
+            "operation_year",
+            -0.014772737271811361
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "age",
+            "label": "Age at operation",
+            "value": 36.0,
+            "value_display": "36 years",
+            "shap_value": -0.2613965548801768,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Age at operation of 36 years (low for this range) pushed this prediction toward \u201cSurvived five years\u201d."
+          },
+          {
+            "feature": "positive_auxillary_nodes",
+            "label": "Positive axillary nodes",
+            "value": 1.0,
+            "value_display": "1",
+            "shap_value": -0.09327093715413488,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Positive axillary nodes of 1 (low for this range) pushed this prediction toward \u201cSurvived five years\u201d."
+          },
+          {
+            "feature": "operation_year",
+            "label": "Year of operation",
+            "value": 60.0,
+            "value_display": "60 19xx",
+            "shap_value": -0.07845304857422777,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Year of operation of 60 19xx (low for this range) pushed this prediction toward \u201cSurvived five years\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cDied within five years\u201d (6%). Lowering it: Age at operation (36 years), Positive axillary nodes (1), Year of operation (60 19xx).",
+        "shap_lime_top5_overlap": 0.6
+      },
+      {
+        "case": "false_positive",
+        "case_label": "False positive (unnecessary referral)",
+        "test_index": 32,
+        "actual": 0,
+        "probability": 0.799269693124854,
+        "patient": {
+          "age": 64.0,
+          "operation_year": 65.0,
+          "positive_auxillary_nodes": 22.0
+        },
+        "patient_display": {
+          "age": "64 years",
+          "operation_year": "65 19xx",
+          "positive_auxillary_nodes": "22"
+        },
+        "shap_values": {
+          "age": 0.012409959170319711,
+          "operation_year": 0.04489718952744036,
+          "positive_auxillary_nodes": 0.24476601069923254
+        },
+        "lime_explanation": [
+          [
+            "positive_auxillary_nodes",
+            0.25668559944528524
+          ],
+          [
+            "age",
+            0.09768641374927112
+          ],
+          [
+            "operation_year",
+            0.042872297482038274
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "positive_auxillary_nodes",
+            "label": "Positive axillary nodes",
+            "value": 22.0,
+            "value_display": "22",
+            "shap_value": 0.24476601069923254,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Positive axillary nodes of 22 (mid-range for this range) pushed this prediction toward \u201cDied within five years\u201d."
+          },
+          {
+            "feature": "operation_year",
+            "label": "Year of operation",
+            "value": 65.0,
+            "value_display": "65 19xx",
+            "shap_value": 0.04489718952744036,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Year of operation of 65 19xx (mid-range for this range) pushed this prediction toward \u201cDied within five years\u201d."
+          },
+          {
+            "feature": "age",
+            "label": "Age at operation",
+            "value": 64.0,
+            "value_display": "64 years",
+            "shap_value": 0.012409959170319711,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Age at operation of 64 years (mid-range for this range) pushed this prediction toward \u201cDied within five years\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cDied within five years\u201d (80%). Raising the estimate: Positive axillary nodes (22), Year of operation (65 19xx), Age at operation (64 years).",
+        "shap_lime_top5_overlap": 0.6
+      },
+      {
+        "case": "false_negative",
+        "case_label": "False negative (missed case)",
+        "test_index": 15,
+        "actual": 1,
+        "probability": 0.08640003588314141,
+        "patient": {
+          "age": 34.0,
+          "operation_year": 59.0,
+          "positive_auxillary_nodes": 0.0
+        },
+        "patient_display": {
+          "age": "34 years",
+          "operation_year": "59 19xx",
+          "positive_auxillary_nodes": "0"
+        },
+        "shap_values": {
+          "age": -0.23380860145309604,
+          "operation_year": -0.05090134900611137,
+          "positive_auxillary_nodes": -0.12608654738551356
+        },
+        "lime_explanation": [
+          [
+            "age",
+            -0.23620841019348335
+          ],
+          [
+            "positive_auxillary_nodes",
+            -0.08770939342809898
+          ],
+          [
+            "operation_year",
+            -0.0024542685319973133
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "age",
+            "label": "Age at operation",
+            "value": 34.0,
+            "value_display": "34 years",
+            "shap_value": -0.23380860145309604,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Age at operation of 34 years (low for this range) pushed this prediction toward \u201cSurvived five years\u201d."
+          },
+          {
+            "feature": "positive_auxillary_nodes",
+            "label": "Positive axillary nodes",
+            "value": 0.0,
+            "value_display": "0",
+            "shap_value": -0.12608654738551356,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Positive axillary nodes of 0 (low for this range) pushed this prediction toward \u201cSurvived five years\u201d."
+          },
+          {
+            "feature": "operation_year",
+            "label": "Year of operation",
+            "value": 59.0,
+            "value_display": "59 19xx",
+            "shap_value": -0.05090134900611137,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Year of operation of 59 19xx (low for this range) pushed this prediction toward \u201cSurvived five years\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cDied within five years\u201d (9%). Lowering it: Age at operation (34 years), Positive axillary nodes (0), Year of operation (59 19xx).",
+        "shap_lime_top5_overlap": 0.6
+      },
+      {
+        "case": "borderline",
+        "case_label": "Borderline (p \u2248 0.5)",
+        "test_index": 4,
+        "actual": 0,
+        "probability": 0.503131190030928,
+        "patient": {
+          "age": 77.0,
+          "operation_year": 65.0,
+          "positive_auxillary_nodes": 3.0
+        },
+        "patient_display": {
+          "age": "77 years",
+          "operation_year": "65 19xx",
+          "positive_auxillary_nodes": "3"
+        },
+        "shap_values": {
+          "age": 0.00023218244990837953,
+          "operation_year": 0.026098804423827494,
+          "positive_auxillary_nodes": -0.02039633057066966
+        },
+        "lime_explanation": [
+          [
+            "age",
+            0.09726427519205068
+          ],
+          [
+            "positive_auxillary_nodes",
+            -0.041319388277123184
+          ],
+          [
+            "operation_year",
+            0.028237157390563976
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "operation_year",
+            "label": "Year of operation",
+            "value": 65.0,
+            "value_display": "65 19xx",
+            "shap_value": 0.026098804423827494,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Year of operation of 65 19xx (mid-range for this range) pushed this prediction toward \u201cDied within five years\u201d."
+          },
+          {
+            "feature": "positive_auxillary_nodes",
+            "label": "Positive axillary nodes",
+            "value": 3.0,
+            "value_display": "3",
+            "shap_value": -0.02039633057066966,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Positive axillary nodes of 3 (low for this range) pushed this prediction toward \u201cSurvived five years\u201d."
+          },
+          {
+            "feature": "age",
+            "label": "Age at operation",
+            "value": 77.0,
+            "value_display": "77 years",
+            "shap_value": 0.00023218244990837953,
+            "direction": "increases",
+            "level": "high",
+            "sentence": "Age at operation of 77 years (high for this range) pushed this prediction toward \u201cDied within five years\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cDied within five years\u201d (50%). Raising the estimate: Year of operation (65 19xx), Age at operation (77 years). Lowering it: Positive axillary nodes (3).",
+        "shap_lime_top5_overlap": 0.6
+      }
+    ]
+  },
+  "cervical_cancer": {
+    "model": "logistic_regression",
+    "model_label": "Logistic Regression",
+    "cases": [
+      {
+        "case": "true_positive",
+        "case_label": "True positive (correctly flagged)",
+        "test_index": 6,
+        "actual": 1,
+        "probability": 0.6521001475849065,
+        "patient": {
+          "Age": 22.0,
+          "Number of sexual partners": 3.0,
+          "First sexual intercourse": 17.0,
+          "Num of pregnancies": 1.0,
+          "Smokes": 0.0,
+          "Smokes (years)": 0.0,
+          "Smokes (packs/year)": 0.0,
+          "Hormonal Contraceptives": 0.0,
+          "Hormonal Contraceptives (years)": 0.0,
+          "IUD": 0.0,
+          "IUD (years)": 0.0,
+          "STDs": 1.0,
+          "STDs (number)": 2.0,
+          "STDs:condylomatosis": 1.0,
+          "STDs:vaginal condylomatosis": 0.0,
+          "STDs:vulvo-perineal condylomatosis": 1.0,
+          "STDs:syphilis": 0.0,
+          "STDs:pelvic inflammatory disease": 0.0,
+          "STDs:genital herpes": 0.0,
+          "STDs:molluscum contagiosum": 0.0,
+          "STDs:HIV": 0.0,
+          "STDs:Hepatitis B": 0.0,
+          "STDs:HPV": 0.0,
+          "STDs: Number of diagnosis": 0.0,
+          "Dx:Cancer": 0.0,
+          "Dx:CIN": 0.0,
+          "Dx:HPV": 0.0,
+          "Dx": 0.0
+        },
+        "patient_display": {
+          "Age": "22 years",
+          "Number of sexual partners": "3",
+          "First sexual intercourse": "17 years",
+          "Num of pregnancies": "1",
+          "Smokes": "No",
+          "Smokes (years)": "0.0 years",
+          "Smokes (packs/year)": "0.0",
+          "Hormonal Contraceptives": "No",
+          "Hormonal Contraceptives (years)": "0.0 years",
+          "IUD": "No",
+          "IUD (years)": "0.0 years",
+          "STDs": "Yes",
+          "STDs (number)": "2",
+          "STDs:condylomatosis": "Yes",
+          "STDs:vaginal condylomatosis": "No",
+          "STDs:vulvo-perineal condylomatosis": "Yes",
+          "STDs:syphilis": "No",
+          "STDs:pelvic inflammatory disease": "No",
+          "STDs:genital herpes": "No",
+          "STDs:molluscum contagiosum": "No",
+          "STDs:HIV": "No",
+          "STDs:Hepatitis B": "No",
+          "STDs:HPV": "No",
+          "STDs: Number of diagnosis": "0",
+          "Dx:Cancer": "No",
+          "Dx:CIN": "No",
+          "Dx:HPV": "No",
+          "Dx": "No"
+        },
+        "shap_values": {
+          "Age": -0.03605820680717217,
+          "Number of sexual partners": -0.002463764231789165,
+          "First sexual intercourse": 0.0021487490973340524,
+          "Num of pregnancies": -0.08504549618634098,
+          "Smokes": 0.0015648369398016224,
+          "Smokes (years)": -0.026003264558029524,
+          "Smokes (packs/year)": 0.0006155868589552634,
+          "Hormonal Contraceptives": -0.005600332439569978,
+          "Hormonal Contraceptives (years)": -0.05098201692233071,
+          "IUD": -0.03600355380986416,
+          "IUD (years)": -0.013795391663451981,
+          "STDs": 0.20154251197061218,
+          "STDs (number)": 0.17940497767664917,
+          "STDs:condylomatosis": 0.3652170449593267,
+          "STDs:vaginal condylomatosis": 8.136877624763151e-18,
+          "STDs:vulvo-perineal condylomatosis": 0.41375802500947556,
+          "STDs:syphilis": 0.001798441869853207,
+          "STDs:pelvic inflammatory disease": 2.09274943662965e-18,
+          "STDs:genital herpes": 0.0,
+          "STDs:molluscum contagiosum": 0.0021816195960096692,
+          "STDs:HIV": -0.010285662884266838,
+          "STDs:Hepatitis B": 3.297742414020367e-18,
+          "STDs:HPV": 1.1247331666311868e-17,
+          "STDs: Number of diagnosis": -0.007458341532028672,
+          "Dx:Cancer": -0.016174991963508918,
+          "Dx:CIN": -0.01383942763705495,
+          "Dx:HPV": -0.017032574887743866,
+          "Dx": -0.015224469715321902
+        },
+        "lime_explanation": [
+          [
+            "STDs:HPV",
+            0.3112020242751318
+          ],
+          [
+            "Dx:CIN",
+            -0.28134891258073047
+          ],
+          [
+            "STDs:Hepatitis B",
+            0.2597567715823489
+          ],
+          [
+            "STDs:vaginal condylomatosis",
+            0.25841115051161145
+          ],
+          [
+            "Dx:HPV",
+            -0.1855522655602766
+          ],
+          [
+            "STDs:pelvic inflammatory disease",
+            0.1815982695124128
+          ],
+          [
+            "Dx:Cancer",
+            -0.18106591564958735
+          ],
+          [
+            "STDs:molluscum contagiosum",
+            0.111871183838069
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "STDs:vulvo-perineal condylomatosis",
+            "label": "Vulvo-perineal condylomatosis",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.41375802500947556,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Vulvo-perineal condylomatosis of Yes pushed this prediction toward \u201cBiopsy-confirmed cervical cancer\u201d."
+          },
+          {
+            "feature": "STDs:condylomatosis",
+            "label": "Condylomatosis",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.3652170449593267,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Condylomatosis of Yes pushed this prediction toward \u201cBiopsy-confirmed cervical cancer\u201d."
+          },
+          {
+            "feature": "STDs",
+            "label": "Any sexually transmitted infection",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.20154251197061218,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Any sexually transmitted infection of Yes pushed this prediction toward \u201cBiopsy-confirmed cervical cancer\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cBiopsy-confirmed cervical cancer\u201d (65%). Raising the estimate: Vulvo-perineal condylomatosis (Yes), Condylomatosis (Yes), Any sexually transmitted infection (Yes).",
+        "shap_lime_top5_overlap": 0.0
+      },
+      {
+        "case": "true_negative",
+        "case_label": "True negative (correctly cleared)",
+        "test_index": 149,
+        "actual": 0,
+        "probability": 0.31108671227750456,
+        "patient": {
+          "Age": 26.0,
+          "Number of sexual partners": 3.0,
+          "First sexual intercourse": 17.0,
+          "Num of pregnancies": 3.0,
+          "Smokes": 0.0,
+          "Smokes (years)": 0.0,
+          "Smokes (packs/year)": 0.0,
+          "Hormonal Contraceptives": 1.0,
+          "Hormonal Contraceptives (years)": 0.25,
+          "IUD": 0.0,
+          "IUD (years)": 0.0,
+          "STDs": 1.0,
+          "STDs (number)": 1.0,
+          "STDs:condylomatosis": 0.0,
+          "STDs:vaginal condylomatosis": 0.0,
+          "STDs:vulvo-perineal condylomatosis": 0.0,
+          "STDs:syphilis": 1.0,
+          "STDs:pelvic inflammatory disease": 0.0,
+          "STDs:genital herpes": 0.0,
+          "STDs:molluscum contagiosum": 0.0,
+          "STDs:HIV": 0.0,
+          "STDs:Hepatitis B": 0.0,
+          "STDs:HPV": 0.0,
+          "STDs: Number of diagnosis": 1.0,
+          "Dx:Cancer": 0.0,
+          "Dx:CIN": 0.0,
+          "Dx:HPV": 0.0,
+          "Dx": 0.0
+        },
+        "patient_display": {
+          "Age": "26 years",
+          "Number of sexual partners": "3",
+          "First sexual intercourse": "17 years",
+          "Num of pregnancies": "3",
+          "Smokes": "No",
+          "Smokes (years)": "0.0 years",
+          "Smokes (packs/year)": "0.0",
+          "Hormonal Contraceptives": "Yes",
+          "Hormonal Contraceptives (years)": "0.2 years",
+          "IUD": "No",
+          "IUD (years)": "0.0 years",
+          "STDs": "Yes",
+          "STDs (number)": "1",
+          "STDs:condylomatosis": "No",
+          "STDs:vaginal condylomatosis": "No",
+          "STDs:vulvo-perineal condylomatosis": "No",
+          "STDs:syphilis": "Yes",
+          "STDs:pelvic inflammatory disease": "No",
+          "STDs:genital herpes": "No",
+          "STDs:molluscum contagiosum": "No",
+          "STDs:HIV": "No",
+          "STDs:Hepatitis B": "No",
+          "STDs:HPV": "No",
+          "STDs: Number of diagnosis": "1",
+          "Dx:Cancer": "No",
+          "Dx:CIN": "No",
+          "Dx:HPV": "No",
+          "Dx": "No"
+        },
+        "shap_values": {
+          "Age": -0.004634932901139779,
+          "Number of sexual partners": -0.002463764231789165,
+          "First sexual intercourse": 0.0021487490973340524,
+          "Num of pregnancies": 0.05622609216306264,
+          "Smokes": 0.0015648369398016224,
+          "Smokes (years)": -0.026003264558029524,
+          "Smokes (packs/year)": 0.0006155868589552634,
+          "Hormonal Contraceptives": 0.0026354505597976367,
+          "Hormonal Contraceptives (years)": -0.04431107364242771,
+          "IUD": -0.03600355380986416,
+          "IUD (years)": -0.013795391663451981,
+          "STDs": 0.20154251197061218,
+          "STDs (number)": 0.08596488513672773,
+          "STDs:condylomatosis": -0.012073290742457065,
+          "STDs:vaginal condylomatosis": 8.136877624763151e-18,
+          "STDs:vulvo-perineal condylomatosis": -0.01367795123998266,
+          "STDs:syphilis": -0.897422493056776,
+          "STDs:pelvic inflammatory disease": 2.09274943662965e-18,
+          "STDs:genital herpes": 0.0,
+          "STDs:molluscum contagiosum": 0.0021816195960096692,
+          "STDs:HIV": -0.010285662884266838,
+          "STDs:Hepatitis B": 3.297742414020367e-18,
+          "STDs:HPV": 1.1247331666311868e-17,
+          "STDs: Number of diagnosis": 0.17900019676868828,
+          "Dx:Cancer": -0.016174991963508918,
+          "Dx:CIN": -0.01383942763705495,
+          "Dx:HPV": -0.017032574887743866,
+          "Dx": -0.015224469715321902
+        },
+        "lime_explanation": [
+          [
+            "STDs:HPV",
+            0.3343697603971132
+          ],
+          [
+            "Dx:CIN",
+            -0.2807288549472624
+          ],
+          [
+            "STDs:vaginal condylomatosis",
+            0.2767841627776477
+          ],
+          [
+            "STDs:Hepatitis B",
+            0.24689295509661616
+          ],
+          [
+            "Dx:Cancer",
+            -0.19002514446386926
+          ],
+          [
+            "Dx:HPV",
+            -0.18894924905772983
+          ],
+          [
+            "STDs:pelvic inflammatory disease",
+            0.15555605037229872
+          ],
+          [
+            "STDs:molluscum contagiosum",
+            0.13369004491617853
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "STDs:syphilis",
+            "label": "Syphilis",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": -0.897422493056776,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Syphilis of Yes pushed this prediction toward \u201cNegative biopsy\u201d."
+          },
+          {
+            "feature": "STDs",
+            "label": "Any sexually transmitted infection",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.20154251197061218,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Any sexually transmitted infection of Yes pushed this prediction toward \u201cBiopsy-confirmed cervical cancer\u201d."
+          },
+          {
+            "feature": "STDs: Number of diagnosis",
+            "label": "Number of STI diagnoses",
+            "value": 1.0,
+            "value_display": "1",
+            "shap_value": 0.17900019676868828,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Number of STI diagnoses of 1 (mid-range for this range) pushed this prediction toward \u201cBiopsy-confirmed cervical cancer\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cBiopsy-confirmed cervical cancer\u201d (31%). Raising the estimate: Any sexually transmitted infection (Yes), Number of STI diagnoses (1). Lowering it: Syphilis (Yes).",
+        "shap_lime_top5_overlap": 0.0
+      },
+      {
+        "case": "false_positive",
+        "case_label": "False positive (unnecessary referral)",
+        "test_index": 31,
+        "actual": 0,
+        "probability": 0.9039204479184084,
+        "patient": {
+          "Age": 59.0,
+          "Number of sexual partners": 2.0,
+          "First sexual intercourse": 13.0,
+          "Num of pregnancies": NaN,
+          "Smokes": 0.0,
+          "Smokes (years)": 0.0,
+          "Smokes (packs/year)": 0.0,
+          "Hormonal Contraceptives": 0.0,
+          "Hormonal Contraceptives (years)": 0.0,
+          "IUD": 1.0,
+          "IUD (years)": 0.41,
+          "STDs": 0.0,
+          "STDs (number)": 0.0,
+          "STDs:condylomatosis": 0.0,
+          "STDs:vaginal condylomatosis": 0.0,
+          "STDs:vulvo-perineal condylomatosis": 0.0,
+          "STDs:syphilis": 0.0,
+          "STDs:pelvic inflammatory disease": 0.0,
+          "STDs:genital herpes": 0.0,
+          "STDs:molluscum contagiosum": 0.0,
+          "STDs:HIV": 0.0,
+          "STDs:Hepatitis B": 0.0,
+          "STDs:HPV": 0.0,
+          "STDs: Number of diagnosis": 0.0,
+          "Dx:Cancer": 0.0,
+          "Dx:CIN": 1.0,
+          "Dx:HPV": 0.0,
+          "Dx": 1.0
+        },
+        "patient_display": {
+          "Age": "59 years",
+          "Number of sexual partners": "2",
+          "First sexual intercourse": "13 years",
+          "Num of pregnancies": "nan",
+          "Smokes": "No",
+          "Smokes (years)": "0.0 years",
+          "Smokes (packs/year)": "0.0",
+          "Hormonal Contraceptives": "No",
+          "Hormonal Contraceptives (years)": "0.0 years",
+          "IUD": "Yes",
+          "IUD (years)": "0.4 years",
+          "STDs": "No",
+          "STDs (number)": "0",
+          "STDs:condylomatosis": "No",
+          "STDs:vaginal condylomatosis": "No",
+          "STDs:vulvo-perineal condylomatosis": "No",
+          "STDs:syphilis": "No",
+          "STDs:pelvic inflammatory disease": "No",
+          "STDs:genital herpes": "No",
+          "STDs:molluscum contagiosum": "No",
+          "STDs:HIV": "No",
+          "STDs:Hepatitis B": "No",
+          "STDs:HPV": "No",
+          "STDs: Number of diagnosis": "0",
+          "Dx:Cancer": "No",
+          "Dx:CIN": "Yes",
+          "Dx:HPV": "No",
+          "Dx": "Yes"
+        },
+        "shap_values": {
+          "Age": 0.2546070768236275,
+          "Number of sexual partners": 0.0021157231878932968,
+          "First sexual intercourse": 0.04989872903809071,
+          "Num of pregnancies": 0.19749768051246627,
+          "Smokes": 0.0015648369398016224,
+          "Smokes (years)": -0.026003264558029524,
+          "Smokes (packs/year)": 0.0006155868589552634,
+          "Hormonal Contraceptives": -0.005600332439569978,
+          "Hormonal Contraceptives (years)": -0.05098201692233071,
+          "IUD": 0.2543476865922662,
+          "IUD (years)": -0.004961307725652793,
+          "STDs": -0.009717982757492812,
+          "STDs (number)": -0.007475207403193716,
+          "STDs:condylomatosis": -0.012073290742457065,
+          "STDs:vaginal condylomatosis": 8.136877624763151e-18,
+          "STDs:vulvo-perineal condylomatosis": -0.01367795123998266,
+          "STDs:syphilis": 0.001798441869853207,
+          "STDs:pelvic inflammatory disease": 2.09274943662965e-18,
+          "STDs:genital herpes": 0.0,
+          "STDs:molluscum contagiosum": 0.0021816195960096692,
+          "STDs:HIV": -0.010285662884266838,
+          "STDs:Hepatitis B": 3.297742414020367e-18,
+          "STDs:HPV": 1.1247331666311868e-17,
+          "STDs: Number of diagnosis": -0.007458341532028672,
+          "Dx:Cancer": -0.016174991963508918,
+          "Dx:CIN": 1.3701033360684394,
+          "Dx:HPV": -0.017032574887743866,
+          "Dx": 0.4922578541287408
+        },
+        "lime_explanation": [
+          [
+            "STDs:HPV",
+            0.31047558012962156
+          ],
+          [
+            "Dx:CIN",
+            0.28996293912275983
+          ],
+          [
+            "STDs:vaginal condylomatosis",
+            0.23755108636594083
+          ],
+          [
+            "STDs:Hepatitis B",
+            0.22592381472179476
+          ],
+          [
+            "Dx:HPV",
+            -0.18666046088116198
+          ],
+          [
+            "Dx:Cancer",
+            -0.18091656389836094
+          ],
+          [
+            "STDs:pelvic inflammatory disease",
+            0.1510829504685612
+          ],
+          [
+            "STDs:HIV",
+            -0.1294476258705611
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "Dx:CIN",
+            "label": "Previous cervical intraepithelial neoplasia",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 1.3701033360684394,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Previous cervical intraepithelial neoplasia of Yes pushed this prediction toward \u201cBiopsy-confirmed cervical cancer\u201d."
+          },
+          {
+            "feature": "Dx",
+            "label": "Any previous diagnosis",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.4922578541287408,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Any previous diagnosis of Yes pushed this prediction toward \u201cBiopsy-confirmed cervical cancer\u201d."
+          },
+          {
+            "feature": "Age",
+            "label": "Age",
+            "value": 59.0,
+            "value_display": "59 years",
+            "shap_value": 0.2546070768236275,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Age of 59 years (mid-range for this range) pushed this prediction toward \u201cBiopsy-confirmed cervical cancer\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cBiopsy-confirmed cervical cancer\u201d (90%). Raising the estimate: Previous cervical intraepithelial neoplasia (Yes), Any previous diagnosis (Yes), Age (59 years).",
+        "shap_lime_top5_overlap": 0.2
+      },
+      {
+        "case": "false_negative",
+        "case_label": "False negative (missed case)",
+        "test_index": 43,
+        "actual": 1,
+        "probability": 0.3628203541254841,
+        "patient": {
+          "Age": 21.0,
+          "Number of sexual partners": 4.0,
+          "First sexual intercourse": 15.0,
+          "Num of pregnancies": 1.0,
+          "Smokes": 0.0,
+          "Smokes (years)": 0.0,
+          "Smokes (packs/year)": 0.0,
+          "Hormonal Contraceptives": 0.0,
+          "Hormonal Contraceptives (years)": 0.0,
+          "IUD": 0.0,
+          "IUD (years)": 0.0,
+          "STDs": 0.0,
+          "STDs (number)": 0.0,
+          "STDs:condylomatosis": 0.0,
+          "STDs:vaginal condylomatosis": 0.0,
+          "STDs:vulvo-perineal condylomatosis": 0.0,
+          "STDs:syphilis": 0.0,
+          "STDs:pelvic inflammatory disease": 0.0,
+          "STDs:genital herpes": 0.0,
+          "STDs:molluscum contagiosum": 0.0,
+          "STDs:HIV": 0.0,
+          "STDs:Hepatitis B": 0.0,
+          "STDs:HPV": 0.0,
+          "STDs: Number of diagnosis": 0.0,
+          "Dx:Cancer": 0.0,
+          "Dx:CIN": 0.0,
+          "Dx:HPV": 0.0,
+          "Dx": 0.0
+        },
+        "patient_display": {
+          "Age": "21 years",
+          "Number of sexual partners": "4",
+          "First sexual intercourse": "15 years",
+          "Num of pregnancies": "1",
+          "Smokes": "No",
+          "Smokes (years)": "0.0 years",
+          "Smokes (packs/year)": "0.0",
+          "Hormonal Contraceptives": "No",
+          "Hormonal Contraceptives (years)": "0.0 years",
+          "IUD": "No",
+          "IUD (years)": "0.0 years",
+          "STDs": "No",
+          "STDs (number)": "0",
+          "STDs:condylomatosis": "No",
+          "STDs:vaginal condylomatosis": "No",
+          "STDs:vulvo-perineal condylomatosis": "No",
+          "STDs:syphilis": "No",
+          "STDs:pelvic inflammatory disease": "No",
+          "STDs:genital herpes": "No",
+          "STDs:molluscum contagiosum": "No",
+          "STDs:HIV": "No",
+          "STDs:Hepatitis B": "No",
+          "STDs:HPV": "No",
+          "STDs: Number of diagnosis": "0",
+          "Dx:Cancer": "No",
+          "Dx:CIN": "No",
+          "Dx:HPV": "No",
+          "Dx": "No"
+        },
+        "shap_values": {
+          "Age": -0.043914025283680276,
+          "Number of sexual partners": -0.007043251651471627,
+          "First sexual intercourse": 0.026023739067712378,
+          "Num of pregnancies": -0.08504549618634098,
+          "Smokes": 0.0015648369398016224,
+          "Smokes (years)": -0.026003264558029524,
+          "Smokes (packs/year)": 0.0006155868589552634,
+          "Hormonal Contraceptives": -0.005600332439569978,
+          "Hormonal Contraceptives (years)": -0.05098201692233071,
+          "IUD": -0.03600355380986416,
+          "IUD (years)": -0.013795391663451981,
+          "STDs": -0.009717982757492812,
+          "STDs (number)": -0.007475207403193716,
+          "STDs:condylomatosis": -0.012073290742457065,
+          "STDs:vaginal condylomatosis": 8.136877624763151e-18,
+          "STDs:vulvo-perineal condylomatosis": -0.01367795123998266,
+          "STDs:syphilis": 0.001798441869853207,
+          "STDs:pelvic inflammatory disease": 2.09274943662965e-18,
+          "STDs:genital herpes": 0.0,
+          "STDs:molluscum contagiosum": 0.0021816195960096692,
+          "STDs:HIV": -0.010285662884266838,
+          "STDs:Hepatitis B": 3.297742414020367e-18,
+          "STDs:HPV": 1.1247331666311868e-17,
+          "STDs: Number of diagnosis": -0.007458341532028672,
+          "Dx:Cancer": -0.016174991963508918,
+          "Dx:CIN": -0.01383942763705495,
+          "Dx:HPV": -0.017032574887743866,
+          "Dx": -0.015224469715321902
+        },
+        "lime_explanation": [
+          [
+            "STDs:HPV",
+            0.3464965566258582
+          ],
+          [
+            "Dx:CIN",
+            -0.2801056393386182
+          ],
+          [
+            "STDs:vaginal condylomatosis",
+            0.26105332636210427
+          ],
+          [
+            "STDs:Hepatitis B",
+            0.2534296410782776
+          ],
+          [
+            "Dx:HPV",
+            -0.18747606748050996
+          ],
+          [
+            "STDs:pelvic inflammatory disease",
+            0.18618821149289863
+          ],
+          [
+            "Dx:Cancer",
+            -0.17926608634474445
+          ],
+          [
+            "STDs:molluscum contagiosum",
+            0.12107565942128434
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "Num of pregnancies",
+            "label": "Number of pregnancies",
+            "value": 1.0,
+            "value_display": "1",
+            "shap_value": -0.08504549618634098,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Number of pregnancies of 1 (low for this range) pushed this prediction toward \u201cNegative biopsy\u201d."
+          },
+          {
+            "feature": "Hormonal Contraceptives (years)",
+            "label": "Years on hormonal contraceptives",
+            "value": 0.0,
+            "value_display": "0.0 years",
+            "shap_value": -0.05098201692233071,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Years on hormonal contraceptives of 0.0 years (low for this range) pushed this prediction toward \u201cNegative biopsy\u201d."
+          },
+          {
+            "feature": "Age",
+            "label": "Age",
+            "value": 21.0,
+            "value_display": "21 years",
+            "shap_value": -0.043914025283680276,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Age of 21 years (low for this range) pushed this prediction toward \u201cNegative biopsy\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cBiopsy-confirmed cervical cancer\u201d (36%). Lowering it: Number of pregnancies (1), Years on hormonal contraceptives (0.0 years), Age (21 years).",
+        "shap_lime_top5_overlap": 0.0
+      },
+      {
+        "case": "borderline",
+        "case_label": "Borderline (p \u2248 0.5)",
+        "test_index": 7,
+        "actual": 0,
+        "probability": 0.4957579637409196,
+        "patient": {
+          "Age": 30.0,
+          "Number of sexual partners": 1.0,
+          "First sexual intercourse": 21.0,
+          "Num of pregnancies": 2.0,
+          "Smokes": 0.0,
+          "Smokes (years)": 0.0,
+          "Smokes (packs/year)": 0.0,
+          "Hormonal Contraceptives": 0.0,
+          "Hormonal Contraceptives (years)": 0.0,
+          "IUD": 1.0,
+          "IUD (years)": 8.0,
+          "STDs": 0.0,
+          "STDs (number)": 0.0,
+          "STDs:condylomatosis": 0.0,
+          "STDs:vaginal condylomatosis": 0.0,
+          "STDs:vulvo-perineal condylomatosis": 0.0,
+          "STDs:syphilis": 0.0,
+          "STDs:pelvic inflammatory disease": 0.0,
+          "STDs:genital herpes": 0.0,
+          "STDs:molluscum contagiosum": 0.0,
+          "STDs:HIV": 0.0,
+          "STDs:Hepatitis B": 0.0,
+          "STDs:HPV": 0.0,
+          "STDs: Number of diagnosis": 0.0,
+          "Dx:Cancer": 0.0,
+          "Dx:CIN": 0.0,
+          "Dx:HPV": 0.0,
+          "Dx": 0.0
+        },
+        "patient_display": {
+          "Age": "30 years",
+          "Number of sexual partners": "1",
+          "First sexual intercourse": "21 years",
+          "Num of pregnancies": "2",
+          "Smokes": "No",
+          "Smokes (years)": "0.0 years",
+          "Smokes (packs/year)": "0.0",
+          "Hormonal Contraceptives": "No",
+          "Hormonal Contraceptives (years)": "0.0 years",
+          "IUD": "Yes",
+          "IUD (years)": "8.0 years",
+          "STDs": "No",
+          "STDs (number)": "0",
+          "STDs:condylomatosis": "No",
+          "STDs:vaginal condylomatosis": "No",
+          "STDs:vulvo-perineal condylomatosis": "No",
+          "STDs:syphilis": "No",
+          "STDs:pelvic inflammatory disease": "No",
+          "STDs:genital herpes": "No",
+          "STDs:molluscum contagiosum": "No",
+          "STDs:HIV": "No",
+          "STDs:Hepatitis B": "No",
+          "STDs:HPV": "No",
+          "STDs: Number of diagnosis": "0",
+          "Dx:Cancer": "No",
+          "Dx:CIN": "No",
+          "Dx:HPV": "No",
+          "Dx": "No"
+        },
+        "shap_values": {
+          "Age": 0.026788341004892618,
+          "Number of sexual partners": 0.006695210607575759,
+          "First sexual intercourse": -0.04560123084342261,
+          "Num of pregnancies": -0.01440970201163917,
+          "Smokes": 0.0015648369398016224,
+          "Smokes (years)": -0.026003264558029524,
+          "Smokes (packs/year)": 0.0006155868589552634,
+          "Hormonal Contraceptives": -0.005600332439569978,
+          "Hormonal Contraceptives (years)": -0.05098201692233071,
+          "IUD": 0.2543476865922662,
+          "IUD (years)": 0.15857697785458097,
+          "STDs": -0.009717982757492812,
+          "STDs (number)": -0.007475207403193716,
+          "STDs:condylomatosis": -0.012073290742457065,
+          "STDs:vaginal condylomatosis": 8.136877624763151e-18,
+          "STDs:vulvo-perineal condylomatosis": -0.01367795123998266,
+          "STDs:syphilis": 0.001798441869853207,
+          "STDs:pelvic inflammatory disease": 2.09274943662965e-18,
+          "STDs:genital herpes": 0.0,
+          "STDs:molluscum contagiosum": 0.0021816195960096692,
+          "STDs:HIV": -0.010285662884266838,
+          "STDs:Hepatitis B": 3.297742414020367e-18,
+          "STDs:HPV": 1.1247331666311868e-17,
+          "STDs: Number of diagnosis": -0.007458341532028672,
+          "Dx:Cancer": -0.016174991963508918,
+          "Dx:CIN": -0.01383942763705495,
+          "Dx:HPV": -0.017032574887743866,
+          "Dx": -0.015224469715321902
+        },
+        "lime_explanation": [
+          [
+            "STDs:HPV",
+            0.3178893902172156
+          ],
+          [
+            "Dx:CIN",
+            -0.28533566546605615
+          ],
+          [
+            "STDs:vaginal condylomatosis",
+            0.26125540932263663
+          ],
+          [
+            "STDs:Hepatitis B",
+            0.24705340663944936
+          ],
+          [
+            "Dx:HPV",
+            -0.1953647247946128
+          ],
+          [
+            "Dx:Cancer",
+            -0.1812504552154864
+          ],
+          [
+            "STDs:pelvic inflammatory disease",
+            0.16682608345750397
+          ],
+          [
+            "STDs:molluscum contagiosum",
+            0.11152221328935294
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "IUD",
+            "label": "Intrauterine device",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.2543476865922662,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Intrauterine device of Yes pushed this prediction toward \u201cBiopsy-confirmed cervical cancer\u201d."
+          },
+          {
+            "feature": "IUD (years)",
+            "label": "Years with an IUD",
+            "value": 8.0,
+            "value_display": "8.0 years",
+            "shap_value": 0.15857697785458097,
+            "direction": "increases",
+            "level": "mid-range",
+            "sentence": "Years with an IUD of 8.0 years (mid-range for this range) pushed this prediction toward \u201cBiopsy-confirmed cervical cancer\u201d."
+          },
+          {
+            "feature": "Hormonal Contraceptives (years)",
+            "label": "Years on hormonal contraceptives",
+            "value": 0.0,
+            "value_display": "0.0 years",
+            "shap_value": -0.05098201692233071,
+            "direction": "decreases",
+            "level": "low",
+            "sentence": "Years on hormonal contraceptives of 0.0 years (low for this range) pushed this prediction toward \u201cNegative biopsy\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cBiopsy-confirmed cervical cancer\u201d (50%). Raising the estimate: Intrauterine device (Yes), Years with an IUD (8.0 years). Lowering it: Years on hormonal contraceptives (0.0 years).",
+        "shap_lime_top5_overlap": 0.0
+      }
+    ]
+  },
+  "lung_cancer_surgery": {
+    "model": "logistic_regression",
+    "model_label": "Logistic Regression",
+    "cases": [
+      {
+        "case": "true_positive",
+        "case_label": "True positive (correctly flagged)",
+        "test_index": 55,
+        "actual": 1,
+        "probability": 0.670960827165844,
+        "patient": {
+          "AGE": 58.0,
+          "PRE30": 1.0,
+          "PRE17": 1.0,
+          "PRE19": 0.0,
+          "PRE25": 0.0,
+          "PRE32": 0.0,
+          "PRE4": 3.08,
+          "PRE5": 1.72,
+          "PRE6": 1.0,
+          "PRE7": 0.0,
+          "PRE8": 0.0,
+          "PRE9": 0.0,
+          "PRE10": 1.0,
+          "PRE11": 1.0,
+          "DGN": 3.0,
+          "PRE14": 12.0
+        },
+        "patient_display": {
+          "AGE": "58 years",
+          "PRE30": "Yes",
+          "PRE17": "Yes",
+          "PRE19": "No",
+          "PRE25": "No",
+          "PRE32": "No",
+          "PRE4": "3.08 L",
+          "PRE5": "1.72 L",
+          "PRE6": "1 \u2014 restricted but ambulatory",
+          "PRE7": "No",
+          "PRE8": "No",
+          "PRE9": "No",
+          "PRE10": "Yes",
+          "PRE11": "Yes",
+          "DGN": "DGN3",
+          "PRE14": "T2"
+        },
+        "shap_values": {
+          "AGE": -0.013449587847937849,
+          "PRE30": 0.059924149553191704,
+          "PRE17": 0.4264814138267458,
+          "PRE19": 0.0,
+          "PRE25": -0.01501706614687038,
+          "PRE32": -4.72070803678739e-18,
+          "PRE4": 0.00873779972504188,
+          "PRE5": 0.08645558195299789,
+          "PRE6": 0.017735074339449108,
+          "PRE7": -0.011374917422642,
+          "PRE8": -0.031253688871413755,
+          "PRE9": -0.05576175347222566,
+          "PRE10": 0.02231429340485282,
+          "PRE11": 0.16948092994253258,
+          "DGN": -0.014462036480133209,
+          "PRE14": 0.08724964454314005
+        },
+        "lime_explanation": [
+          [
+            "PRE32",
+            0.1509513937374188
+          ],
+          [
+            "PRE9",
+            -0.13045491433303485
+          ],
+          [
+            "PRE17",
+            0.10594543951964272
+          ],
+          [
+            "PRE25",
+            -0.0874548992049843
+          ],
+          [
+            "PRE8",
+            -0.053522787285102395
+          ],
+          [
+            "PRE7",
+            -0.047455090379207907
+          ],
+          [
+            "PRE5",
+            0.037745500985411205
+          ],
+          [
+            "PRE11",
+            0.036726531615370685
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "PRE17",
+            "label": "Type 2 diabetes",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.4264814138267458,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Type 2 diabetes of Yes pushed this prediction toward \u201cDied within one year\u201d."
+          },
+          {
+            "feature": "PRE11",
+            "label": "Weakness before surgery",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.16948092994253258,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Weakness before surgery of Yes pushed this prediction toward \u201cDied within one year\u201d."
+          },
+          {
+            "feature": "PRE14",
+            "label": "Tumour size (clinical T stage)",
+            "value": 12.0,
+            "value_display": "T2",
+            "shap_value": 0.08724964454314005,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Tumour size (clinical T stage) of T2 pushed this prediction toward \u201cDied within one year\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cDied within one year\u201d (67%). Raising the estimate: Type 2 diabetes (Yes), Weakness before surgery (Yes), Tumour size (clinical T stage) (T2).",
+        "shap_lime_top5_overlap": 0.2
+      },
+      {
+        "case": "true_negative",
+        "case_label": "True negative (correctly cleared)",
+        "test_index": 9,
+        "actual": 0,
+        "probability": 0.28696313498017356,
+        "patient": {
+          "AGE": 56.0,
+          "PRE30": 0.0,
+          "PRE17": 0.0,
+          "PRE19": 0.0,
+          "PRE25": 0.0,
+          "PRE32": 0.0,
+          "PRE4": 3.32,
+          "PRE5": 2.52,
+          "PRE6": 0.0,
+          "PRE7": 0.0,
+          "PRE8": 0.0,
+          "PRE9": 0.0,
+          "PRE10": 0.0,
+          "PRE11": 0.0,
+          "DGN": 3.0,
+          "PRE14": 11.0
+        },
+        "patient_display": {
+          "AGE": "56 years",
+          "PRE30": "No",
+          "PRE17": "No",
+          "PRE19": "No",
+          "PRE25": "No",
+          "PRE32": "No",
+          "PRE4": "3.32 L",
+          "PRE5": "2.52 L",
+          "PRE6": "0 \u2014 fully active",
+          "PRE7": "No",
+          "PRE8": "No",
+          "PRE9": "No",
+          "PRE10": "No",
+          "PRE11": "No",
+          "DGN": "DGN3",
+          "PRE14": "T1 \u2014 smallest"
+        },
+        "shap_values": {
+          "AGE": -0.01812770536026406,
+          "PRE30": -0.27298779240898446,
+          "PRE17": -0.02244639020140768,
+          "PRE19": 0.0,
+          "PRE25": -0.01501706614687038,
+          "PRE32": -4.72070803678739e-18,
+          "PRE4": -0.005076903397553971,
+          "PRE5": -0.006620000825091617,
+          "PRE6": -0.10894402808518734,
+          "PRE7": -0.011374917422642,
+          "PRE8": -0.031253688871413755,
+          "PRE9": -0.05576175347222566,
+          "PRE10": -0.06694288021455844,
+          "PRE11": -0.03228208189381572,
+          "DGN": -0.014462036480133209,
+          "PRE14": -0.2243562288252172
+        },
+        "lime_explanation": [
+          [
+            "PRE32",
+            0.1500695681569805
+          ],
+          [
+            "PRE9",
+            -0.13598878283231214
+          ],
+          [
+            "PRE17",
+            -0.10007561962606705
+          ],
+          [
+            "PRE25",
+            -0.08430058306451257
+          ],
+          [
+            "PRE7",
+            -0.05657715522492889
+          ],
+          [
+            "PRE8",
+            -0.05134186738388432
+          ],
+          [
+            "PRE11",
+            -0.04162899769134053
+          ],
+          [
+            "PRE14",
+            -0.0357691513453464
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "PRE30",
+            "label": "Smoker",
+            "value": 0.0,
+            "value_display": "No",
+            "shap_value": -0.27298779240898446,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Smoker of No pushed this prediction toward \u201cSurvived one year\u201d."
+          },
+          {
+            "feature": "PRE14",
+            "label": "Tumour size (clinical T stage)",
+            "value": 11.0,
+            "value_display": "T1 \u2014 smallest",
+            "shap_value": -0.2243562288252172,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Tumour size (clinical T stage) of T1 \u2014 smallest pushed this prediction toward \u201cSurvived one year\u201d."
+          },
+          {
+            "feature": "PRE6",
+            "label": "Performance status (Zubrod)",
+            "value": 0.0,
+            "value_display": "0 \u2014 fully active",
+            "shap_value": -0.10894402808518734,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Performance status (Zubrod) of 0 \u2014 fully active pushed this prediction toward \u201cSurvived one year\u201d."
+          }
+        ],
+        "summary": "The model estimates a low likelihood of \u201cDied within one year\u201d (29%). Lowering it: Smoker (No), Tumour size (clinical T stage) (T1 \u2014 smallest), Performance status (Zubrod) (0 \u2014 fully active).",
+        "shap_lime_top5_overlap": 0.2
+      },
+      {
+        "case": "false_positive",
+        "case_label": "False positive (unnecessary referral)",
+        "test_index": 62,
+        "actual": 0,
+        "probability": 0.7305681098412729,
+        "patient": {
+          "AGE": 67.0,
+          "PRE30": 1.0,
+          "PRE17": 0.0,
+          "PRE19": 0.0,
+          "PRE25": 1.0,
+          "PRE32": 0.0,
+          "PRE4": 2.36,
+          "PRE5": 2.0,
+          "PRE6": 1.0,
+          "PRE7": 0.0,
+          "PRE8": 0.0,
+          "PRE9": 1.0,
+          "PRE10": 0.0,
+          "PRE11": 0.0,
+          "DGN": 3.0,
+          "PRE14": 12.0
+        },
+        "patient_display": {
+          "AGE": "67 years",
+          "PRE30": "Yes",
+          "PRE17": "No",
+          "PRE19": "No",
+          "PRE25": "Yes",
+          "PRE32": "No",
+          "PRE4": "2.36 L",
+          "PRE5": "2.00 L",
+          "PRE6": "1 \u2014 restricted but ambulatory",
+          "PRE7": "No",
+          "PRE8": "No",
+          "PRE9": "Yes",
+          "PRE10": "No",
+          "PRE11": "No",
+          "DGN": "DGN3",
+          "PRE14": "T2"
+        },
+        "shap_values": {
+          "AGE": 0.00760194095753009,
+          "PRE30": 0.059924149553191704,
+          "PRE17": -0.02244639020140768,
+          "PRE19": 0.0,
+          "PRE25": 0.3604095875248888,
+          "PRE32": -4.72070803678739e-18,
+          "PRE4": 0.05018190909282949,
+          "PRE5": 0.05387912798066656,
+          "PRE6": 0.017735074339449108,
+          "PRE7": -0.011374917422642,
+          "PRE8": -0.031253688871413755,
+          "PRE9": 0.5638132851080597,
+          "PRE10": -0.06694288021455844,
+          "PRE11": -0.03228208189381572,
+          "DGN": -0.014462036480133209,
+          "PRE14": 0.08724964454314005
+        },
+        "lime_explanation": [
+          [
+            "PRE9",
+            0.13772954914867572
+          ],
+          [
+            "PRE32",
+            0.13021978924086516
+          ],
+          [
+            "PRE17",
+            -0.09769506250476716
+          ],
+          [
+            "PRE25",
+            0.0818337077528411
+          ],
+          [
+            "PRE8",
+            -0.05446512762448199
+          ],
+          [
+            "PRE7",
+            -0.053327504540066135
+          ],
+          [
+            "PRE11",
+            -0.03893789129877715
+          ],
+          [
+            "DGN",
+            -0.03456824212228269
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "PRE9",
+            "label": "Dyspnoea before surgery",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.5638132851080597,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Dyspnoea before surgery of Yes pushed this prediction toward \u201cDied within one year\u201d."
+          },
+          {
+            "feature": "PRE25",
+            "label": "Peripheral arterial disease",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.3604095875248888,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Peripheral arterial disease of Yes pushed this prediction toward \u201cDied within one year\u201d."
+          },
+          {
+            "feature": "PRE14",
+            "label": "Tumour size (clinical T stage)",
+            "value": 12.0,
+            "value_display": "T2",
+            "shap_value": 0.08724964454314005,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Tumour size (clinical T stage) of T2 pushed this prediction toward \u201cDied within one year\u201d."
+          }
+        ],
+        "summary": "The model estimates a high likelihood of \u201cDied within one year\u201d (73%). Raising the estimate: Dyspnoea before surgery (Yes), Peripheral arterial disease (Yes), Tumour size (clinical T stage) (T2).",
+        "shap_lime_top5_overlap": 0.4
+      },
+      {
+        "case": "false_negative",
+        "case_label": "False negative (missed case)",
+        "test_index": 11,
+        "actual": 1,
+        "probability": 0.3403809929172524,
+        "patient": {
+          "AGE": 58.0,
+          "PRE30": 0.0,
+          "PRE17": 0.0,
+          "PRE19": 0.0,
+          "PRE25": 0.0,
+          "PRE32": 0.0,
+          "PRE4": 4.32,
+          "PRE5": 3.2,
+          "PRE6": 0.0,
+          "PRE7": 0.0,
+          "PRE8": 0.0,
+          "PRE9": 0.0,
+          "PRE10": 0.0,
+          "PRE11": 0.0,
+          "DGN": 8.0,
+          "PRE14": 11.0
+        },
+        "patient_display": {
+          "AGE": "58 years",
+          "PRE30": "No",
+          "PRE17": "No",
+          "PRE19": "No",
+          "PRE25": "No",
+          "PRE32": "No",
+          "PRE4": "4.32 L",
+          "PRE5": "3.20 L",
+          "PRE6": "0 \u2014 fully active",
+          "PRE7": "No",
+          "PRE8": "No",
+          "PRE9": "No",
+          "PRE10": "No",
+          "PRE11": "No",
+          "DGN": "DGN8",
+          "PRE14": "T1 \u2014 smallest"
+        },
+        "shap_values": {
+          "AGE": -0.013449587847937849,
+          "PRE30": -0.27298779240898446,
+          "PRE17": -0.02244639020140768,
+          "PRE19": 0.0,
+          "PRE25": -0.01501706614687038,
+          "PRE32": -4.72070803678739e-18,
+          "PRE4": -0.06263816640837011,
+          "PRE5": -0.0857342461864677,
+          "PRE6": -0.10894402808518734,
+          "PRE7": -0.011374917422642,
+          "PRE8": -0.031253688871413755,
+          "PRE9": -0.05576175347222566,
+          "PRE10": -0.06694288021455844,
+          "PRE11": -0.03228208189381572,
+          "DGN": 0.36611787089179365,
+          "PRE14": -0.2243562288252172
+        },
+        "lime_explanation": [
+          [
+            "PRE32",
+            0.14093892185853016
+          ],
+          [
+            "PRE9",
+            -0.13353667807343156
+          ],
+          [
+            "PRE17",
+            -0.09797224945068359
+          ],
+          [
+            "PRE25",
+            -0.09272347458247414
+          ],
+          [
+            "PRE8",
+            -0.056734460940429984
+          ],
+          [
+            "PRE5",
+            -0.05455795105944324
+          ],
+          [
+            "PRE7",
+            -0.052417850311954645
+          ],
+          [
+            "PRE11",
+            -0.04007075091545769
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "DGN",
+            "label": "Diagnosis (ICD-10 group)",
+            "value": 8.0,
+            "value_display": "DGN8",
+            "shap_value": 0.36611787089179365,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Diagnosis (ICD-10 group) of DGN8 pushed this prediction toward \u201cDied within one year\u201d."
+          },
+          {
+            "feature": "PRE30",
+            "label": "Smoker",
+            "value": 0.0,
+            "value_display": "No",
+            "shap_value": -0.27298779240898446,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Smoker of No pushed this prediction toward \u201cSurvived one year\u201d."
+          },
+          {
+            "feature": "PRE14",
+            "label": "Tumour size (clinical T stage)",
+            "value": 11.0,
+            "value_display": "T1 \u2014 smallest",
+            "shap_value": -0.2243562288252172,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Tumour size (clinical T stage) of T1 \u2014 smallest pushed this prediction toward \u201cSurvived one year\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cDied within one year\u201d (34%). Raising the estimate: Diagnosis (ICD-10 group) (DGN8). Lowering it: Smoker (No), Tumour size (clinical T stage) (T1 \u2014 smallest).",
+        "shap_lime_top5_overlap": 0.0
+      },
+      {
+        "case": "borderline",
+        "case_label": "Borderline (p \u2248 0.5)",
+        "test_index": 18,
+        "actual": 0,
+        "probability": 0.49987016193516737,
+        "patient": {
+          "AGE": 74.0,
+          "PRE30": 1.0,
+          "PRE17": 0.0,
+          "PRE19": 0.0,
+          "PRE25": 0.0,
+          "PRE32": 0.0,
+          "PRE4": 3.52,
+          "PRE5": 2.36,
+          "PRE6": 1.0,
+          "PRE7": 0.0,
+          "PRE8": 0.0,
+          "PRE9": 0.0,
+          "PRE10": 1.0,
+          "PRE11": 0.0,
+          "DGN": 3.0,
+          "PRE14": 12.0
+        },
+        "patient_display": {
+          "AGE": "74 years",
+          "PRE30": "Yes",
+          "PRE17": "No",
+          "PRE19": "No",
+          "PRE25": "No",
+          "PRE32": "No",
+          "PRE4": "3.52 L",
+          "PRE5": "2.36 L",
+          "PRE6": "1 \u2014 restricted but ambulatory",
+          "PRE7": "No",
+          "PRE8": "No",
+          "PRE9": "No",
+          "PRE10": "Yes",
+          "PRE11": "No",
+          "DGN": "DGN3",
+          "PRE14": "T2"
+        },
+        "shap_values": {
+          "AGE": 0.02397535225067182,
+          "PRE30": 0.059924149553191704,
+          "PRE17": -0.02244639020140768,
+          "PRE19": 0.0,
+          "PRE25": -0.01501706614687038,
+          "PRE32": -4.72070803678739e-18,
+          "PRE4": -0.016589155999717203,
+          "PRE5": 0.011995115730526302,
+          "PRE6": 0.017735074339449108,
+          "PRE7": -0.011374917422642,
+          "PRE8": -0.031253688871413755,
+          "PRE9": -0.05576175347222566,
+          "PRE10": 0.02231429340485282,
+          "PRE11": -0.03228208189381572,
+          "DGN": -0.014462036480133209,
+          "PRE14": 0.08724964454314005
+        },
+        "lime_explanation": [
+          [
+            "PRE32",
+            0.1541870573071803
+          ],
+          [
+            "PRE9",
+            -0.13802843933140843
+          ],
+          [
+            "PRE17",
+            -0.10353086652292857
+          ],
+          [
+            "PRE25",
+            -0.09273124579675059
+          ],
+          [
+            "PRE8",
+            -0.05567030601920032
+          ],
+          [
+            "PRE7",
+            -0.05274535854050032
+          ],
+          [
+            "PRE11",
+            -0.04164847916154215
+          ],
+          [
+            "DGN",
+            -0.03503869961946654
+          ]
+        ],
+        "top_factors": [
+          {
+            "feature": "PRE14",
+            "label": "Tumour size (clinical T stage)",
+            "value": 12.0,
+            "value_display": "T2",
+            "shap_value": 0.08724964454314005,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Tumour size (clinical T stage) of T2 pushed this prediction toward \u201cDied within one year\u201d."
+          },
+          {
+            "feature": "PRE30",
+            "label": "Smoker",
+            "value": 1.0,
+            "value_display": "Yes",
+            "shap_value": 0.059924149553191704,
+            "direction": "increases",
+            "level": "",
+            "sentence": "Smoker of Yes pushed this prediction toward \u201cDied within one year\u201d."
+          },
+          {
+            "feature": "PRE9",
+            "label": "Dyspnoea before surgery",
+            "value": 0.0,
+            "value_display": "No",
+            "shap_value": -0.05576175347222566,
+            "direction": "decreases",
+            "level": "",
+            "sentence": "Dyspnoea before surgery of No pushed this prediction toward \u201cSurvived one year\u201d."
+          }
+        ],
+        "summary": "The model estimates a moderate likelihood of \u201cDied within one year\u201d (50%). Raising the estimate: Tumour size (clinical T stage) (T2), Smoker (Yes). Lowering it: Dyspnoea before surgery (No).",
+        "shap_lime_top5_overlap": 0.4
+      }
+    ]
+  }
+}

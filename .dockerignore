@@ -1,0 +1,14 @@
+# Keep the API image to source + artefacts.
+.venv/
+.git/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+notebooks/
+web/
+scripts/
+results/figures/
+data/raw/*.csv
+data/processed/*_x_test_raw.csv
+*.md
+.DS_Store

@@ -1,0 +1,338 @@
+[
+  {
+    "dataset":"Heart Disease (Cleveland)",
+    "feature":"Major vessels coloured by fluoroscopy",
+    "missing_fraction":0.0132,
+    "missing_rows":4
+  },
+  {
+    "dataset":"Heart Disease (Cleveland)",
+    "feature":"Thallium perfusion scan",
+    "missing_fraction":0.0066,
+    "missing_rows":2
+  },
+  {
+    "dataset":"Pima Indians Diabetes",
+    "feature":"2-hour serum insulin",
+    "missing_fraction":0.487,
+    "missing_rows":374
+  },
+  {
+    "dataset":"Pima Indians Diabetes",
+    "feature":"Triceps skin fold thickness",
+    "missing_fraction":0.2956,
+    "missing_rows":227
+  },
+  {
+    "dataset":"Pima Indians Diabetes",
+    "feature":"Diastolic blood pressure",
+    "missing_fraction":0.0508,
+    "missing_rows":39
+  },
+  {
+    "dataset":"Pima Indians Diabetes",
+    "feature":"Body mass index",
+    "missing_fraction":0.0143,
+    "missing_rows":11
+  },
+  {
+    "dataset":"Pima Indians Diabetes",
+    "feature":"Plasma glucose (2-hour OGTT)",
+    "missing_fraction":0.0065,
+    "missing_rows":5
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Red blood cells (urine microscopy)",
+    "missing_fraction":0.38,
+    "missing_rows":152
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Red blood cell count",
+    "missing_fraction":0.3275,
+    "missing_rows":131
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"White blood cell count",
+    "missing_fraction":0.265,
+    "missing_rows":106
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Serum potassium",
+    "missing_fraction":0.22,
+    "missing_rows":88
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Serum sodium",
+    "missing_fraction":0.22,
+    "missing_rows":88
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Packed cell volume",
+    "missing_fraction":0.1775,
+    "missing_rows":71
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Pus cells",
+    "missing_fraction":0.1625,
+    "missing_rows":65
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Haemoglobin",
+    "missing_fraction":0.13,
+    "missing_rows":52
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Urine sugar",
+    "missing_fraction":0.1225,
+    "missing_rows":49
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Urine specific gravity",
+    "missing_fraction":0.1175,
+    "missing_rows":47
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Urine albumin",
+    "missing_fraction":0.115,
+    "missing_rows":46
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Random blood glucose",
+    "missing_fraction":0.11,
+    "missing_rows":44
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Blood urea",
+    "missing_fraction":0.0475,
+    "missing_rows":19
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Serum creatinine",
+    "missing_fraction":0.0425,
+    "missing_rows":17
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Blood pressure",
+    "missing_fraction":0.03,
+    "missing_rows":12
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Age",
+    "missing_fraction":0.0225,
+    "missing_rows":9
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Bacteria",
+    "missing_fraction":0.01,
+    "missing_rows":4
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Pus cell clumps",
+    "missing_fraction":0.01,
+    "missing_rows":4
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Hypertension",
+    "missing_fraction":0.005,
+    "missing_rows":2
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Coronary artery disease",
+    "missing_fraction":0.005,
+    "missing_rows":2
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Diabetes mellitus",
+    "missing_fraction":0.005,
+    "missing_rows":2
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Appetite",
+    "missing_fraction":0.0025,
+    "missing_rows":1
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Pedal oedema",
+    "missing_fraction":0.0025,
+    "missing_rows":1
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "feature":"Anaemia",
+    "missing_fraction":0.0025,
+    "missing_rows":1
+  },
+  {
+    "dataset":"Breast Cancer Recurrence (Ljubljana)",
+    "feature":"Node capsular invasion",
+    "missing_fraction":0.028,
+    "missing_rows":8
+  },
+  {
+    "dataset":"Breast Cancer Recurrence (Ljubljana)",
+    "feature":"Quadrant",
+    "missing_fraction":0.0035,
+    "missing_rows":1
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Intrauterine device",
+    "missing_fraction":0.1364,
+    "missing_rows":117
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Years with an IUD",
+    "missing_fraction":0.1364,
+    "missing_rows":117
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Hormonal contraceptives",
+    "missing_fraction":0.1259,
+    "missing_rows":108
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Years on hormonal contraceptives",
+    "missing_fraction":0.1259,
+    "missing_rows":108
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Number of STIs",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Vaginal condylomatosis",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Hepatitis B",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"HIV",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Molluscum contagiosum",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Genital herpes",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Pelvic inflammatory disease",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Syphilis",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Vulvo-perineal condylomatosis",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"HPV",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Condylomatosis",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Any sexually transmitted infection",
+    "missing_fraction":0.1224,
+    "missing_rows":105
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Number of pregnancies",
+    "missing_fraction":0.0653,
+    "missing_rows":56
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Number of sexual partners",
+    "missing_fraction":0.0303,
+    "missing_rows":26
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Pack-years",
+    "missing_fraction":0.0152,
+    "missing_rows":13
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Years smoked",
+    "missing_fraction":0.0152,
+    "missing_rows":13
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Smokes",
+    "missing_fraction":0.0152,
+    "missing_rows":13
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "feature":"Age at first intercourse",
+    "missing_fraction":0.0082,
+    "missing_rows":7
+  },
+  {
+    "dataset":"Lung Cancer Thoracic Surgery",
+    "feature":"FEV1",
+    "missing_fraction":0.0298,
+    "missing_rows":14
+  }
+]

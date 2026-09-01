@@ -1,0 +1,214 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ==========================================================================
+   Clinical decision-support theme.
+   Deep navy/charcoal base, one confident teal accent, no violet gradients.
+   Semantic risk and attribution colours are tokens rather than inline hex so
+   the charts and the badges can never drift out of sync.
+   ========================================================================== */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-fraunces);
+  --font-mono: var(--font-geist-mono);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* project-specific semantic tokens */
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-teal: var(--teal);
+  --color-teal-soft: var(--teal-soft);
+  --color-risk-low: var(--risk-low);
+  --color-risk-moderate: var(--risk-moderate);
+  --color-risk-high: var(--risk-high);
+  --color-increases: var(--increases);
+  --color-decreases: var(--decreases);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-2xl: calc(var(--radius) * 2);
+  --radius-3xl: calc(var(--radius) * 2.6);
+
+  --shadow-card: 0 1px 2px oklch(0.2 0.03 245 / 0.04),
+    0 8px 24px -12px oklch(0.2 0.03 245 / 0.12);
+  --shadow-raised: 0 2px 4px oklch(0.2 0.03 245 / 0.05),
+    0 18px 48px -20px oklch(0.2 0.03 245 / 0.22);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Cool near-white paper, never pure #fff for large surfaces. */
+  --background: oklch(0.982 0.004 220);
+  --foreground: oklch(0.24 0.028 250);
+  --surface: oklch(1 0 0);
+  --surface-raised: oklch(0.995 0.003 220);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.028 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.028 250);
+
+  /* Primary is the navy, not the accent — the accent stays scarce. */
+  --primary: oklch(0.3 0.048 250);
+  --primary-foreground: oklch(0.985 0.004 220);
+  --secondary: oklch(0.955 0.008 225);
+  --secondary-foreground: oklch(0.3 0.048 250);
+  --muted: oklch(0.958 0.007 225);
+  --muted-foreground: oklch(0.505 0.024 245);
+
+  --teal: oklch(0.55 0.098 195);
+  --teal-soft: oklch(0.93 0.032 195);
+  --accent: oklch(0.93 0.032 195);
+  --accent-foreground: oklch(0.34 0.06 200);
+
+  --destructive: oklch(0.552 0.164 25);
+  --border: oklch(0.905 0.008 230);
+  --input: oklch(0.895 0.01 230);
+  --ring: oklch(0.55 0.098 195);
+
+  --risk-low: oklch(0.56 0.096 175);
+  --risk-moderate: oklch(0.68 0.13 65);
+  --risk-high: oklch(0.55 0.17 25);
+
+  /* Attribution direction. Warm = pushes risk up, cool = pushes risk down.
+     Deliberately not red/green: ~8% of men have a red-green deficiency and
+     this is a clinical tool. */
+  --increases: oklch(0.56 0.16 30);
+  --decreases: oklch(0.5 0.09 220);
+
+  --chart-1: oklch(0.55 0.098 195);
+  --chart-2: oklch(0.42 0.09 255);
+  --chart-3: oklch(0.62 0.13 45);
+  --chart-4: oklch(0.5 0.1 155);
+  --chart-5: oklch(0.45 0.11 300);
+}
+
+.dark {
+  /* Deep charcoal with a navy cast — reads as instrumentation, not as a
+     "dark mode" afterthought. */
+  --background: oklch(0.178 0.019 250);
+  --foreground: oklch(0.955 0.006 220);
+  --surface: oklch(0.213 0.021 250);
+  --surface-raised: oklch(0.243 0.023 250);
+
+  --card: oklch(0.213 0.021 250);
+  --card-foreground: oklch(0.955 0.006 220);
+  --popover: oklch(0.228 0.022 250);
+  --popover-foreground: oklch(0.955 0.006 220);
+
+  --primary: oklch(0.9 0.02 200);
+  --primary-foreground: oklch(0.2 0.025 250);
+  --secondary: oklch(0.265 0.024 250);
+  --secondary-foreground: oklch(0.955 0.006 220);
+  --muted: oklch(0.262 0.022 250);
+  --muted-foreground: oklch(0.7 0.017 235);
+
+  --teal: oklch(0.74 0.115 187);
+  --teal-soft: oklch(0.3 0.05 195);
+  --accent: oklch(0.3 0.05 195);
+  --accent-foreground: oklch(0.9 0.06 190);
+
+  --destructive: oklch(0.66 0.17 25);
+  --border: oklch(0.98 0.01 220 / 11%);
+  --input: oklch(0.98 0.01 220 / 16%);
+  --ring: oklch(0.74 0.115 187);
+
+  --risk-low: oklch(0.72 0.11 175);
+  --risk-moderate: oklch(0.78 0.13 70);
+  --risk-high: oklch(0.68 0.16 25);
+
+  --increases: oklch(0.7 0.15 33);
+  --decreases: oklch(0.68 0.1 220);
+
+  --chart-1: oklch(0.74 0.115 187);
+  --chart-2: oklch(0.68 0.12 255);
+  --chart-3: oklch(0.76 0.13 50);
+  --chart-4: oklch(0.7 0.11 155);
+  --chart-5: oklch(0.7 0.12 300);
+
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.3), 0 8px 24px -12px oklch(0 0 0 / 0.5);
+  --shadow-raised: 0 2px 6px oklch(0 0 0 / 0.35), 0 20px 50px -20px oklch(0 0 0 / 0.6);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv11", "ss01";
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+    /* Fraunces variable axes: low optical size + slight softness reads as
+       editorial authority rather than decorative. */
+    font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 32;
+    letter-spacing: -0.015em;
+  }
+  /* Tabular figures everywhere a number is compared against another number. */
+  .numeric {
+    font-variant-numeric: tabular-nums;
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  /* Hairline grid used behind the hero — suggests a clinical chart without
+     shouting. */
+  .clinical-grid {
+    background-image:
+      linear-gradient(to right, var(--border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 75%);
+  }
+  .card-elevated {
+    @apply bg-card border rounded-xl;
+    box-shadow: var(--shadow-card);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

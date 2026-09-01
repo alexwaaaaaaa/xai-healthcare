@@ -1,0 +1,15 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Node
+web/node_modules/
+web/.next/
+web/next-env.d.ts
+
+# Raw data can be re-downloaded if needed, but keep processed and models for standalone API deployment
+data/raw/*.csv
+
+.DS_Store

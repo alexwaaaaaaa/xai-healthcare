@@ -1,0 +1,1059 @@
+{
+  "heart_disease": {
+    "model": "logistic_regression",
+    "model_label": "Logistic Regression",
+    "base_value": -0.16728130677594882,
+    "features": [
+      {
+        "feature": "ca",
+        "label": "Major vessels coloured by fluoroscopy",
+        "group": "labs",
+        "mean_abs_shap": 0.7468918189793898,
+        "mean_signed_shap": 0.2744642892745467
+      },
+      {
+        "feature": "thal",
+        "label": "Thallium perfusion scan",
+        "group": "labs",
+        "mean_abs_shap": 0.5565421812855329,
+        "mean_signed_shap": -0.006857681338919941
+      },
+      {
+        "feature": "sex",
+        "label": "Sex",
+        "group": "demographics",
+        "mean_abs_shap": 0.43459745359486246,
+        "mean_signed_shap": 0.002097945375690008
+      },
+      {
+        "feature": "cp",
+        "label": "Chest pain type",
+        "group": "vitals",
+        "mean_abs_shap": 0.3224055004710325,
+        "mean_signed_shap": -0.008713662174892748
+      },
+      {
+        "feature": "exang",
+        "label": "Exercise-induced angina",
+        "group": "vitals",
+        "mean_abs_shap": 0.3055373497290126,
+        "mean_signed_shap": 0.005488694905311586
+      },
+      {
+        "feature": "thalach",
+        "label": "Maximum heart rate achieved",
+        "group": "vitals",
+        "mean_abs_shap": 0.2379162050146027,
+        "mean_signed_shap": 0.035113581814875616
+      },
+      {
+        "feature": "slope",
+        "label": "ST segment slope at peak exercise",
+        "group": "vitals",
+        "mean_abs_shap": 0.21471733192378198,
+        "mean_signed_shap": 0.046746577798904614
+      },
+      {
+        "feature": "oldpeak",
+        "label": "ST depression (exercise vs rest)",
+        "group": "vitals",
+        "mean_abs_shap": 0.20483661068704564,
+        "mean_signed_shap": 0.06074180262370184
+      },
+      {
+        "feature": "restecg",
+        "label": "Resting ECG",
+        "group": "vitals",
+        "mean_abs_shap": 0.17244896267535875,
+        "mean_signed_shap": 0.014950510927219959
+      },
+      {
+        "feature": "trestbps",
+        "label": "Resting blood pressure",
+        "group": "vitals",
+        "mean_abs_shap": 0.12723155514363638,
+        "mean_signed_shap": 0.038663597343961104
+      },
+      {
+        "feature": "chol",
+        "label": "Serum cholesterol",
+        "group": "labs",
+        "mean_abs_shap": 0.09714978166064031,
+        "mean_signed_shap": -0.04621538426824853
+      },
+      {
+        "feature": "fbs",
+        "label": "Fasting blood sugar > 120 mg/dL",
+        "group": "labs",
+        "mean_abs_shap": 0.0774998311522798,
+        "mean_signed_shap": -0.01046475215167771
+      },
+      {
+        "feature": "age",
+        "label": "Age",
+        "group": "demographics",
+        "mean_abs_shap": 0.00019459722509580774,
+        "mean_signed_shap": 4.187100786893923e-05
+      }
+    ]
+  },
+  "heart_failure": {
+    "model": "random_forest",
+    "model_label": "Random Forest",
+    "base_value": 0.3201255230125521,
+    "features": [
+      {
+        "feature": "serum_creatinine",
+        "label": "Serum creatinine",
+        "group": "labs",
+        "mean_abs_shap": 0.10945085296312536,
+        "mean_signed_shap": 0.011694842302649798
+      },
+      {
+        "feature": "ejection_fraction",
+        "label": "Ejection fraction",
+        "group": "vitals",
+        "mean_abs_shap": 0.07762181757870984,
+        "mean_signed_shap": -0.02186972388738755
+      },
+      {
+        "feature": "age",
+        "label": "Age",
+        "group": "demographics",
+        "mean_abs_shap": 0.042364730520133606,
+        "mean_signed_shap": 0.006729940895866497
+      },
+      {
+        "feature": "serum_sodium",
+        "label": "Serum sodium",
+        "group": "labs",
+        "mean_abs_shap": 0.03631826972521232,
+        "mean_signed_shap": 0.003075480086802791
+      },
+      {
+        "feature": "platelets",
+        "label": "Platelet count",
+        "group": "labs",
+        "mean_abs_shap": 0.0297005817383844,
+        "mean_signed_shap": -0.0014905271464906457
+      },
+      {
+        "feature": "high_blood_pressure",
+        "label": "Hypertension",
+        "group": "history",
+        "mean_abs_shap": 0.018747600508566407,
+        "mean_signed_shap": -0.004818721598148689
+      },
+      {
+        "feature": "anaemia",
+        "label": "Anaemia",
+        "group": "labs",
+        "mean_abs_shap": 0.015988885486035137,
+        "mean_signed_shap": -0.0021766879791541034
+      },
+      {
+        "feature": "creatinine_phosphokinase",
+        "label": "Creatinine phosphokinase (CPK)",
+        "group": "labs",
+        "mean_abs_shap": 0.014097609730383234,
+        "mean_signed_shap": -0.0008343920169856633
+      },
+      {
+        "feature": "diabetes",
+        "label": "Diabetes",
+        "group": "history",
+        "mean_abs_shap": 0.011249451520181865,
+        "mean_signed_shap": -0.004445476787550812
+      },
+      {
+        "feature": "smoking",
+        "label": "Smoker",
+        "group": "history",
+        "mean_abs_shap": 0.008278210192192884,
+        "mean_signed_shap": -0.00039846971718854416
+      },
+      {
+        "feature": "sex",
+        "label": "Sex",
+        "group": "demographics",
+        "mean_abs_shap": 0.005242550419216044,
+        "mean_signed_shap": -0.0017794544879995073
+      }
+    ]
+  },
+  "diabetes": {
+    "model": "random_forest",
+    "model_label": "Random Forest",
+    "base_value": 0.49705329323273545,
+    "features": [
+      {
+        "feature": "Glucose",
+        "label": "Plasma glucose (2-hour OGTT)",
+        "group": "labs",
+        "mean_abs_shap": 0.16183296005132017,
+        "mean_signed_shap": -0.03275906213408813
+      },
+      {
+        "feature": "BMI",
+        "label": "Body mass index",
+        "group": "vitals",
+        "mean_abs_shap": 0.08767731298011937,
+        "mean_signed_shap": -0.022154480962009435
+      },
+      {
+        "feature": "Age",
+        "label": "Age",
+        "group": "demographics",
+        "mean_abs_shap": 0.06132192398702352,
+        "mean_signed_shap": -0.009096432019234543
+      },
+      {
+        "feature": "Insulin",
+        "label": "2-hour serum insulin",
+        "group": "labs",
+        "mean_abs_shap": 0.03057469071831055,
+        "mean_signed_shap": -0.005010454563073612
+      },
+      {
+        "feature": "DiabetesPedigreeFunction",
+        "label": "Diabetes pedigree function",
+        "group": "demographics",
+        "mean_abs_shap": 0.02600705316495469,
+        "mean_signed_shap": -0.0070289512370251975
+      },
+      {
+        "feature": "Pregnancies",
+        "label": "Number of pregnancies",
+        "group": "demographics",
+        "mean_abs_shap": 0.015329371962772701,
+        "mean_signed_shap": -0.0004623688367246847
+      },
+      {
+        "feature": "SkinThickness",
+        "label": "Triceps skin fold thickness",
+        "group": "vitals",
+        "mean_abs_shap": 0.012586361145584188,
+        "mean_signed_shap": -0.0014886825770464803
+      },
+      {
+        "feature": "BloodPressure",
+        "label": "Diastolic blood pressure",
+        "group": "vitals",
+        "mean_abs_shap": 0.004781984445322373,
+        "mean_signed_shap": -0.0003959580420888059
+      }
+    ]
+  },
+  "kidney_disease": {
+    "model": "random_forest",
+    "model_label": "Random Forest",
+    "base_value": 0.6251666666666666,
+    "features": [
+      {
+        "feature": "sg",
+        "label": "Urine specific gravity",
+        "group": "labs",
+        "mean_abs_shap": 0.079473790124266,
+        "mean_signed_shap": -0.008236328505197633
+      },
+      {
+        "feature": "rbc",
+        "label": "Red blood cells (urine microscopy)",
+        "group": "labs",
+        "mean_abs_shap": 0.06652798208913394,
+        "mean_signed_shap": -0.0018864241923695715
+      },
+      {
+        "feature": "hemo",
+        "label": "Haemoglobin",
+        "group": "labs",
+        "mean_abs_shap": 0.06590528824812454,
+        "mean_signed_shap": -0.007697188777825326
+      },
+      {
+        "feature": "pcv",
+        "label": "Packed cell volume",
+        "group": "labs",
+        "mean_abs_shap": 0.058667979144210534,
+        "mean_signed_shap": -0.015310337456767183
+      },
+      {
+        "feature": "al",
+        "label": "Urine albumin",
+        "group": "labs",
+        "mean_abs_shap": 0.057777838967961515,
+        "mean_signed_shap": 0.004668574567142322
+      },
+      {
+        "feature": "sc",
+        "label": "Serum creatinine",
+        "group": "labs",
+        "mean_abs_shap": 0.05504010567222524,
+        "mean_signed_shap": -0.00458749284792434
+      },
+      {
+        "feature": "htn",
+        "label": "Hypertension",
+        "group": "history",
+        "mean_abs_shap": 0.031250098103633245,
+        "mean_signed_shap": -0.0026340101520218257
+      },
+      {
+        "feature": "dm",
+        "label": "Diabetes mellitus",
+        "group": "history",
+        "mean_abs_shap": 0.02511372073545808,
+        "mean_signed_shap": 0.004158374853001359
+      },
+      {
+        "feature": "bgr",
+        "label": "Random blood glucose",
+        "group": "labs",
+        "mean_abs_shap": 0.019294508103816322,
+        "mean_signed_shap": 0.003950206119796433
+      },
+      {
+        "feature": "rbcc",
+        "label": "Red blood cell count",
+        "group": "labs",
+        "mean_abs_shap": 0.01560482362075603,
+        "mean_signed_shap": -0.0022637534133484825
+      },
+      {
+        "feature": "sod",
+        "label": "Serum sodium",
+        "group": "labs",
+        "mean_abs_shap": 0.015033728272723354,
+        "mean_signed_shap": -0.003947809588149951
+      },
+      {
+        "feature": "pc",
+        "label": "Pus cells",
+        "group": "labs",
+        "mean_abs_shap": 0.009843524686080655,
+        "mean_signed_shap": -0.000815655736525972
+      },
+      {
+        "feature": "bu",
+        "label": "Blood urea",
+        "group": "labs",
+        "mean_abs_shap": 0.008050410808497287,
+        "mean_signed_shap": -0.0024978031572058792
+      },
+      {
+        "feature": "appet",
+        "label": "Appetite",
+        "group": "vitals",
+        "mean_abs_shap": 0.0068446449527051435,
+        "mean_signed_shap": 0.0021132390799875086
+      },
+      {
+        "feature": "pe",
+        "label": "Pedal oedema",
+        "group": "vitals",
+        "mean_abs_shap": 0.00486224418122601,
+        "mean_signed_shap": 0.002522365788010963
+      },
+      {
+        "feature": "bp",
+        "label": "Blood pressure",
+        "group": "vitals",
+        "mean_abs_shap": 0.003942301999857776,
+        "mean_signed_shap": -0.0005649511966420763
+      },
+      {
+        "feature": "su",
+        "label": "Urine sugar",
+        "group": "labs",
+        "mean_abs_shap": 0.003486576962962362,
+        "mean_signed_shap": 0.0012036590282899413
+      },
+      {
+        "feature": "pot",
+        "label": "Serum potassium",
+        "group": "labs",
+        "mean_abs_shap": 0.0028545987994711155,
+        "mean_signed_shap": -0.000523187650842634
+      },
+      {
+        "feature": "age",
+        "label": "Age",
+        "group": "demographics",
+        "mean_abs_shap": 0.002421331011405201,
+        "mean_signed_shap": -0.0007486493571286373
+      },
+      {
+        "feature": "wbcc",
+        "label": "White blood cell count",
+        "group": "labs",
+        "mean_abs_shap": 0.0016549249357772412,
+        "mean_signed_shap": -0.00028497954206552846
+      },
+      {
+        "feature": "ane",
+        "label": "Anaemia",
+        "group": "labs",
+        "mean_abs_shap": 0.0013347189816284354,
+        "mean_signed_shap": 5.6727859777820676e-05
+      },
+      {
+        "feature": "pcc",
+        "label": "Pus cell clumps",
+        "group": "labs",
+        "mean_abs_shap": 0.0006084129921186808,
+        "mean_signed_shap": -0.0003594341575096169
+      },
+      {
+        "feature": "cad",
+        "label": "Coronary artery disease",
+        "group": "history",
+        "mean_abs_shap": 0.00033461118049602574,
+        "mean_signed_shap": -0.00010618271333629075
+      },
+      {
+        "feature": "ba",
+        "label": "Bacteria",
+        "group": "labs",
+        "mean_abs_shap": 0.0002813136549020641,
+        "mean_signed_shap": -2.745909739759876e-05
+      }
+    ]
+  },
+  "breast_cancer": {
+    "model": "logistic_regression",
+    "model_label": "Logistic Regression",
+    "base_value": 0.9557150398937644,
+    "features": [
+      {
+        "feature": "texture3",
+        "label": "Texture (grey-scale s.d.) (worst)",
+        "group": "morphology_worst",
+        "mean_abs_shap": 1.2417737887968778,
+        "mean_signed_shap": -0.3815753722277295
+      },
+      {
+        "feature": "radius2",
+        "label": "Radius (variability)",
+        "group": "morphology_se",
+        "mean_abs_shap": 0.7674147442981099,
+        "mean_signed_shap": -0.16100581743181555
+      },
+      {
+        "feature": "symmetry3",
+        "label": "Symmetry (worst)",
+        "group": "morphology_worst",
+        "mean_abs_shap": 0.7391408591432406,
+        "mean_signed_shap": -0.08997309307686842
+      },
+      {
+        "feature": "concave_points1",
+        "label": "Concave points (mean)",
+        "group": "morphology_mean",
+        "mean_abs_shap": 0.7242774055271437,
+        "mean_signed_shap": -0.12570437335208062
+      },
+      {
+        "feature": "radius3",
+        "label": "Radius (worst)",
+        "group": "morphology_worst",
+        "mean_abs_shap": 0.7122307120047473,
+        "mean_signed_shap": -0.21048845539655378
+      },
+      {
+        "feature": "area3",
+        "label": "Area (worst)",
+        "group": "morphology_worst",
+        "mean_abs_shap": 0.7025224731697136,
+        "mean_signed_shap": -0.21232564999453393
+      },
+      {
+        "feature": "compactness2",
+        "label": "Compactness (variability)",
+        "group": "morphology_se",
+        "mean_abs_shap": 0.6954892744346172,
+        "mean_signed_shap": -0.04790580098167834
+      },
+      {
+        "feature": "concavity3",
+        "label": "Concavity (worst)",
+        "group": "morphology_worst",
+        "mean_abs_shap": 0.6930946004214622,
+        "mean_signed_shap": -0.1292048721456778
+      },
+      {
+        "feature": "concave_points3",
+        "label": "Concave points (worst)",
+        "group": "morphology_worst",
+        "mean_abs_shap": 0.5699027200006797,
+        "mean_signed_shap": -0.16144698401488145
+      },
+      {
+        "feature": "concavity1",
+        "label": "Concavity (mean)",
+        "group": "morphology_mean",
+        "mean_abs_shap": 0.5662404937986272,
+        "mean_signed_shap": -0.0621215779921513
+      },
+      {
+        "feature": "perimeter3",
+        "label": "Perimeter (worst)",
+        "group": "morphology_worst",
+        "mean_abs_shap": 0.5636839125894146,
+        "mean_signed_shap": -0.1588394708485024
+      },
+      {
+        "feature": "area2",
+        "label": "Area (variability)",
+        "group": "morphology_se",
+        "mean_abs_shap": 0.495502422351412,
+        "mean_signed_shap": -0.12475313954378936
+      },
+      {
+        "feature": "perimeter2",
+        "label": "Perimeter (variability)",
+        "group": "morphology_se",
+        "mean_abs_shap": 0.43246141769296376,
+        "mean_signed_shap": -0.07522521694668145
+      },
+      {
+        "feature": "texture1",
+        "label": "Texture (grey-scale s.d.) (mean)",
+        "group": "morphology_mean",
+        "mean_abs_shap": 0.39179121624713653,
+        "mean_signed_shap": -0.08194250866844828
+      },
+      {
+        "feature": "fractal_dimension2",
+        "label": "Fractal dimension (variability)",
+        "group": "morphology_se",
+        "mean_abs_shap": 0.3821033948327859,
+        "mean_signed_shap": -0.01237797855839867
+      },
+      {
+        "feature": "concave_points2",
+        "label": "Concave points (variability)",
+        "group": "morphology_se",
+        "mean_abs_shap": 0.34486073266942513,
+        "mean_signed_shap": -0.0019074239722634177
+      },
+      {
+        "feature": "compactness1",
+        "label": "Compactness (mean)",
+        "group": "morphology_mean",
+        "mean_abs_shap": 0.33269190617249444,
+        "mean_signed_shap": 0.02788903170236679
+      },
+      {
+        "feature": "area1",
+        "label": "Area (mean)",
+        "group": "morphology_mean",
+        "mean_abs_shap": 0.33026914759964787,
+        "mean_signed_shap": -0.07313956579314901
+      },
+      {
+        "feature": "texture2",
+        "label": "Texture (grey-scale s.d.) (variability)",
+        "group": "morphology_se",
+        "mean_abs_shap": 0.32016833661751676,
+        "mean_signed_shap": 0.003351454638066943
+      },
+      {
+        "feature": "smoothness3",
+        "label": "Smoothness (worst)",
+        "group": "morphology_worst",
+        "mean_abs_shap": 0.2783441456910257,
+        "mean_signed_shap": -0.05223626889223574
+      },
+      {
+        "feature": "radius1",
+        "label": "Radius (mean)",
+        "group": "morphology_mean",
+        "mean_abs_shap": 0.2702450270744507,
+        "mean_signed_shap": -0.06074828394437086
+      },
+      {
+        "feature": "perimeter1",
+        "label": "Perimeter (mean)",
+        "group": "morphology_mean",
+        "mean_abs_shap": 0.2635689011613589,
+        "mean_signed_shap": -0.057188101305771864
+      },
+      {
+        "feature": "smoothness1",
+        "label": "Smoothness (mean)",
+        "group": "morphology_mean",
+        "mean_abs_shap": 0.24742491830271854,
+        "mean_signed_shap": -0.007562348481969198
+      },
+      {
+        "feature": "symmetry2",
+        "label": "Symmetry (variability)",
+        "group": "morphology_se",
+        "mean_abs_shap": 0.21731216790563765,
+        "mean_signed_shap": -0.08122984126099796
+      },
+      {
+        "feature": "smoothness2",
+        "label": "Smoothness (variability)",
+        "group": "morphology_se",
+        "mean_abs_shap": 0.2087386753750365,
+        "mean_signed_shap": 0.062477153086021114
+      },
+      {
+        "feature": "compactness3",
+        "label": "Compactness (worst)",
+        "group": "morphology_worst",
+        "mean_abs_shap": 0.13121546935966263,
+        "mean_signed_shap": 0.021774980449759253
+      },
+      {
+        "feature": "symmetry1",
+        "label": "Symmetry (mean)",
+        "group": "morphology_mean",
+        "mean_abs_shap": 0.12798429902125597,
+        "mean_signed_shap": 0.017044123400876465
+      },
+      {
+        "feature": "concavity2",
+        "label": "Concavity (variability)",
+        "group": "morphology_se",
+        "mean_abs_shap": 0.056699884440473254,
+        "mean_signed_shap": -0.0014035914101759635
+      },
+      {
+        "feature": "fractal_dimension1",
+        "label": "Fractal dimension (mean)",
+        "group": "morphology_mean",
+        "mean_abs_shap": 0.05176523790573582,
+        "mean_signed_shap": -0.003948559881976766
+      },
+      {
+        "feature": "fractal_dimension3",
+        "label": "Fractal dimension (worst)",
+        "group": "morphology_worst",
+        "mean_abs_shap": 0.045340133369262056,
+        "mean_signed_shap": -0.007812247270146501
+      }
+    ]
+  },
+  "breast_cancer_recurrence": {
+    "model": "random_forest",
+    "model_label": "Random Forest",
+    "base_value": 0.30095029239766086,
+    "features": [
+      {
+        "feature": "deg-malig",
+        "label": "Histological grade",
+        "group": "tumour",
+        "mean_abs_shap": 0.06743752577525455,
+        "mean_signed_shap": 0.0075112643759101694
+      },
+      {
+        "feature": "inv-nodes",
+        "label": "Involved axillary nodes (band midpoint)",
+        "group": "tumour",
+        "mean_abs_shap": 0.053625206512244276,
+        "mean_signed_shap": -0.0020418522472661167
+      },
+      {
+        "feature": "tumor-size",
+        "label": "Tumour size (band midpoint)",
+        "group": "tumour",
+        "mean_abs_shap": 0.0377622833100287,
+        "mean_signed_shap": 0.004259614311478081
+      },
+      {
+        "feature": "node-caps",
+        "label": "Node capsular invasion",
+        "group": "tumour",
+        "mean_abs_shap": 0.03316255309705939,
+        "mean_signed_shap": -0.003297675810229878
+      },
+      {
+        "feature": "irradiat",
+        "label": "Received radiotherapy",
+        "group": "history",
+        "mean_abs_shap": 0.023446997090579787,
+        "mean_signed_shap": 0.001719187436991561
+      },
+      {
+        "feature": "breast-quad",
+        "label": "Quadrant",
+        "group": "tumour",
+        "mean_abs_shap": 0.022427707768657257,
+        "mean_signed_shap": -0.0009699967530193373
+      },
+      {
+        "feature": "age",
+        "label": "Age band (midpoint)",
+        "group": "demographics",
+        "mean_abs_shap": 0.007565846291942595,
+        "mean_signed_shap": 0.001648191390133291
+      },
+      {
+        "feature": "breast",
+        "label": "Affected breast",
+        "group": "tumour",
+        "mean_abs_shap": 0.007453311268800377,
+        "mean_signed_shap": -0.0013055285727988162
+      },
+      {
+        "feature": "menopause",
+        "label": "Menopausal status",
+        "group": "demographics",
+        "mean_abs_shap": 0.005006363498740653,
+        "mean_signed_shap": 0.0004092822112027732
+      }
+    ]
+  },
+  "breast_cancer_survival": {
+    "model": "random_forest",
+    "model_label": "Random Forest",
+    "base_value": 0.4971965337278609,
+    "features": [
+      {
+        "feature": "positive_auxillary_nodes",
+        "label": "Positive axillary nodes",
+        "group": "tumour",
+        "mean_abs_shap": 0.14344029287658405,
+        "mean_signed_shap": -0.07214901217596124
+      },
+      {
+        "feature": "age",
+        "label": "Age at operation",
+        "group": "demographics",
+        "mean_abs_shap": 0.044206653582785034,
+        "mean_signed_shap": -0.026308727499778896
+      },
+      {
+        "feature": "operation_year",
+        "label": "Year of operation",
+        "group": "demographics",
+        "mean_abs_shap": 0.033649399130293904,
+        "mean_signed_shap": -0.007271915712017363
+      }
+    ]
+  },
+  "cervical_cancer": {
+    "model": "logistic_regression",
+    "model_label": "Logistic Regression",
+    "base_value": -0.20398080595925236,
+    "features": [
+      {
+        "feature": "Hormonal Contraceptives (years)",
+        "label": "Years on hormonal contraceptives",
+        "group": "history",
+        "mean_abs_shap": 0.07273099861601544,
+        "mean_signed_shap": 0.015522974816729679
+      },
+      {
+        "feature": "Num of pregnancies",
+        "label": "Number of pregnancies",
+        "group": "demographics",
+        "mean_abs_shap": 0.07164440760780104,
+        "mean_signed_shap": -0.0015145628425366296
+      },
+      {
+        "feature": "IUD",
+        "label": "Intrauterine device",
+        "group": "history",
+        "mean_abs_shap": 0.05938020483944963,
+        "mean_signed_shap": -0.002579399391479387
+      },
+      {
+        "feature": "Age",
+        "label": "Age",
+        "group": "demographics",
+        "mean_abs_shap": 0.04967891719126661,
+        "mean_signed_shap": -0.001163757295240851
+      },
+      {
+        "feature": "STDs:vulvo-perineal condylomatosis",
+        "label": "Vulvo-perineal condylomatosis",
+        "group": "sti_history",
+        "mean_abs_shap": 0.039264467585706044,
+        "mean_signed_shap": 0.013658070496901292
+      },
+      {
+        "feature": "Smokes (years)",
+        "label": "Years smoked",
+        "group": "history",
+        "mean_abs_shap": 0.03781167850232726,
+        "mean_signed_shap": -0.007824329634449153
+      },
+      {
+        "feature": "STDs:condylomatosis",
+        "label": "Condylomatosis",
+        "group": "sti_history",
+        "mean_abs_shap": 0.03465806572144292,
+        "mean_signed_shap": 0.012055742354750038
+      },
+      {
+        "feature": "STDs",
+        "label": "Any sexually transmitted infection",
+        "group": "sti_history",
+        "mean_abs_shap": 0.028073080625032356,
+        "mean_signed_shap": 0.010671111501149882
+      },
+      {
+        "feature": "STDs:syphilis",
+        "label": "Syphilis",
+        "group": "sti_history",
+        "mean_abs_shap": 0.024697207538333654,
+        "mean_signed_shap": -0.02120488437245591
+      },
+      {
+        "feature": "STDs (number)",
+        "label": "Number of STIs",
+        "group": "sti_history",
+        "mean_abs_shap": 0.022534273479976403,
+        "mean_signed_shap": 0.00914843696728068
+      },
+      {
+        "feature": "STDs: Number of diagnosis",
+        "label": "Number of STI diagnoses",
+        "group": "sti_history",
+        "mean_abs_shap": 0.022505111948388855,
+        "mean_signed_shap": 0.00880257750582455
+      },
+      {
+        "feature": "First sexual intercourse",
+        "label": "Age at first intercourse",
+        "group": "sti_history",
+        "mean_abs_shap": 0.022439714410531164,
+        "mean_signed_shap": 0.0038422076882562357
+      },
+      {
+        "feature": "IUD (years)",
+        "label": "Years with an IUD",
+        "group": "history",
+        "mean_abs_shap": 0.02238584429374139,
+        "mean_signed_shap": -0.0018626137340844325
+      },
+      {
+        "feature": "Dx:HPV",
+        "label": "Previous HPV diagnosis",
+        "group": "diagnoses",
+        "mean_abs_shap": 0.021785851600602632,
+        "mean_signed_shap": -0.012081244978515994
+      },
+      {
+        "feature": "Dx:CIN",
+        "label": "Previous cervical intraepithelial neoplasia",
+        "group": "diagnoses",
+        "mean_abs_shap": 0.02172468291863277,
+        "mean_signed_shap": -0.00579324877830208
+      },
+      {
+        "feature": "Dx",
+        "label": "Any previous diagnosis",
+        "group": "diagnoses",
+        "mean_abs_shap": 0.020771369534082585,
+        "mean_signed_shap": -0.00932351246132117
+      },
+      {
+        "feature": "Dx:Cancer",
+        "label": "Previous cancer diagnosis",
+        "group": "diagnoses",
+        "mean_abs_shap": 0.02068894320913932,
+        "mean_signed_shap": -0.011472959415977245
+      },
+      {
+        "feature": "STDs:HIV",
+        "label": "HIV",
+        "group": "sti_history",
+        "mean_abs_shap": 0.016026497982462275,
+        "mean_signed_shap": -0.004305626323646585
+      },
+      {
+        "feature": "STDs:vaginal condylomatosis",
+        "label": "Vaginal condylomatosis",
+        "group": "sti_history",
+        "mean_abs_shap": 0.01580629817684684,
+        "mean_signed_shap": -0.015806298176846822
+      },
+      {
+        "feature": "Number of sexual partners",
+        "label": "Number of sexual partners",
+        "group": "sti_history",
+        "mean_abs_shap": 0.005069705573003354,
+        "mean_signed_shap": -0.00020597043417827667
+      },
+      {
+        "feature": "Hormonal Contraceptives",
+        "label": "Hormonal contraceptives",
+        "group": "history",
+        "mean_abs_shap": 0.003441791174386885,
+        "mean_signed_shap": -0.00017046155510319017
+      },
+      {
+        "feature": "Smokes",
+        "label": "Smokes",
+        "group": "history",
+        "mean_abs_shap": 0.0027718235716641133,
+        "mean_signed_shap": -4.245681619616777e-05
+      },
+      {
+        "feature": "STDs:molluscum contagiosum",
+        "label": "Molluscum contagiosum",
+        "group": "sti_history",
+        "mean_abs_shap": 0.0021816195960096692,
+        "mean_signed_shap": 0.0021816195960096692
+      },
+      {
+        "feature": "Smokes (packs/year)",
+        "label": "Pack-years",
+        "group": "history",
+        "mean_abs_shap": 0.00084885071219616,
+        "mean_signed_shap": 0.00023813018328638932
+      },
+      {
+        "feature": "STDs:HPV",
+        "label": "HPV",
+        "group": "sti_history",
+        "mean_abs_shap": 1.1247331666311871e-17,
+        "mean_signed_shap": 1.1247331666311871e-17
+      },
+      {
+        "feature": "STDs:Hepatitis B",
+        "label": "Hepatitis B",
+        "group": "sti_history",
+        "mean_abs_shap": 3.2977424140203673e-18,
+        "mean_signed_shap": 3.2977424140203673e-18
+      },
+      {
+        "feature": "STDs:pelvic inflammatory disease",
+        "label": "Pelvic inflammatory disease",
+        "group": "sti_history",
+        "mean_abs_shap": 2.09274943662965e-18,
+        "mean_signed_shap": 2.09274943662965e-18
+      },
+      {
+        "feature": "STDs:genital herpes",
+        "label": "Genital herpes",
+        "group": "sti_history",
+        "mean_abs_shap": 0.0,
+        "mean_signed_shap": 0.0
+      }
+    ]
+  },
+  "lung_cancer_surgery": {
+    "model": "logistic_regression",
+    "model_label": "Logistic Regression",
+    "base_value": -0.02452589160461008,
+    "features": [
+      {
+        "feature": "PRE14",
+        "label": "Tumour size (clinical T stage)",
+        "group": "tumour",
+        "mean_abs_shap": 0.15049900692471727,
+        "mean_signed_shap": -0.0022541701477710742
+      },
+      {
+        "feature": "PRE30",
+        "label": "Smoker",
+        "group": "history",
+        "mean_abs_shap": 0.09845693602711168,
+        "mean_signed_shap": -0.00028332931230824364
+      },
+      {
+        "feature": "PRE9",
+        "label": "Dyspnoea before surgery",
+        "group": "vitals",
+        "mean_abs_shap": 0.09359537816851117,
+        "mean_signed_shap": -0.009623186769438456
+      },
+      {
+        "feature": "PRE5",
+        "label": "FEV1",
+        "group": "vitals",
+        "mean_abs_shap": 0.06343373261914713,
+        "mean_signed_shap": -0.001297859788578521
+      },
+      {
+        "feature": "PRE8",
+        "label": "Haemoptysis before surgery",
+        "group": "vitals",
+        "mean_abs_shap": 0.06283986379465108,
+        "mean_signed_shap": 0.01030706760653008
+      },
+      {
+        "feature": "PRE17",
+        "label": "Type 2 diabetes",
+        "group": "history",
+        "mean_abs_shap": 0.05683234965888327,
+        "mean_signed_shap": 0.01576023141800964
+      },
+      {
+        "feature": "PRE11",
+        "label": "Weakness before surgery",
+        "group": "vitals",
+        "mean_abs_shap": 0.05563507730636327,
+        "mean_signed_shap": 0.0020605584187542063
+      },
+      {
+        "feature": "PRE6",
+        "label": "Performance status (Zubrod)",
+        "group": "vitals",
+        "mean_abs_shap": 0.050671640969854596,
+        "mean_signed_shap": -0.011913226228019
+      },
+      {
+        "feature": "PRE10",
+        "label": "Cough before surgery",
+        "group": "vitals",
+        "mean_abs_shap": 0.03608268720784712,
+        "mean_signed_shap": -0.00522249420113576
+      },
+      {
+        "feature": "PRE4",
+        "label": "Forced vital capacity (FVC)",
+        "group": "vitals",
+        "mean_abs_shap": 0.03466584200056073,
+        "mean_signed_shap": -0.0025540054868671467
+      },
+      {
+        "feature": "DGN",
+        "label": "Diagnosis (ICD-10 group)",
+        "group": "tumour",
+        "mean_abs_shap": 0.03305376982749373,
+        "mean_signed_shap": -0.011223058545052986
+      },
+      {
+        "feature": "PRE7",
+        "label": "Pain before surgery",
+        "group": "vitals",
+        "mean_abs_shap": 0.03097849851272714,
+        "mean_signed_shap": 0.010406839344119269
+      },
+      {
+        "feature": "PRE25",
+        "label": "Peripheral arterial disease",
+        "group": "history",
+        "mean_abs_shap": 0.01869145467216845,
+        "mean_signed_shap": -0.011023165575894217
+      },
+      {
+        "feature": "AGE",
+        "label": "Age at surgery",
+        "group": "demographics",
+        "mean_abs_shap": 0.015564694170000235,
+        "mean_signed_shap": -0.00449149048390894
+      },
+      {
+        "feature": "PRE32",
+        "label": "Asthma",
+        "group": "history",
+        "mean_abs_shap": 4.72070803678739e-18,
+        "mean_signed_shap": -4.72070803678739e-18
+      },
+      {
+        "feature": "PRE19",
+        "label": "Myocardial infarction within 6 months",
+        "group": "history",
+        "mean_abs_shap": 0.0,
+        "mean_signed_shap": 0.0
+      }
+    ]
+  }
+}

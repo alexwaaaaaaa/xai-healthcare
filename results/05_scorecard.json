@@ -1,0 +1,110 @@
+[
+  {
+    "dataset":"Heart Disease (Cleveland)",
+    "model":"Logistic Regression",
+    "AUC-ROC":0.958,
+    "F1":0.867,
+    "recall":0.929,
+    "fidelity":2.402,
+    "stability":0.5708,
+    "stability gap":0.5979,
+    "clinical top-3":0.847,
+    "SHAP\u2248LIME":0.808
+  },
+  {
+    "dataset":"Heart Failure Clinical Records",
+    "model":"Random Forest",
+    "AUC-ROC":0.789,
+    "F1":0.529,
+    "recall":0.474,
+    "fidelity":2.441,
+    "stability":0.3383,
+    "stability gap":0.2338,
+    "clinical top-3":0.85,
+    "SHAP\u2248LIME":0.688
+  },
+  {
+    "dataset":"Pima Indians Diabetes",
+    "model":"Random Forest",
+    "AUC-ROC":0.814,
+    "F1":0.683,
+    "recall":0.759,
+    "fidelity":2.205,
+    "stability":0.6155,
+    "stability gap":0.6021,
+    "clinical top-3":0.991,
+    "SHAP\u2248LIME":0.864
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "model":"Random Forest",
+    "AUC-ROC":1.0,
+    "F1":1.0,
+    "recall":1.0,
+    "fidelity":3.207,
+    "stability":0.6638,
+    "stability gap":0.6508,
+    "clinical top-3":0.796,
+    "SHAP\u2248LIME":0.488
+  },
+  {
+    "dataset":"Breast Cancer Wisconsin (Diagnostic)",
+    "model":"Logistic Regression",
+    "AUC-ROC":0.996,
+    "F1":0.964,
+    "recall":0.952,
+    "fidelity":3.824,
+    "stability":0.7611,
+    "stability gap":0.7226,
+    "clinical top-3":0.596,
+    "SHAP\u2248LIME":0.688
+  },
+  {
+    "dataset":"Breast Cancer Recurrence (Ljubljana)",
+    "model":"Random Forest",
+    "AUC-ROC":0.666,
+    "F1":0.519,
+    "recall":0.412,
+    "fidelity":1.859,
+    "stability":0.5149,
+    "stability gap":0.4706,
+    "clinical top-3":0.914,
+    "SHAP\u2248LIME":0.72
+  },
+  {
+    "dataset":"Breast Cancer Surgical Survival (Haberman)",
+    "model":"Random Forest",
+    "AUC-ROC":0.594,
+    "F1":0.2,
+    "recall":0.188,
+    "fidelity":1.285,
+    "stability":0.7075,
+    "stability gap":0.4153,
+    "clinical top-3":0.667,
+    "SHAP\u2248LIME":0.6
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "model":"Logistic Regression",
+    "AUC-ROC":0.631,
+    "F1":0.133,
+    "recall":0.273,
+    "fidelity":4.43,
+    "stability":0.8127,
+    "stability gap":0.736,
+    "clinical top-3":0.738,
+    "SHAP\u2248LIME":0.048
+  },
+  {
+    "dataset":"Lung Cancer Thoracic Surgery",
+    "model":"Logistic Regression",
+    "AUC-ROC":0.621,
+    "F1":0.276,
+    "recall":0.571,
+    "fidelity":2.736,
+    "stability":0.6455,
+    "stability gap":0.6478,
+    "clinical top-3":0.844,
+    "SHAP\u2248LIME":0.432
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "dataset":"Heart Disease (Cleveland)",
+    "slug":"heart_disease",
+    "features":13,
+    "dropped":"\u2014",
+    "imputer":"median",
+    "train_n":242,
+    "test_n":61,
+    "train_pos_rate":0.459,
+    "test_pos_rate":0.459
+  },
+  {
+    "dataset":"Heart Failure Clinical Records",
+    "slug":"heart_failure",
+    "features":11,
+    "dropped":"time",
+    "imputer":"median",
+    "train_n":239,
+    "test_n":60,
+    "train_pos_rate":0.322,
+    "test_pos_rate":0.317
+  },
+  {
+    "dataset":"Pima Indians Diabetes",
+    "slug":"diabetes",
+    "features":8,
+    "dropped":"\u2014",
+    "imputer":"median",
+    "train_n":614,
+    "test_n":154,
+    "train_pos_rate":0.349,
+    "test_pos_rate":0.351
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "slug":"kidney_disease",
+    "features":24,
+    "dropped":"\u2014",
+    "imputer":"knn",
+    "train_n":320,
+    "test_n":80,
+    "train_pos_rate":0.625,
+    "test_pos_rate":0.625
+  },
+  {
+    "dataset":"Breast Cancer Wisconsin (Diagnostic)",
+    "slug":"breast_cancer",
+    "features":30,
+    "dropped":"\u2014",
+    "imputer":"median",
+    "train_n":455,
+    "test_n":114,
+    "train_pos_rate":0.374,
+    "test_pos_rate":0.368
+  },
+  {
+    "dataset":"Breast Cancer Recurrence (Ljubljana)",
+    "slug":"breast_cancer_recurrence",
+    "features":9,
+    "dropped":"\u2014",
+    "imputer":"median",
+    "train_n":228,
+    "test_n":58,
+    "train_pos_rate":0.298,
+    "test_pos_rate":0.293
+  },
+  {
+    "dataset":"Breast Cancer Surgical Survival (Haberman)",
+    "slug":"breast_cancer_survival",
+    "features":3,
+    "dropped":"\u2014",
+    "imputer":"median",
+    "train_n":244,
+    "test_n":62,
+    "train_pos_rate":0.266,
+    "test_pos_rate":0.258
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "slug":"cervical_cancer",
+    "features":28,
+    "dropped":"STDs: Time since first diagnosis, STDs: Time since last diagnosis, STDs:cervical condylomatosis, STDs:AIDS",
+    "imputer":"knn",
+    "train_n":686,
+    "test_n":172,
+    "train_pos_rate":0.064,
+    "test_pos_rate":0.064
+  },
+  {
+    "dataset":"Lung Cancer Thoracic Surgery",
+    "slug":"lung_cancer_surgery",
+    "features":16,
+    "dropped":"\u2014",
+    "imputer":"median",
+    "train_n":376,
+    "test_n":94,
+    "train_pos_rate":0.149,
+    "test_pos_rate":0.149
+  }
+]

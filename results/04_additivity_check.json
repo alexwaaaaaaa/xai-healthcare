@@ -1,0 +1,56 @@
+[
+  {
+    "dataset":"Heart Disease (Cleveland)",
+    "model":"Logistic Regression",
+    "space":"log-odds",
+    "max_abs_reconstruction_error":8.881784197e-16
+  },
+  {
+    "dataset":"Heart Failure Clinical Records",
+    "model":"Random Forest",
+    "space":"probability",
+    "max_abs_reconstruction_error":0.0
+  },
+  {
+    "dataset":"Pima Indians Diabetes",
+    "model":"Random Forest",
+    "space":"probability",
+    "max_abs_reconstruction_error":0.0
+  },
+  {
+    "dataset":"Chronic Kidney Disease",
+    "model":"Random Forest",
+    "space":"probability",
+    "max_abs_reconstruction_error":4.683753385e-16
+  },
+  {
+    "dataset":"Breast Cancer Wisconsin (Diagnostic)",
+    "model":"Logistic Regression",
+    "space":"log-odds",
+    "max_abs_reconstruction_error":0.0
+  },
+  {
+    "dataset":"Breast Cancer Recurrence (Ljubljana)",
+    "model":"Random Forest",
+    "space":"probability",
+    "max_abs_reconstruction_error":7.771561172e-16
+  },
+  {
+    "dataset":"Breast Cancer Surgical Survival (Haberman)",
+    "model":"Random Forest",
+    "space":"probability",
+    "max_abs_reconstruction_error":0.0
+  },
+  {
+    "dataset":"Cervical Cancer (Risk Factors)",
+    "model":"Logistic Regression",
+    "space":"log-odds",
+    "max_abs_reconstruction_error":7.771561172e-16
+  },
+  {
+    "dataset":"Lung Cancer Thoracic Surgery",
+    "model":"Logistic Regression",
+    "space":"log-odds",
+    "max_abs_reconstruction_error":2.220446049e-16
+  }
+]
