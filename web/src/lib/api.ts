@@ -85,31 +85,78 @@ async function request<T>(
   return body as T;
 }
 
+import {
+  STATIC_CASE_STUDIES,
+  STATIC_DATASETS,
+  STATIC_EVALUATION,
+  STATIC_MODELS,
+  STATIC_OVERVIEW,
+} from "./static-data";
+
 /* --------------------------------------------------------------------------
-   Server-side reads. `revalidate: 300` because these are notebook artefacts:
-   they change only when the notebooks are re-run, never per request.
+   Server-side reads. Gracefully falls back to pre-rendered metadata if
+   remote API is starting or unreachable.
    -------------------------------------------------------------------------- */
 
 const cached = { next: { revalidate: 300 } } satisfies RequestInit;
 
 export const getHealth = () => request<Health>("/health", { cache: "no-store" });
 
-export const getDatasets = () => request<Dataset[]>("/datasets", cached);
+export const getDatasets = async (): Promise<Dataset[]> => {
+  try {
+    const res = await request<Dataset[]>("/datasets", cached);
+    if (Array.isArray(res) && res.length > 0) return res;
+  } catch {}
+  return STATIC_DATASETS;
+};
 
-export const getDataset = (slug: string) =>
-  request<Dataset>(`/datasets/${slug}`, cached);
+export const getDataset = async (slug: string): Promise<Dataset> => {
+  try {
+    const res = await request<Dataset>(`/datasets/${slug}`, cached);
+    if (res && res.slug) return res;
+  } catch {}
+  const found = STATIC_DATASETS.find((d) => d.slug === slug);
+  if (found) return found;
+  throw new ApiError(404, `Dataset '${slug}' not found`);
+};
 
-export const getModels = (slug: string) =>
-  request<ModelSummary[]>(`/models/${slug}`, cached);
+export const getModels = async (slug: string): Promise<ModelSummary[]> => {
+  try {
+    const res = await request<ModelSummary[]>(`/models/${slug}`, cached);
+    if (Array.isArray(res) && res.length > 0) return res;
+  } catch {}
+  return STATIC_MODELS[slug] ?? [];
+};
 
-export const getEvaluation = (slug: string, model: ModelName) =>
-  request<Evaluation>(`/evaluation/${slug}/${model}`, cached);
+export const getEvaluation = async (
+  slug: string,
+  model: ModelName,
+): Promise<Evaluation> => {
+  try {
+    const res = await request<Evaluation>(`/evaluation/${slug}/${model}`, cached);
+    if (res && res.metrics) return res;
+  } catch {}
+  if (STATIC_EVALUATION[slug]?.[model]) {
+    return STATIC_EVALUATION[slug][model];
+  }
+  throw new ApiError(404, `Evaluation for ${slug}/${model} not found`);
+};
 
-export const getExplainability = () =>
-  request<ExplainabilityOverview>("/explainability", cached);
+export const getExplainability = async (): Promise<ExplainabilityOverview> => {
+  try {
+    const res = await request<ExplainabilityOverview>("/explainability", cached);
+    if (res && res.datasets) return res;
+  } catch {}
+  return STATIC_OVERVIEW;
+};
 
-export const getCases = (slug: DatasetSlug) =>
-  request<CaseStudies>(`/explainability/${slug}/cases`, cached);
+export const getCases = async (slug: DatasetSlug): Promise<CaseStudies> => {
+  try {
+    const res = await request<CaseStudies>(`/explainability/${slug}/cases`, cached);
+    if (res && res.cases) return res;
+  } catch {}
+  return STATIC_CASE_STUDIES[slug];
+};
 
 /** Called from the browser, so it uses the published API origin. */
 export const postPredict = (payload: PredictRequest) =>
@@ -118,3 +165,4 @@ export const postPredict = (payload: PredictRequest) =>
     body: JSON.stringify(payload),
     browser: true,
   });
+

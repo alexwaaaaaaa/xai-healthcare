@@ -157,6 +157,7 @@ export interface PredictResponse {
 export interface FidelityResult {
   model: ModelName;
   model_label: string;
+  n_features?: number;
   k_values: number[];
   top_k_probability_drop: number[];
   random_k_probability_drop: number[];
@@ -215,9 +216,9 @@ export interface Evaluation {
   best_params: Record<string, string | number | boolean | null>;
   cv_roc_auc: number;
   test_n: number;
-  fidelity: FidelityResult | null;
-  stability: StabilityResult | null;
-  comprehensibility: ComprehensibilityResult | null;
+  fidelity?: FidelityResult | null;
+  stability?: StabilityResult | null;
+  comprehensibility?: ComprehensibilityResult | null;
 }
 
 export interface ExplainabilityDataset {
