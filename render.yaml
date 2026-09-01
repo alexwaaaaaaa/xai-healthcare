@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: xai-healthcare-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.app.main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    region: oregon
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.10
+      - key: WEB_ORIGIN
+        value: "*"
