@@ -40,12 +40,10 @@ with gr.Blocks(title="Explainable AI for Healthcare", theme=gr.themes.Soft()) as
 
     btn.click(fn=check_health, inputs=inp, outputs=out)
 
-# Mount all FastAPI routes onto demo.app so both Gradio and FastAPI REST API work simultaneously
-for route in fastapi_app.routes:
-    if route not in demo.app.routes:
-        demo.app.routes.append(route)
-
 demo.queue()
+
+# Mount all FastAPI routes with top priority before Gradio catch-all
+demo.app.router.routes = [r for r in fastapi_app.router.routes if r not in demo.app.router.routes] + demo.app.router.routes
 
 if __name__ == "__main__":
     demo.launch()
