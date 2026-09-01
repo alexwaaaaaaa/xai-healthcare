@@ -158,11 +158,22 @@ export const getCases = async (slug: DatasetSlug): Promise<CaseStudies> => {
   return STATIC_CASE_STUDIES[slug];
 };
 
-/** Called from the browser, so it uses the published API origin. */
-export const postPredict = (payload: PredictRequest) =>
-  request<PredictResponse>("/predict", {
+/** Called from the browser, hitting the Next.js /api/predict route. */
+export const postPredict = async (
+  payload: PredictRequest,
+): Promise<PredictResponse> => {
+  const res = await fetch("/api/predict", {
     method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
-    browser: true,
   });
+  if (!res.ok) {
+    const data = await res.json().catch(() => null);
+    throw new ApiError(
+      res.status,
+      data?.error || `Prediction failed with status ${res.status}`,
+    );
+  }
+  return res.json();
+};
 
