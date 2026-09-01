@@ -1,4 +1,4 @@
-"""Hugging Face Spaces entrypoint (Gradio SDK).
+"""Hugging Face Spaces entrypoint (Gradio SDK with ZeroGPU support).
 
 Mounts the FastAPI backend so that:
 1. Next.js on Vercel can consume all REST endpoints (/predict, /datasets, /models, etc.).
@@ -10,6 +10,16 @@ from __future__ import annotations
 import gradio as gr
 from api.app.main import app as fastapi_app
 from api.app.store import registry
+
+try:
+    import spaces
+
+    @spaces.GPU(duration=1)
+    def gpu_probe():
+        """Satisfies ZeroGPU startup requirement."""
+        return True
+except Exception:
+    pass
 
 # Ensure artefacts are loaded
 if not registry.ready:
