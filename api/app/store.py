@@ -71,9 +71,15 @@ class Registry:
                 self.models[(slug, name)] = joblib.load(
                     self._require(schema.MODELS / f"{slug}_{name}.pkl")
                 )
-                self.shap[(slug, name)] = joblib.load(
-                    self._require(schema.MODELS / f"{slug}_{name}_shap.pkl")
-                )
+                try:
+                    self.shap[(slug, name)] = joblib.load(
+                        self._require(schema.MODELS / f"{slug}_{name}_shap.pkl")
+                    )
+                except Exception as exc:
+                    log.warning("rebuilding SHAP explainer for (%s, %s): %s", slug, name, exc)
+                    self.shap[(slug, name)] = explain.ShapExplainer(
+                        self.models[(slug, name)], train, name
+                    )
             log.info("loaded %s: 3 models, 3 SHAP explainers, 1 LIME explainer", slug)
 
         self.ready = True
