@@ -8,19 +8,30 @@ Mounts the FastAPI backend at root and Gradio at /gradio so that:
 from __future__ import annotations
 
 import gradio as gr
-import spaces
 from api.app.main import app as fastapi_app
 from api.app.store import registry
+
+# Graceful fallback for Hugging Face ZeroGPU decorator
+try:
+    import spaces
+    gpu_decorator = spaces.GPU
+except Exception:
+    def gpu_decorator(fn=None, **kwargs):
+        if fn is not None:
+            return fn
+        def wrapper(f):
+            return f
+        return wrapper
 
 # Ensure artefacts are loaded
 if not registry.ready:
     registry.load()
 
-@spaces.GPU
+@gpu_decorator
 def gpu_worker(probe: str) -> str:
     return f"Loaded {len(registry.models)} models. {probe}"
 
-with gr.Blocks(title="Explainable AI for Healthcare", theme=gr.themes.Soft()) as demo:
+with gr.Blocks(title="Explainable AI for Healthcare") as demo:
     gr.Markdown(
         "# 🩺 Explainable AI for Healthcare Diagnosis (MDS-391)\n\n"
         "**Department of Computer Engineering, Jamia Millia Islamia**\n\n"
@@ -54,3 +65,6 @@ def home():
         "datasets": "/datasets",
         "gradio_ui": "/gradio",
     }
+
+if __name__ == "__main__":
+    demo.launch()
