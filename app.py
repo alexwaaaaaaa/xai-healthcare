@@ -8,23 +8,18 @@ Mounts the FastAPI backend so that:
 from __future__ import annotations
 
 import gradio as gr
+import spaces
 from api.app.main import app as fastapi_app
 from api.app.store import registry
-
-try:
-    import spaces
-
-    @spaces.GPU
-    def check_health(probe: str) -> str:
-        """Attached to Gradio UI to satisfy ZeroGPU startup check."""
-        return f"XAI Engine Active. Loaded {len(registry.models)} models. Probe: {probe}"
-except Exception:
-    def check_health(probe: str) -> str:
-        return f"XAI Engine Active. Loaded {len(registry.models)} models."
 
 # Ensure artefacts are loaded
 if not registry.ready:
     registry.load()
+
+@spaces.GPU
+def check_health(probe: str) -> str:
+    """Attached to Gradio UI to satisfy ZeroGPU startup check."""
+    return f"XAI Engine Active. Loaded {len(registry.models)} models. Probe: {probe}"
 
 with gr.Blocks(title="Explainable AI for Healthcare", theme=gr.themes.Soft()) as demo:
     gr.Markdown(
@@ -45,5 +40,12 @@ with gr.Blocks(title="Explainable AI for Healthcare", theme=gr.themes.Soft()) as
 
     btn.click(fn=check_health, inputs=inp, outputs=out)
 
-# Mount Gradio onto the existing FastAPI application
-app = gr.mount_gradio_app(fastapi_app, demo, path="/")
+# Mount all FastAPI routes onto demo.app so both Gradio and FastAPI REST API work simultaneously
+for route in fastapi_app.routes:
+    if route not in demo.app.routes:
+        demo.app.routes.append(route)
+
+demo.queue()
+
+if __name__ == "__main__":
+    demo.launch()
