@@ -1,8 +1,8 @@
 """Hugging Face Spaces entrypoint (Gradio SDK with ZeroGPU support).
 
-Mounts the FastAPI backend so that:
+Mounts the FastAPI backend at root and Gradio at /gradio so that:
 1. Next.js on Vercel can consume all REST endpoints (/predict, /datasets, /models, etc.).
-2. Hugging Face Spaces displays an interactive status and test page.
+2. Hugging Face Spaces displays the status UI and satisfies ZeroGPU.
 """
 
 from __future__ import annotations
@@ -17,9 +17,8 @@ if not registry.ready:
     registry.load()
 
 @spaces.GPU
-def check_health(probe: str) -> str:
-    """Attached to Gradio UI to satisfy ZeroGPU startup check."""
-    return f"XAI Engine Active. Loaded {len(registry.models)} models. Probe: {probe}"
+def gpu_worker(probe: str) -> str:
+    return f"Loaded {len(registry.models)} models. {probe}"
 
 with gr.Blocks(title="Explainable AI for Healthcare", theme=gr.themes.Soft()) as demo:
     gr.Markdown(
@@ -34,16 +33,24 @@ with gr.Blocks(title="Explainable AI for Healthcare", theme=gr.themes.Soft()) as
     )
 
     with gr.Row():
-        inp = gr.Textbox(label="System Probe", value="All systems nominal")
+        inp = gr.Textbox(label="Probe Input", value="Nominal")
         btn = gr.Button("Verify XAI Backend Engine", variant="primary")
-    out = gr.Textbox(label="Backend Status Response")
+    out = gr.Textbox(label="Backend Response")
 
-    btn.click(fn=check_health, inputs=inp, outputs=out)
+    btn.click(fn=gpu_worker, inputs=inp, outputs=out)
 
 demo.queue()
 
-# Mount all FastAPI routes with top priority before Gradio catch-all
-demo.app.router.routes = [r for r in fastapi_app.router.routes if r not in demo.app.router.routes] + demo.app.router.routes
+# Mount Gradio at /gradio so root routes /docs, /health, /datasets, /predict belong directly to FastAPI
+app = gr.mount_gradio_app(fastapi_app, demo, path="/gradio")
 
-if __name__ == "__main__":
-    demo.launch()
+@app.get("/")
+def home():
+    return {
+        "service": "Explainable AI for Healthcare Diagnosis API",
+        "status": "online",
+        "docs": "/docs",
+        "health": "/health",
+        "datasets": "/datasets",
+        "gradio_ui": "/gradio",
+    }
